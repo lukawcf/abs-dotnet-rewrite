@@ -1,0 +1,12 @@
+# Local data (audio, database, cache)
+library/
+config/
+metadata/
+
+# Secrets
+.env
+
+# .NET build output (for later)
+bin/
+obj/
+.vs/
