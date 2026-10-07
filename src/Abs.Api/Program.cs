@@ -13,6 +13,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IPermissionService, PermissionService>();
 builder.Services.AddScoped<LibraryService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

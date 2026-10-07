@@ -18,8 +18,8 @@ public static class AuthenticationSetup
             return services;
         }
 #endif
-        // Real token authentication belongs to the Auth module. Until it exists, nobody is authenticated.
-        authentication.AddScheme<AuthenticationSchemeOptions, UnauthenticatedHandler>(Scheme, null);
+        // Real JWT authentication — validates tokens issued by the Node.js backend.
+        authentication.AddScheme<AuthenticationSchemeOptions, JwtAuthenticationHandler>(Scheme, null);
         return services;
     }
 }
