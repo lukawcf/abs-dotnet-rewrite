@@ -8,6 +8,16 @@
          - ./library:/audiobooks
          - ./config:/config
          - ./metadata:/metadata
+     abs-dotnet:
+       build:
+         context: .
+         dockerfile: src/Abs.Api/Dockerfile
+       environment:
+         - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+       volumes:
+         - ./config:/config:ro
+       depends_on:
+         - abs-node
      nginx:
        image: nginx:stable
        ports:
