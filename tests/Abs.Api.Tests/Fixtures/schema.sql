@@ -1,0 +1,5 @@
+-- Table definitions copied from a real audiobookshelf 2.37.1 database (sqlite_master).
+-- Test setup only. Production code never creates or changes the schema.
+CREATE TABLE `users` (`id` UUID PRIMARY KEY, `username` VARCHAR(255), `email` VARCHAR(255), `pash` VARCHAR(255), `type` VARCHAR(255), `token` VARCHAR(255), `isActive` TINYINT(1) DEFAULT 0, `isLocked` TINYINT(1) DEFAULT 0, `lastSeen` DATETIME, `permissions` JSON, `bookmarks` JSON, `extraData` JSON, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+CREATE TABLE `libraries` (`id` UUID PRIMARY KEY, `name` VARCHAR(255), `displayOrder` INTEGER, `icon` VARCHAR(255), `mediaType` VARCHAR(255), `provider` VARCHAR(255), `lastScan` DATETIME, `lastScanVersion` VARCHAR(255), `settings` JSON, `extraData` JSON, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+CREATE TABLE `libraryFolders` (`id` UUID PRIMARY KEY, `path` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `libraryId` UUID REFERENCES `libraries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE);

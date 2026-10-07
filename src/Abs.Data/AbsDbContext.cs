@@ -1,3 +1,4 @@
+using Abs.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Abs.Data;
@@ -8,4 +9,10 @@ namespace Abs.Data;
 /// </summary>
 public class AbsDbContext(DbContextOptions<AbsDbContext> options) : DbContext(options)
 {
+    public DbSet<Library> Libraries => Set<Library>();
+    public DbSet<LibraryFolder> LibraryFolders => Set<LibraryFolder>();
+    public DbSet<User> Users => Set<User>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder) =>
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AbsDbContext).Assembly);
 }

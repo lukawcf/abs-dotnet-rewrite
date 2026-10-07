@@ -14,7 +14,9 @@ public static class DataServiceCollectionExtensions
             ?? throw new InvalidOperationException($"Connection string '{ConnectionStringName}' is missing.");
 
         // The file is opened lazily, so the service starts even when the database is not mounted.
-        services.AddDbContext<AbsDbContext>(options => options.UseSqlite(connectionString));
+        services.AddDbContext<AbsDbContext>(options => options
+            .UseSqlite(connectionString)
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
         return services;
     }
 }

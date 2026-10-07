@@ -66,3 +66,14 @@
 - Cost: not recorded
 - Result: success. dotnet build 0 warnings, dotnet test 1/1 passed, dotnet format --verify-no-changes clean (after auto-fixing a missing final newline in the template GlobalUsings.cs), docker-compose up -d --build gives three services Up, /health returns 200 from inside the compose network, nginx unchanged (no diff) and localhost:8080 still serves audiobookshelf. Deviation from the task text: the compose build context is the repo root with dockerfile src/Abs.Api/Dockerfile, because Abs.Api references Abs.Data. Config is mounted read-only (./config:/config:ro), see the caveat in wal-and-cache.md section 4
 - Outcome: AbsRewrite.sln, src/Abs.Api, src/Abs.Data, tests/Abs.Api.Tests, .editorconfig, .dockerignore, docker-compose.yml. Not committed
+
+## K2. Template slice: GET /api/libraries and /api/libraries/:id
+- Task: K2, template slice, AGENTS.md, shared interfaces, dev fake login
+- Workflow: W1 one-shot (done directly by the main session; DEV.md did not exist, so the task ran from the research notes and the upstream code)
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: pasted from A-HANDBOOK.md, section P5 K2
+- Time spent: about 40 minutes
+- Cost: not recorded
+- Result: success with deviations. dotnet build 0 warnings, dotnet test 18/18 passed, dotnet format --verify-no-changes clean. The Debug service run against a database copy returned a body byte-identical to Node (873 bytes). The Release container ignores the dev header (401). Deviations: (1) the Node comparison used Node's own Library.toOldJSON in a throwaway container on a database copy, not a recorded HTTP response, because no token was available; (2) IPermissionService has a real implementation (PermissionService) and a minimal User entity, because the controller needs one at runtime; the task said interface plus fake only; (3) include=stats and include=filterdata return 501; (4) routes are /api/libraries because nginx passes the path through. Two shell heredoc commands failed to parse (apostrophes in the text) and ran nothing; the files were then written with the Write tool
+- Outcome: src/Abs.Data (entities, configurations, AbsDateConverter), src/Abs.Api (controller, service, DTOs, auth, abstractions), tests/Abs.Api.Tests, AGENTS.md, docs/research/k2-shape-comparison.md. Not committed
