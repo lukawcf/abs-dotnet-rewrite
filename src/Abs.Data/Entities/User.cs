@@ -1,8 +1,8 @@
 namespace Abs.Data.Entities;
 
 /// <summary>
-/// Table "users", minimal mapping: only what permission checks need.
-/// The Auth and Users module owns this entity and extends it there.
+/// Table "users". Auth and Users module owns this entity.
+/// Node owns the schema — .NET only reads.
 /// </summary>
 public class User
 {
@@ -13,4 +13,7 @@ public class User
 
     /// <summary>JSON text, e.g. {"accessAllLibraries":true,"librariesAccessible":[]}.</summary>
     public string? Permissions { get; set; }
+
+    public DateTimeOffset CreatedAt { get; set; }
+    public DateTimeOffset UpdatedAt { get; set; }
 }
