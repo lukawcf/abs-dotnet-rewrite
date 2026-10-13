@@ -10,6 +10,62 @@ namespace Abs.Api.Tests;
 
 public class W2BookmarkWriteTests
 {
+    [Theory]
+    [InlineData("POST")]
+    [InlineData("PATCH")]
+    [InlineData("DELETE")]
+    public async Task Failed_bookmark_save_rolls_back_and_preserves_user_fields(string method)
+    {
+        using var factory = new AbsApiFactory { EnableProgressWrites = true };
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Dev-User", "w2-bm-alice");
+        using var scope = factory.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<AbsDbContext>();
+        async Task<string> Snapshot() => JsonSerializer.Serialize(await db.Users.OrderBy(x => x.Id)
+            .Select(x => new
+            {
+                x.Id,
+                x.Username,
+                x.Type,
+                x.IsActive,
+                x.Permissions,
+                Bookmarks = EF.Property<string?>(x, "DBookmarks"),
+                UpdatedAt = EF.Property<DateTimeOffset>(x, "DBookmarkUpdatedAt")
+            }).ToListAsync());
+        async Task<string> UserFields() => JsonSerializer.Serialize(await db.Users.OrderBy(x => x.Id)
+            .Select(x => new { x.Id, x.Username, x.Type, x.IsActive, x.Permissions }).ToListAsync());
+        var before = await Snapshot();
+        var fields = await UserFields();
+        // Failure injection is confined to the synthetic SQLite test database.
+        await db.Database.ExecuteSqlRawAsync("CREATE TRIGGER fail_bookmark_save BEFORE UPDATE ON users WHEN NEW.id = 'w2-bm-alice' BEGIN SELECT RAISE(ABORT, 'injected bookmark failure'); END;");
+        async Task<HttpResponseMessage> Write() => method switch
+        {
+            "POST" => await client.PostAsJsonAsync("/api/me/item/w2-item/bookmark", new { time = 36, title = "new" }),
+            "PATCH" => await client.PatchAsJsonAsync("/api/me/item/w2-item/bookmark", new { time = 12, title = "changed" }),
+            _ => await client.DeleteAsync("/api/me/item/w2-item/bookmark/12")
+        };
+        Assert.Equal(HttpStatusCode.InternalServerError, (await Write()).StatusCode);
+        Assert.Equal(before, await Snapshot());
+        await db.Database.ExecuteSqlRawAsync("DROP TRIGGER fail_bookmark_save;");
+        Assert.Equal(HttpStatusCode.OK, (await Write()).StatusCode);
+        Assert.Equal(fields, await UserFields());
+    }
+
+    [Fact]
+    public async Task Large_unsigned_hex_time_does_not_match_negative_time()
+    {
+        using var factory = new AbsApiFactory { EnableProgressWrites = true };
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Dev-User", "w2-bm-alice");
+        Assert.Equal(HttpStatusCode.OK, (await client.PostAsJsonAsync("/api/me/item/w2-item/bookmark",
+            new { time = -1, title = "negative" })).StatusCode);
+        var created = await client.PostAsJsonAsync("/api/me/item/w2-item/bookmark",
+            new { time = "0xFFFFFFFFFFFFFFFF", title = "unsigned" });
+        Assert.Equal(HttpStatusCode.OK, created.StatusCode);
+        var bookmark = JsonNode.Parse(await created.Content.ReadAsStringAsync())!;
+        Assert.Equal("0xFFFFFFFFFFFFFFFF", bookmark["time"]!.GetValue<string>());
+    }
+
     private static JsonArray Load(string name) => JsonNode.Parse(File.ReadAllText(
         Path.Combine(AppContext.BaseDirectory, "Fixtures", name)))!.AsArray();
     public static IEnumerable<object[]> Cases => Load("w2-bookmark-write-cases.json")

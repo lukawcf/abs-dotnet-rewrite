@@ -25,7 +25,7 @@ internal static class ProgressPatchValues
         var s = v.GetString()!.Trim();
         if (s.Length == 0) return 0;
         if (s.StartsWith("0x", StringComparison.OrdinalIgnoreCase) &&
-            long.TryParse(s[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var hex)) return hex;
+            ulong.TryParse(s[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var hex)) return hex;
         return double.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out var n) && double.IsFinite(n) ? n : null;
     }
 
