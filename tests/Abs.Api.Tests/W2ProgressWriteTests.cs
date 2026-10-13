@@ -15,7 +15,7 @@ public class W2ProgressWriteTests
     [InlineData("{\"currentTime\":\"invalid\"}")]
     [InlineData("{\"currentTime\":1e400}")]
     [InlineData("{\"progress\":-1e400}")]
-    [InlineData("{\"isFinished\":\"false\"}")]
+    [InlineData("{\"isFinished\":\"maybe\"}")]
     [InlineData("{\"finishedAt\":\"invalid\"}")]
     public async Task Unsupported_values_do_not_mutate_data(string payload)
     {
@@ -57,12 +57,23 @@ public class W2ProgressWriteTests
     public static IEnumerable<object[]> Cases => Load("w2-write-cases.json")
         .Select(x => new object[] { x!["name"]!.GetValue<string>() });
 
+    public static IEnumerable<object[]> CoercionCases => Load("w2-coercion-cases.json")
+        .Select(x => new object[] { x!["name"]!.GetValue<string>() });
+
+    [Theory]
+    [MemberData(nameof(CoercionCases))]
+    public Task Scalar_flag_coercion_matches_Node(string name) =>
+        CheckPatch(name, "w2-coercion-cases.json", "w2-node-coercion.json");
+
     [Theory]
     [MemberData(nameof(Cases))]
-    public async Task Single_patch_matches_Node_persisted_result(string name)
+    public Task Single_patch_matches_Node_persisted_result(string name) =>
+        CheckPatch(name, "w2-write-cases.json", "w2-node-progress-writes.json");
+
+    private static async Task CheckPatch(string name, string casesFile, string expectedFile)
     {
-        var input = Load("w2-write-cases.json").Single(x => x!["name"]!.GetValue<string>() == name)!;
-        var expected = Load("w2-node-progress-writes.json").Single(x => x!["name"]!.GetValue<string>() == name)!;
+        var input = Load(casesFile).Single(x => x!["name"]!.GetValue<string>() == name)!;
+        var expected = Load(expectedFile).Single(x => x!["name"]!.GetValue<string>() == name)!;
         using var factory = new AbsApiFactory { EnableProgressWrites = true };
         using var client = factory.CreateClient();
         client.DefaultRequestHeaders.Add("X-Dev-User", input["user"]?.GetValue<string>() ?? "w2-alice");

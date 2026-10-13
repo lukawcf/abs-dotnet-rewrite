@@ -20,8 +20,8 @@ public partial class PlaybackProgressService
         }
         foreach (var name in new[] { "isFinished", "hideFromContinueListening" })
         {
-            if (patch.TryGetProperty(name, out var flag) && flag.ValueKind is not
-                (JsonValueKind.Null or JsonValueKind.True or JsonValueKind.False)) return new(501, "Unsupported progress value");
+            if (patch.TryGetProperty(name, out var flag) && !ProgressPatchValues.BooleanScalar(flag))
+                return new(501, "Unsupported progress value");
         }
         foreach (var name in new[] { "createdAt", "finishedAt" })
         {
@@ -139,9 +139,9 @@ public partial class PlaybackProgressService
 
         if (p.TryGetProperty("duration", out var duration)) row.Duration = NullableNumber(duration);
         if (!unfinish && p.TryGetProperty("currentTime", out var time)) row.CurrentTime = NullableNumber(time);
-        if (hasFinished) row.IsFinished = finish.ValueKind == JsonValueKind.Null ? null : ProgressPatchValues.Truth(finish);
+        if (hasFinished) row.IsFinished = ProgressPatchValues.StoredBoolean(finish);
         if (p.TryGetProperty("hideFromContinueListening", out var hidden))
-            row.HideFromContinueListening = hidden.ValueKind == JsonValueKind.Null ? null : ProgressPatchValues.Truth(hidden);
+            row.HideFromContinueListening = ProgressPatchValues.StoredBoolean(hidden);
         if (p.TryGetProperty("ebookLocation", out var location)) row.EbookLocation = location.ValueKind == JsonValueKind.Null ? null : location.ToString();
         if (p.TryGetProperty("ebookProgress", out var ebook)) row.EbookProgress = NullableNumber(ebook);
         if (!unfinish && !finishTransition && p.TryGetProperty("finishedAt", out var at))
