@@ -11,7 +11,7 @@ namespace Abs.Api.Controllers;
 [ApiController]
 [Authorize]
 [Route("api/me/bookmarks")]
-public class BookmarksController(BookmarkService bookmarks, IPermissionService permissions) : ControllerBase
+public partial class BookmarksController(BookmarkService bookmarks, IPermissionService permissions, IConfiguration configuration) : ControllerBase
 {
     // Node MeController.js:123-126: no item permission filtering on the all-bookmarks endpoint.
     [HttpGet]

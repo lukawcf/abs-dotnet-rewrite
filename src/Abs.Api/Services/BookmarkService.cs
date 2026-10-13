@@ -9,7 +9,7 @@ namespace Abs.Api.Services;
 public record BookmarkUserData(string? Permissions, bool IsActive, IReadOnlyList<JsonElement> Bookmarks);
 public record BookmarkItemData(string? LibraryId, bool Explicit, IReadOnlyList<string> Tags);
 
-public class BookmarkService(AbsDbContext db)
+public partial class BookmarkService(AbsDbContext db)
 {
     public async Task<BookmarkUserData?> GetUserAsync(string userId, CancellationToken ct)
     {

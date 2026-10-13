@@ -76,3 +76,17 @@
 - Evidence: docs/evidence/w2/w2-step4.trx. Review: docs/research/d-w2-step4-review.md.
 - No bookmark writes, nginx/auth changes, push or PR. Existing writes remain default-off.
 - Time/cost unavailable. Outcome: ready for human review; this entry's Git commit identifies the result.
+
+## 2026-10-13 — Step 5: bookmark creation/update/deletion
+
+- Exact human prompt: “下一步”. Agent announced bookmark writes, default-off gate and a human review stop.
+- Workflow W2; agent Codex, exact model unavailable; operator D member.
+- Implemented POST/PATCH/DELETE, source-compatible error ordering and permission checks, scalar time matching,
+  duplicate handling and Node's loose-find/strict-delete quirk. D-owned shadow updatedAt mapping added.
+- Independently authored recorder executes real Node controllers/User methods with SQLite persistence;
+  expanded-item lookup, socket boundary and browser serialization are simulated. No W1/W3 code/fixtures copied.
+- First test run: 142 passed, 0 failed/skipped, including 37 added checks.
+- Build zero warnings/errors; format verification exit 0.
+- Evidence: docs/evidence/w2/w2-step5.trx. Review: docs/research/d-w2-step5-review.md.
+- No production writes, auth/nginx changes, push or PR. Time/cost not measured, unavailable.
+- Outcome: bookmark writes ready for human review; this entry's Git commit identifies the result.
