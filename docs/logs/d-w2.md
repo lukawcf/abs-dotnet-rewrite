@@ -49,3 +49,18 @@
 - Intentional input boundaries and unverified cache/socket/JWT/nginx/concurrency behavior are disclosed there.
 - No batch/delete/bookmarks, live write enablement, nginx routing, push or PR.
 - Time/cost: not measured, unavailable. Outcome: ready for human review; this entry's Git commit identifies the result.
+
+## 2026-10-13 — Step 3: batch update and delete
+
+- Exact human prompt: “实现播放进度批量更新和删除，核对 Node.js 的成功、失败及用户数据隔离行为，补充测试。写入保持默认关闭，完成后让我检查，暂时不要做书签。”
+- Workflow W2; agent Codex, exact model unavailable; operator D member.
+- Implemented sequential batch upserts, returned-error skipping and ownership-filtered atomic deletion.
+  Default-off write gate retained. No bookmarks or routing changes.
+- Independently authored Node recorder exercises real batch/delete controllers and persisted model methods;
+  media lookups and socket boundary are simulated. No W1/W3 fixtures copied.
+- First test run for this step: 83 passed, 0 failed/skipped. Includes 18 added checks.
+  Updated the prior batch-not-implemented test to assert non-array rejection under the new endpoint.
+- Build zero warnings/errors; format verification exit 0. No fixes from failing tests were required this step.
+- Evidence: docs/evidence/w2/w2-step3.trx. Review: docs/research/d-w2-step3-review.md.
+- Time/cost unavailable; no measured duration or estimate claimed.
+- Outcome: ready for human review; this entry's Git commit identifies the result. No push or PR.

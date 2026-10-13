@@ -129,12 +129,12 @@ public class W2ProgressWriteTests
     }
 
     [Fact]
-    public async Task Batch_remains_unimplemented()
+    public async Task Batch_without_array_payload_is_rejected()
     {
         using var factory = new AbsApiFactory { EnableProgressWrites = true };
         using var client = factory.CreateClient();
         client.DefaultRequestHeaders.Add("X-Dev-User", "w2-alice");
-        Assert.Equal(HttpStatusCode.NotImplemented,
+        Assert.Equal(HttpStatusCode.BadRequest,
             (await client.PatchAsJsonAsync("/api/me/progress/batch/update", new { currentTime = 99 })).StatusCode);
     }
 

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "mixed",
+    "method": "PATCH",
+    "payload": [
+      {
+        "libraryItemId": "w2-item",
+        "currentTime": 80
+      },
+      {
+        "libraryItemId": "absent",
+        "currentTime": 20
+      },
+      {
+        "libraryItemId": "w2-new-item",
+        "currentTime": 30
+      }
+    ]
+  },
+  {
+    "name": "all-failed",
+    "method": "PATCH",
+    "payload": [
+      {
+        "libraryItemId": "absent"
+      },
+      {
+        "libraryItemId": "w2-podcast"
+      }
+    ]
+  },
+  {
+    "name": "sequential",
+    "method": "PATCH",
+    "payload": [
+      {
+        "libraryItemId": "w2-item",
+        "currentTime": 80
+      },
+      {
+        "libraryItemId": "absent"
+      },
+      {
+        "libraryItemId": "w2-item",
+        "currentTime": 90
+      }
+    ]
+  },
+  {
+    "name": "episode",
+    "method": "PATCH",
+    "payload": [
+      {
+        "libraryItemId": "w2-podcast",
+        "episodeId": "w2-episode",
+        "currentTime": 40
+      },
+      {
+        "libraryItemId": "w2-podcast",
+        "episodeId": "absent"
+      }
+    ]
+  },
+  {
+    "name": "create-own-on-shared-item",
+    "method": "PATCH",
+    "payload": [
+      {
+        "libraryItemId": "w2-private-item",
+        "currentTime": 20,
+        "userId": "w2-bob"
+      }
+    ]
+  },
+  {
+    "name": "empty",
+    "method": "PATCH",
+    "payload": []
+  },
+  {
+    "name": "null",
+    "method": "PATCH",
+    "payload": null
+  },
+  {
+    "name": "object",
+    "method": "PATCH",
+    "payload": {}
+  },
+  {
+    "name": "delete-owned",
+    "method": "DELETE",
+    "id": "w2-book-progress"
+  },
+  {
+    "name": "delete-other",
+    "method": "DELETE",
+    "id": "w2-private"
+  },
+  {
+    "name": "delete-missing",
+    "method": "DELETE",
+    "id": "absent"
+  },
+  {
+    "name": "delete-item-id",
+    "method": "DELETE",
+    "id": "w2-item"
+  },
+  {
+    "name": "delete-twice",
+    "method": "DELETE",
+    "id": "w2-book-progress",
+    "repeat": 2
+  }
+]

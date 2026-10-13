@@ -14,7 +14,25 @@ public class PlaybackProgressController(PlaybackProgressService progress, IConfi
 {
     // Node MeController.js:275-288. A separate explicit gate preserves read-only defaults.
     [HttpPatch("batch/update")]
-    public IActionResult UnsupportedBatch() => StatusCode(501);
+    public async Task<IActionResult> Batch([FromBody] JsonElement payload, CancellationToken ct)
+    {
+        if (!configuration.GetValue<bool>("ProgressWrites:Enabled")) return StatusCode(501);
+        if (payload.ValueKind != JsonValueKind.Array || payload.GetArrayLength() == 0)
+            return Plain(400, "Missing request payload");
+        await progress.BatchUpdateAsync(User.FindFirstValue(ClaimTypes.NameIdentifier)!, payload, ct);
+        return Plain(200, "OK");
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(string id, CancellationToken ct)
+    {
+        if (!configuration.GetValue<bool>("ProgressWrites:Enabled")) return StatusCode(501);
+        var removed = await progress.DeleteAsync(User.FindFirstValue(ClaimTypes.NameIdentifier)!, id, ct);
+        return removed ? Plain(200, "OK") : Plain(404, "Not Found");
+    }
+
+    private static ContentResult Plain(int status, string message) =>
+        new() { StatusCode = status, Content = message, ContentType = "text/plain" };
 
     [HttpPatch("{id}/{episodeId?}")]
     public async Task<IActionResult> Patch(string id, string? episodeId, [FromBody] JsonElement patch, CancellationToken ct)
