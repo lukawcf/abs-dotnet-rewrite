@@ -1,3 +1,4 @@
+using Abs.Api.Abstractions;
 using Abs.Api.Dtos;
 using Abs.Data;
 using Abs.Data.Entities;
@@ -5,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Abs.Api.Services;
 
-public partial class PlaybackProgressService(AbsDbContext db)
+public partial class PlaybackProgressService(AbsDbContext db) : IUserProgressReader
 {
     // Node User.js:716-721 matches libraryItemId in extraData, optionally mediaItemId.
     // No library permission filtering: these endpoints only expose the authenticated user's rows.

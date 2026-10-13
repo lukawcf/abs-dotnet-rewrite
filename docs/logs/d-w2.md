@@ -90,3 +90,15 @@
 - Evidence: docs/evidence/w2/w2-step5.trx. Review: docs/research/d-w2-step5-review.md.
 - No production writes, auth/nginx changes, push or PR. Time/cost not measured, unavailable.
 - Outcome: bookmark writes ready for human review; this entry's Git commit identifies the result.
+
+## 2026-10-13 — Step 6: internal reader and handover
+
+- Exact human prompt: “下一步”, following discussion of independently implementing IUserProgressReader and final handover.
+- Workflow W2; agent Codex, exact model unavailable; operator D member.
+- PlaybackProgressService now implements the existing IUserProgressReader contract and resolves to the same scoped DI instance.
+  Reuses current item/user lookup; numeric internal projection and nullable time defaults are documented.
+- Added 10 checks: stored progress, numeric-string/null projection, missing/other users' rows, scoped DI, fresh reads and cancellation.
+- First run: 156 passed, 0 failed/skipped. Build zero warnings/errors; format verification exit 0.
+- Evidence: docs/evidence/w2/w2-handover.trx. Handover: docs/research/d-w2-handover.md.
+- No shared interface signature changes, nginx/auth changes, production write enablement, push, PR or merge.
+- Time/cost not measured, unavailable. Outcome: local W2 handover ready for human review; this entry's Git commit identifies the result.
