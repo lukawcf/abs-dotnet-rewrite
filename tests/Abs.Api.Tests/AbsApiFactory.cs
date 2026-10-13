@@ -28,7 +28,7 @@ public class AbsApiFactory : WebApplicationFactory<Program>
     public AbsApiFactory()
     {
         connection.Open();
-        foreach (var file in new[] { "schema.sql", "seed.sql", "w2-progress-schema.sql", "w2-progress-seed.sql", "w2-write-media-schema.sql", "w2-write-media-seed.sql" })
+        foreach (var file in new[] { "schema.sql", "seed.sql", "w2-progress-schema.sql", "w2-progress-seed.sql", "w2-write-media-schema.sql", "w2-write-media-seed.sql", "w2-bookmark-seed.sql" })
         {
             using var command = connection.CreateCommand();
             command.CommandText = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Fixtures", file));

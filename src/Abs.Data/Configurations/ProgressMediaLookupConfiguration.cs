@@ -12,6 +12,7 @@ public class ProgressItemLookupConfiguration : IEntityTypeConfiguration<Progress
         b.Property(x => x.Id).HasColumnName("id");
         b.Property(x => x.MediaId).HasColumnName("mediaId");
         b.Property(x => x.MediaType).HasColumnName("mediaType");
+        b.Property(x => x.LibraryId).HasColumnName("libraryId");
     }
 }
 public class ProgressBookLookupConfiguration : IEntityTypeConfiguration<ProgressBookLookup>
@@ -20,6 +21,8 @@ public class ProgressBookLookupConfiguration : IEntityTypeConfiguration<Progress
     {
         b.HasNoKey().ToView("books");
         b.Property(x => x.Id).HasColumnName("id");
+        b.Property(x => x.Explicit).HasColumnName("explicit");
+        b.Property(x => x.Tags).HasColumnName("tags");
     }
 }
 public class ProgressEpisodeLookupConfiguration : IEntityTypeConfiguration<ProgressEpisodeLookup>

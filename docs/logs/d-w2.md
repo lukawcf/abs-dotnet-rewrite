@@ -64,3 +64,15 @@
 - Evidence: docs/evidence/w2/w2-step3.trx. Review: docs/research/d-w2-step3-review.md.
 - Time/cost unavailable; no measured duration or estimate claimed.
 - Outcome: ready for human review; this entry's Git commit identifies the result. No push or PR.
+
+## 2026-10-13 — Step 4: bookmark reads
+
+- Exact human prompt: “继续下一项”. Agent announced bookmark reads only, with a review stop before bookmark writes.
+- Workflow W2; agent Codex, exact model unavailable; operator D member. Scope subdivision was agent-selected under the human continuation instruction.
+- Implemented all-bookmark and per-library-item bookmark lists; latter checks library, tags and explicit access.
+- D-owned shadow mapping reads users.bookmarks without changing Auth-owned User files. No schema changes or application SQL.
+- Independently authored Node recorder uses real bookmark controller and User permission methods with simulated expanded-item lookup.
+- First tests: 105 passed, 0 failed/skipped, including 20 new checks. Build zero warnings/errors; format verification exit 0.
+- Evidence: docs/evidence/w2/w2-step4.trx. Review: docs/research/d-w2-step4-review.md.
+- No bookmark writes, nginx/auth changes, push or PR. Existing writes remain default-off.
+- Time/cost unavailable. Outcome: ready for human review; this entry's Git commit identifies the result.

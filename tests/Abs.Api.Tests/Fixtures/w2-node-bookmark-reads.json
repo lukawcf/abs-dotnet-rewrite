@@ -1,0 +1,209 @@
+[
+  {
+    "name": "all",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    }
+  },
+  {
+    "name": "item",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        }
+      ]
+    }
+  },
+  {
+    "name": "bob",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "bob-only",
+          "createdAt": 1790812800000
+        }
+      ]
+    }
+  },
+  {
+    "name": "null-bookmarks",
+    "status": 200,
+    "body": {
+      "bookmarks": []
+    }
+  },
+  {
+    "name": "empty-bookmarks",
+    "status": 200,
+    "body": {
+      "bookmarks": []
+    }
+  },
+  {
+    "name": "missing-item",
+    "status": 404,
+    "body": "Not Found"
+  },
+  {
+    "name": "deny-library",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "all-does-not-filter",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    }
+  },
+  {
+    "name": "allow-tag",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        }
+      ]
+    }
+  },
+  {
+    "name": "deny-tag",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "denylist",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "denylist-untagged",
+    "status": 200,
+    "body": {
+      "bookmarks": []
+    }
+  },
+  {
+    "name": "allowlist-untagged",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "explicit-denied",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "explicit-allowed",
+    "status": 200,
+    "body": {
+      "bookmarks": []
+    }
+  },
+  {
+    "name": "explicit-inactive",
+    "status": 403,
+    "body": "Forbidden"
+  },
+  {
+    "name": "podcast",
+    "status": 200,
+    "body": {
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        }
+      ]
+    }
+  }
+]
