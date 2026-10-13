@@ -13,6 +13,8 @@ public class W2ProgressWriteTests
     [Theory]
     [InlineData("{\"currentTime\":[]}")]
     [InlineData("{\"currentTime\":\"invalid\"}")]
+    [InlineData("{\"currentTime\":1e400}")]
+    [InlineData("{\"progress\":-1e400}")]
     [InlineData("{\"isFinished\":\"false\"}")]
     [InlineData("{\"finishedAt\":\"invalid\"}")]
     public async Task Unsupported_values_do_not_mutate_data(string payload)

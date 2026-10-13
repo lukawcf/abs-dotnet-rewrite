@@ -19,7 +19,8 @@ internal static class ProgressPatchValues
         if (v.ValueKind == JsonValueKind.Null) return 0;
         if (v.ValueKind == JsonValueKind.True) return 1;
         if (v.ValueKind == JsonValueKind.False) return 0;
-        if (v.ValueKind == JsonValueKind.Number) return v.GetDouble();
+        if (v.ValueKind == JsonValueKind.Number)
+            return v.TryGetDouble(out var number) && double.IsFinite(number) ? number : null;
         if (v.ValueKind != JsonValueKind.String) return null;
         var s = v.GetString()!.Trim();
         if (s.Length == 0) return 0;
