@@ -1,0 +1,58 @@
+[
+  {
+    "id": "w2-book-progress",
+    "userId": "w2-alice",
+    "mediaItemId": "w2-book",
+    "mediaItemType": "book",
+    "duration": 200,
+    "currentTime": 50,
+    "isFinished": false,
+    "hideFromContinueListening": false,
+    "ebookLocation": null,
+    "ebookProgress": null,
+    "finishedAt": null,
+    "extraData": {
+      "libraryItemId": "w2-item",
+      "progress": 0.4
+    },
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "updatedAt": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "w2-episode-progress",
+    "userId": "w2-alice",
+    "mediaItemId": "w2-episode",
+    "mediaItemType": "podcastEpisode",
+    "duration": null,
+    "currentTime": null,
+    "isFinished": null,
+    "hideFromContinueListening": null,
+    "ebookLocation": "chapter-2",
+    "ebookProgress": 0.2,
+    "finishedAt": "1970-01-01T00:00:00.000Z",
+    "extraData": {
+      "libraryItemId": "w2-podcast",
+      "progress": "0.25"
+    },
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "updatedAt": "2026-10-02T00:00:00.000Z"
+  },
+  {
+    "id": "w2-private",
+    "userId": "w2-bob",
+    "mediaItemId": "w2-bob-book",
+    "mediaItemType": "book",
+    "duration": 100,
+    "currentTime": 100,
+    "isFinished": true,
+    "hideFromContinueListening": true,
+    "ebookLocation": null,
+    "ebookProgress": null,
+    "finishedAt": "2026-10-02T00:00:00.000Z",
+    "extraData": {
+      "libraryItemId": "w2-private-item"
+    },
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "updatedAt": "2026-10-02T00:00:00.000Z"
+  }
+]
