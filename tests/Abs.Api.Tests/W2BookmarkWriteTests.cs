@@ -30,7 +30,7 @@ public class W2BookmarkWriteTests
                 x.IsActive,
                 x.Permissions,
                 Bookmarks = EF.Property<string?>(x, "DBookmarks"),
-                UpdatedAt = EF.Property<DateTimeOffset>(x, "DBookmarkUpdatedAt")
+                UpdatedAt = x.UpdatedAt
             }).ToListAsync());
         async Task<string> UserFields() => JsonSerializer.Serialize(await db.Users.OrderBy(x => x.Id)
             .Select(x => new { x.Id, x.Username, x.Type, x.IsActive, x.Permissions }).ToListAsync());
@@ -107,7 +107,7 @@ public class W2BookmarkWriteTests
             {
                 x.Id,
                 Bookmarks = EF.Property<string?>(x, "DBookmarks"),
-                UpdatedAt = EF.Property<DateTimeOffset>(x, "DBookmarkUpdatedAt")
+                UpdatedAt = x.UpdatedAt
             }).ToListAsync();
         var actualUsers = new JsonArray(users.Select(x => (JsonNode)new JsonObject
         {
@@ -158,7 +158,7 @@ public class W2BookmarkWriteTests
             {
                 x.Id,
                 Bookmarks = EF.Property<string?>(x, "DBookmarks"),
-                UpdatedAt = EF.Property<DateTimeOffset>(x, "DBookmarkUpdatedAt"),
+                UpdatedAt = x.UpdatedAt,
                 x.Permissions
             }).ToListAsync());
         var before = await Snapshot();

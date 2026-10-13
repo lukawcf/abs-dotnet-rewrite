@@ -22,6 +22,7 @@ public class AbsApiFactory : WebApplicationFactory<Program>
 
     public string EnvironmentName { get; init; } = "Development";
     public bool EnableProgressWrites { get; init; }
+    public string? TestJwtSecret { get; init; }
 
     public Action<IServiceCollection>? ConfigureTestServices { get; init; }
 
@@ -42,7 +43,8 @@ public class AbsApiFactory : WebApplicationFactory<Program>
         builder.ConfigureAppConfiguration((_, configuration) =>
             configuration.AddInMemoryCollection(new Dictionary<string, string?>
             {
-                ["ProgressWrites:Enabled"] = EnableProgressWrites.ToString()
+                ["ProgressWrites:Enabled"] = EnableProgressWrites.ToString(),
+                ["JWT_SECRET_KEY"] = TestJwtSecret
             }));
         builder.ConfigureServices(services =>
         {

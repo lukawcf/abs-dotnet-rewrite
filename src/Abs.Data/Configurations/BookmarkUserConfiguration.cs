@@ -5,12 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Abs.Data.Configurations;
 
-// Additive D-owned shadow mapping; the Auth module's User class stays unchanged.
+// D's bookmark JSON remains a shadow property. Dates use the Auth module's real properties.
 public class BookmarkUserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.Property<string?>("DBookmarks").HasColumnName("bookmarks");
-        builder.Property<DateTimeOffset>("DBookmarkUpdatedAt").HasColumnName("updatedAt").HasConversion<AbsDateConverter>();
+        builder.Property(x => x.CreatedAt).HasColumnName("createdAt").HasConversion<AbsDateConverter>();
+        builder.Property(x => x.UpdatedAt).HasColumnName("updatedAt").HasConversion<AbsDateConverter>();
     }
 }

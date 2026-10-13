@@ -54,7 +54,7 @@ public partial class BookmarkService
         {
             stored.CurrentValue = rows.ToJsonString();
             stored.IsModified = true; // Node forces JSON dirty for PATCH and DELETE, even if unchanged.
-            entry.Property<DateTimeOffset>("DBookmarkUpdatedAt").CurrentValue = DateTimeOffset.UtcNow;
+            user.UpdatedAt = DateTimeOffset.UtcNow;
             await db.SaveChangesAsync(ct);
         }
         await transaction.CommitAsync(ct);
