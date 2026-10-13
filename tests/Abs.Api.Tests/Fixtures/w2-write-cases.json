@@ -1,0 +1,171 @@
+[
+  {
+    "name": "same-stored-progress-touches-timestamp",
+    "item": "w2-item",
+    "patch": { "progress": 0.4 }
+  },
+  {
+    "name": "partial",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 80
+    }
+  },
+  {
+    "name": "numeric-strings",
+    "item": "w2-item",
+    "patch": {
+      "duration": "300",
+      "currentTime": "75",
+      "progress": "0.25"
+    }
+  },
+  {
+    "name": "explicit-null",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": null,
+      "ebookProgress": null,
+      "progress": null
+    }
+  },
+  {
+    "name": "finish",
+    "item": "w2-item",
+    "patch": {
+      "isFinished": true
+    }
+  },
+  {
+    "name": "unfinish",
+    "item": "w2-private-item",
+    "user": "w2-bob",
+    "patch": {
+      "isFinished": false,
+      "currentTime": 90
+    }
+  },
+  {
+    "name": "threshold-equal",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 190
+    }
+  },
+  {
+    "name": "threshold-beyond",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 191
+    }
+  },
+  {
+    "name": "percent-equal",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 180,
+      "markAsFinishedPercentComplete": 90
+    }
+  },
+  {
+    "name": "percent-beyond",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 181,
+      "markAsFinishedPercentComplete": 90
+    }
+  },
+  {
+    "name": "createdAt-ignored",
+    "item": "w2-item",
+    "patch": {
+      "createdAt": 1600000000000
+    }
+  },
+  {
+    "name": "local-sync",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 70,
+      "lastUpdate": "2026-09-01T00:00:00.000Z"
+    }
+  },
+  {
+    "name": "invalid-sync",
+    "item": "w2-item",
+    "patch": {
+      "lastUpdate": "invalid-date"
+    }
+  },
+  {
+    "name": "noop",
+    "item": "w2-item",
+    "patch": {}
+  },
+  {
+    "name": "ebook",
+    "item": "w2-item",
+    "patch": {
+      "ebookLocation": "chapter-9",
+      "ebookProgress": 0.8
+    }
+  },
+  {
+    "name": "create-no-auto-finish",
+    "item": "w2-new-item",
+    "patch": {
+      "duration": 200,
+      "currentTime": 199
+    }
+  },
+  {
+    "name": "create-finished",
+    "item": "w2-new-item",
+    "patch": {
+      "isFinished": true,
+      "createdAt": 1600000000000,
+      "finishedAt": 1600000001000
+    }
+  },
+  {
+    "name": "episode-update",
+    "item": "w2-podcast",
+    "episode": "w2-episode",
+    "patch": {
+      "duration": 200,
+      "currentTime": 20
+    }
+  },
+  {
+    "name": "episode-create",
+    "item": "w2-podcast",
+    "episode": "w2-new-episode",
+    "patch": {
+      "duration": 200,
+      "currentTime": 20
+    }
+  },
+  {
+    "name": "other-user-create",
+    "item": "w2-private-item",
+    "patch": {
+      "currentTime": 10
+    }
+  },
+  {
+    "name": "missing-item",
+    "item": "absent",
+    "patch": {}
+  },
+  {
+    "name": "not-book",
+    "item": "w2-podcast",
+    "patch": {}
+  },
+  {
+    "name": "missing-episode",
+    "item": "w2-podcast",
+    "episode": "absent",
+    "patch": {}
+  }
+]

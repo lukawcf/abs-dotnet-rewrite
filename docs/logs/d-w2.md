@@ -30,3 +30,22 @@
 - No writes/bookmarks, nginx changes, push or PR. Awaiting human review; no subsequent task selected.
 - Time/cost: unavailable; no measured duration or monetary estimate claimed.
 - Outcome: step 1 implementation ready for review; commit identifiable by this log's Git history.
+
+## 2026-10-13 — Step 2: single progress creation/update
+
+- Human accepted the query implementation: “查询部分通过”.
+- Exact prompt: “查询部分通过。接下来实现单项播放进度的创建和更新，核对 Node.js 的部分更新、完成状态和时间戳行为，补充测试。写入默认关闭，完成后让我检查，暂时不要做批量更新、删除和书签。”
+- Workflow W2; agent Codex, exact model unavailable; operator D member. Prior W1/W3 knowledge remains disclosed.
+- Independently implemented single PATCH, D-owned keyless media lookups, finite scalar conversion,
+  partial update/completion/time transitions and explicit default-off write gate. No W1/W3 code copied.
+- Node recorder executes actual User creation/update and MediaProgress persistence; media lookups simulated.
+- Recorder first failed because its synthetic users table had not been initialized; initialized that test-only FK parent.
+- First .NET run: 56 failed, 1 passed from missing podcasts FK parent in fixture setup.
+  Extracted actual podcasts DDL and seeded the parent; second run: 57 passed.
+- Review found Node's forced extraData dirty flag matters even when progress has the same stored value;
+  implemented explicit EF property modification and added a regression case, not a failing test suppression.
+- Expanded final run: 63 passed, 0 failed/skipped. Build zero warnings/errors; format verify exit 0.
+- Raw failure/final TRX retained in docs/evidence/w2. Review artifact: docs/research/d-w2-step2-review.md.
+- Intentional input boundaries and unverified cache/socket/JWT/nginx/concurrency behavior are disclosed there.
+- No batch/delete/bookmarks, live write enablement, nginx routing, push or PR.
+- Time/cost: not measured, unavailable. Outcome: ready for human review; this entry's Git commit identifies the result.

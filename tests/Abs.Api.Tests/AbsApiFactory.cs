@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -20,13 +21,14 @@ public class AbsApiFactory : WebApplicationFactory<Program>
     private readonly SqliteConnection connection = new("Data Source=:memory:");
 
     public string EnvironmentName { get; init; } = "Development";
+    public bool EnableProgressWrites { get; init; }
 
     public Action<IServiceCollection>? ConfigureTestServices { get; init; }
 
     public AbsApiFactory()
     {
         connection.Open();
-        foreach (var file in new[] { "schema.sql", "seed.sql", "w2-progress-schema.sql", "w2-progress-seed.sql" })
+        foreach (var file in new[] { "schema.sql", "seed.sql", "w2-progress-schema.sql", "w2-progress-seed.sql", "w2-write-media-schema.sql", "w2-write-media-seed.sql" })
         {
             using var command = connection.CreateCommand();
             command.CommandText = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Fixtures", file));
@@ -37,6 +39,11 @@ public class AbsApiFactory : WebApplicationFactory<Program>
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment(EnvironmentName);
+        builder.ConfigureAppConfiguration((_, configuration) =>
+            configuration.AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["ProgressWrites:Enabled"] = EnableProgressWrites.ToString()
+            }));
         builder.ConfigureServices(services =>
         {
             services.RemoveAll<DbContextOptions<AbsDbContext>>();

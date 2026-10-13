@@ -15,6 +15,7 @@ public class PlaybackProgressConfiguration : IEntityTypeConfiguration<PlaybackPr
         builder.Property(x => x.UserId).HasColumnName("userId");
         builder.Property(x => x.MediaItemId).HasColumnName("mediaItemId");
         builder.Property(x => x.MediaItemType).HasColumnName("mediaItemType");
+        builder.Property(x => x.PodcastId).HasColumnName("podcastId");
         builder.Property(x => x.Duration).HasColumnName("duration");
         builder.Property(x => x.CurrentTime).HasColumnName("currentTime");
         builder.Property(x => x.IsFinished).HasColumnName("isFinished");

@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using System.Text.Json;
 using Abs.Api.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,8 +10,21 @@ namespace Abs.Api.Controllers;
 [ApiController]
 [Authorize]
 [Route("api/me/progress")]
-public class PlaybackProgressController(PlaybackProgressService progress) : ControllerBase
+public class PlaybackProgressController(PlaybackProgressService progress, IConfiguration configuration) : ControllerBase
 {
+    // Node MeController.js:275-288. A separate explicit gate preserves read-only defaults.
+    [HttpPatch("batch/update")]
+    public IActionResult UnsupportedBatch() => StatusCode(501);
+
+    [HttpPatch("{id}/{episodeId?}")]
+    public async Task<IActionResult> Patch(string id, string? episodeId, [FromBody] JsonElement patch, CancellationToken ct)
+    {
+        if (!configuration.GetValue<bool>("ProgressWrites:Enabled")) return StatusCode(501);
+        if (patch.ValueKind != JsonValueKind.Object) return BadRequest("Expected a JSON object");
+        var result = await progress.UpsertAsync(User.FindFirstValue(ClaimTypes.NameIdentifier)!, id, episodeId, patch, ct);
+        return new ContentResult { StatusCode = result.Status, Content = result.Message, ContentType = "text/plain" };
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetAll(CancellationToken ct) =>
         Ok(new { mediaProgress = await progress.GetAllAsync(User.FindFirstValue(ClaimTypes.NameIdentifier)!, ct) });

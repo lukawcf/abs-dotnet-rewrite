@@ -6,6 +6,7 @@ public class PlaybackProgress
     public string? UserId { get; set; }
     public string? MediaItemId { get; set; }
     public string? MediaItemType { get; set; }
+    public string? PodcastId { get; set; }
     public double? Duration { get; set; }
     public double? CurrentTime { get; set; }
     public bool? IsFinished { get; set; }

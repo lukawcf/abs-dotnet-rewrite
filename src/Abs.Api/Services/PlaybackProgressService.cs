@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Abs.Api.Services;
 
-public class PlaybackProgressService(AbsDbContext db)
+public partial class PlaybackProgressService(AbsDbContext db)
 {
     // Node User.js:716-721 matches libraryItemId in extraData, optionally mediaItemId.
     // No library permission filtering: these endpoints only expose the authenticated user's rows.
