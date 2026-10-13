@@ -3,6 +3,7 @@ using System.Text.Json;
 using Abs.Api.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Abs.Api.Controllers;
 
@@ -14,7 +15,7 @@ public class PlaybackProgressController(PlaybackProgressService progress, IConfi
 {
     // Node MeController.js:275-288. A separate explicit gate preserves read-only defaults.
     [HttpPatch("batch/update")]
-    public async Task<IActionResult> Batch([FromBody] JsonElement payload, CancellationToken ct)
+    public async Task<IActionResult> Batch([FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow)] JsonElement payload, CancellationToken ct)
     {
         if (!configuration.GetValue<bool>("ProgressWrites:Enabled")) return StatusCode(501);
         if (payload.ValueKind != JsonValueKind.Array || payload.GetArrayLength() == 0)

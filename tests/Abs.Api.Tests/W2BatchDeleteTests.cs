@@ -11,6 +11,41 @@ namespace Abs.Api.Tests;
 
 public class W2BatchDeleteTests
 {
+    [Fact]
+    public async Task Database_failure_stops_batch_but_preserves_earlier_success()
+    {
+        using var factory = new AbsApiFactory { EnableProgressWrites = true };
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Dev-User", "w2-alice");
+        using (var scope = factory.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<AbsDbContext>();
+            // Synthetic failure injection in the test DB only, never application SQL.
+            await db.Database.ExecuteSqlRawAsync("CREATE TRIGGER fail_new_progress BEFORE INSERT ON mediaProgresses WHEN NEW.mediaItemId = 'w2-new-book' BEGIN SELECT RAISE(ABORT, 'injected failure'); END;");
+        }
+        var payload = JsonNode.Parse("[{\"libraryItemId\":\"w2-item\",\"currentTime\":80},{\"libraryItemId\":\"w2-new-item\",\"currentTime\":30},{\"libraryItemId\":\"w2-item\",\"currentTime\":90}]");
+        // Development exception middleware exposes the unhandled database failure as HTTP 500.
+        var failed = await client.PatchAsJsonAsync("/api/me/progress/batch/update", payload);
+        Assert.Equal(HttpStatusCode.InternalServerError, failed.StatusCode);
+        var row = JsonNode.Parse(await client.GetStringAsync("/api/me/progress/w2-item"))!;
+        Assert.Equal(80, row["currentTime"]!.GetValue<double>());
+        Assert.Equal(HttpStatusCode.NotFound, (await client.GetAsync("/api/me/progress/w2-new-item")).StatusCode);
+        Assert.Equal(HttpStatusCode.OK, (await client.PatchAsJsonAsync("/api/me/progress/batch/update",
+            new[] { new { libraryItemId = "w2-item", currentTime = 85 } })).StatusCode);
+    }
+
+    [Fact]
+    public async Task Missing_batch_body_matches_Node_plain_error()
+    {
+        using var factory = new AbsApiFactory { EnableProgressWrites = true };
+        using var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Dev-User", "w2-alice");
+        using var request = new HttpRequestMessage(HttpMethod.Patch, "/api/me/progress/batch/update");
+        var response = await client.SendAsync(request);
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        Assert.Equal("Missing request payload", await response.Content.ReadAsStringAsync());
+    }
+
     private static JsonArray Load(string file) => JsonNode.Parse(File.ReadAllText(
         Path.Combine(AppContext.BaseDirectory, "Fixtures", file)))!.AsArray();
     public static IEnumerable<object[]> Cases => Load("w2-batch-delete-cases.json")
