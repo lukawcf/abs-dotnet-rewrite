@@ -37,6 +37,14 @@ public class AbsApiFactory : WebApplicationFactory<Program>
         }
     }
 
+    /// <summary>Runs setup SQL against the in-memory database, for tests that change a row first.</summary>
+    public void Execute(string sql)
+    {
+        using var command = connection.CreateCommand();
+        command.CommandText = sql;
+        command.ExecuteNonQuery();
+    }
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment(EnvironmentName);

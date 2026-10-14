@@ -12,6 +12,13 @@ public class AbsDbContext(DbContextOptions<AbsDbContext> options) : DbContext(op
     public DbSet<Library> Libraries => Set<Library>();
     public DbSet<LibraryFolder> LibraryFolders => Set<LibraryFolder>();
     public DbSet<User> Users => Set<User>();
+    public DbSet<LibraryItem> LibraryItems => Set<LibraryItem>();
+    public DbSet<Book> Books => Set<Book>();
+    public DbSet<Author> Authors => Set<Author>();
+    public DbSet<Series> Series => Set<Series>();
+    public DbSet<BookAuthor> BookAuthors => Set<BookAuthor>();
+    public DbSet<BookSeries> BookSeries => Set<BookSeries>();
+    public DbSet<Setting> Settings => Set<Setting>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AbsDbContext).Assembly);

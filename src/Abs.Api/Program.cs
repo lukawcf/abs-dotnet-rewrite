@@ -13,6 +13,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IPermissionService, PermissionService>();
 builder.Services.AddScoped<LibraryService>();
+builder.Services.AddScoped<LibraryItemService>();
 builder.Services.AddScoped<PlaybackProgressService>();
 builder.Services.AddScoped<IUserProgressReader>(services => services.GetRequiredService<PlaybackProgressService>());
 builder.Services.AddScoped<BookmarkService>();
