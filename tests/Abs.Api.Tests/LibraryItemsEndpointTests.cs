@@ -16,7 +16,7 @@ public class LibraryItemsEndpointTests : IDisposable
     private const string Alpha = "li-alpha";
     private const string Podcast = "li-podcast";
 
-    private readonly AbsApiFactory factory = new();
+    private readonly AbsApiFactory factory = new() { IncludeW2Fixtures = false };
 
     public void Dispose() => factory.Dispose();
 
@@ -159,6 +159,7 @@ public class LibraryItemsEndpointTests : IDisposable
     {
         using var custom = new AbsApiFactory
         {
+            IncludeW2Fixtures = false,
             ConfigureTestServices = services =>
             {
                 services.RemoveAll<IPermissionService>();
