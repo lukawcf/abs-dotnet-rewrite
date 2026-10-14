@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -20,13 +21,37 @@ public class AbsApiFactory : WebApplicationFactory<Program>
     private readonly SqliteConnection connection = new("Data Source=:memory:");
 
     public string EnvironmentName { get; init; } = "Development";
+    public bool EnableProgressWrites { get; init; }
+    public string? TestJwtSecret { get; init; }
 
     public Action<IServiceCollection>? ConfigureTestServices { get; init; }
+
+    /// <summary>
+    /// The W2 progress and bookmark fixtures move rows into library A. Library Items tests count the items
+    /// of library A, so they turn this off and get only schema.sql and seed.sql.
+    /// </summary>
+    public bool IncludeW2Fixtures { get; init; } = true;
+
+    private bool seeded;
 
     public AbsApiFactory()
     {
         connection.Open();
-        foreach (var file in new[] { "schema.sql", "seed.sql" })
+    }
+
+    // Seeding is lazy so that init properties (IncludeW2Fixtures) are already set.
+    private void EnsureSeeded()
+    {
+        if (seeded)
+        {
+            return;
+        }
+
+        seeded = true;
+        string[] files = IncludeW2Fixtures
+            ? ["schema.sql", "seed.sql", "w2-progress-schema.sql", "w2-progress-seed.sql", "w2-write-media-schema.sql", "w2-write-media-seed.sql", "w2-bookmark-seed.sql"]
+            : ["schema.sql", "seed.sql"];
+        foreach (var file in files)
         {
             using var command = connection.CreateCommand();
             command.CommandText = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Fixtures", file));
@@ -37,6 +62,7 @@ public class AbsApiFactory : WebApplicationFactory<Program>
     /// <summary>Runs setup SQL against the in-memory database, for tests that change a row first.</summary>
     public void Execute(string sql)
     {
+        EnsureSeeded();
         using var command = connection.CreateCommand();
         command.CommandText = sql;
         command.ExecuteNonQuery();
@@ -44,7 +70,14 @@ public class AbsApiFactory : WebApplicationFactory<Program>
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        EnsureSeeded();
         builder.UseEnvironment(EnvironmentName);
+        builder.ConfigureAppConfiguration((_, configuration) =>
+            configuration.AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["ProgressWrites:Enabled"] = EnableProgressWrites.ToString(),
+                ["JWT_SECRET_KEY"] = TestJwtSecret
+            }));
         builder.ConfigureServices(services =>
         {
             services.RemoveAll<DbContextOptions<AbsDbContext>>();

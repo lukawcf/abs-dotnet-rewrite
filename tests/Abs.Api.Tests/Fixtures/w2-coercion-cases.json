@@ -1,0 +1,75 @@
+[
+  {
+    "name": "extra-finish-numeric-1",
+    "item": "w2-item",
+    "patch": {
+      "isFinished": 1
+    }
+  },
+  {
+    "name": "extra-unfinish-numeric-0",
+    "item": "w2-private-item",
+    "user": "w2-bob",
+    "patch": {
+      "isFinished": 0
+    }
+  },
+  {
+    "name": "extra-finish-string-false",
+    "item": "w2-item",
+    "patch": {
+      "isFinished": "false"
+    }
+  },
+  {
+    "name": "extra-hide-numeric-1",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 80,
+      "hideFromContinueListening": 1
+    }
+  },
+  {
+    "name": "extra-hide-numeric-0",
+    "item": "w2-item",
+    "patch": {
+      "currentTime": 80,
+      "hideFromContinueListening": 0
+    }
+  },
+  {
+    "name": "extra-new-numeric-finished",
+    "item": "w2-new-item",
+    "patch": {
+      "isFinished": 1
+    }
+  },
+  {
+    "name": "extra-new-progress-over-one",
+    "item": "w2-new-item",
+    "patch": {
+      "progress": 2
+    }
+  },
+  {
+    "name": "extra-progress-true",
+    "item": "w2-item",
+    "patch": {
+      "progress": true
+    }
+  },
+  {
+    "name": "extra-null-isFinished",
+    "item": "w2-item",
+    "patch": {
+      "isFinished": null
+    }
+  },
+  {
+    "name": "extra-ebook-null",
+    "item": "w2-item",
+    "patch": {
+      "ebookLocation": null
+    }
+  }
+]

@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="29cdc0ce-1e28-41e3-bc86-c454664c92c5" name="xiaoj@骁基苯的LEGION 2026-10-13 20:09:47" runUser="骁基苯的LEGION\xiaoj" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-13T20:09:47.8438217+13:00" queuing="2026-10-13T20:09:47.8438221+13:00" start="2026-10-13T20:09:45.9043164+13:00" finish="2026-10-13T20:09:49.3459523+13:00" />
+  <TestSettings name="default" id="c288edad-2b63-4ee5-acfe-50cc345f7d3c">
+    <Deployment runDeploymentRoot="xiaoj_骁基苯的LEGION_2026-10-13_20_09_47" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8ef3e592-44af-448d-bb0c-3960eaa362b7" testId="bf047d9e-e316-46e2-6ff5-661c15811283" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;unfinish&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0453820" startTime="2026-10-13T20:09:48.8511800+13:00" endTime="2026-10-13T20:09:48.8511806+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ef3e592-44af-448d-bb0c-3960eaa362b7" />
+    <UnitTestResult executionId="ac36c482-e41f-429c-8d12-7f8ba615dd65" testId="5d4c88f9-abc6-aabb-29ba-dce242101ad0" testName="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-podcast/w2-episode&quot;, fixture: &quot;episode&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.8194363" startTime="2026-10-13T20:09:47.9081854+13:00" endTime="2026-10-13T20:09:47.9081857+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac36c482-e41f-429c-8d12-7f8ba615dd65" />
+    <UnitTestResult executionId="ec9fcaae-8f46-4b4d-a021-51d2d4acfbff" testId="2673938a-f2c2-0a43-f24e-71f20abdf02b" testName="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-private-item&quot;, fixture: &quot;otherUser&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0405866" startTime="2026-10-13T20:09:47.9870443+13:00" endTime="2026-10-13T20:09:47.9870447+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec9fcaae-8f46-4b4d-a021-51d2d4acfbff" />
+    <UnitTestResult executionId="0f0d260b-4cf9-41f2-a7e5-7ddf1304129c" testId="4cb1543b-4e45-2309-9c87-5f670ad38869" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;finish&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0366091" startTime="2026-10-13T20:09:48.8878973+13:00" endTime="2026-10-13T20:09:48.8878976+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f0d260b-4cf9-41f2-a7e5-7ddf1304129c" />
+    <UnitTestResult executionId="0610ae6c-9a36-482d-93ba-7869121ceffe" testId="070f71f0-01bc-9ac5-7820-bd246e7642b5" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;not-book&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0429909" startTime="2026-10-13T20:09:48.4517856+13:00" endTime="2026-10-13T20:09:48.4517858+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0610ae6c-9a36-482d-93ba-7869121ceffe" />
+    <UnitTestResult executionId="9517ed27-8f77-447d-80c6-8442e7b6fee4" testId="6221401a-868f-2031-04b4-31303417e544" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;threshold-equal&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0404383" startTime="2026-10-13T20:09:48.6327663+13:00" endTime="2026-10-13T20:09:48.6327665+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9517ed27-8f77-447d-80c6-8442e7b6fee4" />
+    <UnitTestResult executionId="0cc61640-db2d-4ec7-8c4f-f61322e315d2" testId="f7fc0eed-2995-08d8-8d7f-c7d0070aeda8" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;same-stored-progress-touches-timestamp&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0325587" startTime="2026-10-13T20:09:48.7158487+13:00" endTime="2026-10-13T20:09:48.7158490+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0cc61640-db2d-4ec7-8c4f-f61322e315d2" />
+    <UnitTestResult executionId="006a07b9-3b09-42e7-a4c6-b1c8da835ab1" testId="3257fe58-2023-cff6-df37-143e6a11f709" testName="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;currentTime\&quot;:\&quot;invalid\&quot;}&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0396415" startTime="2026-10-13T20:09:49.0739819+13:00" endTime="2026-10-13T20:09:49.0739821+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="006a07b9-3b09-42e7-a4c6-b1c8da835ab1" />
+    <UnitTestResult executionId="25f232ac-a385-4c92-ae6c-c35264ac6119" testId="7ef359de-8167-a8ca-70e7-633a6e3020b1" testName="Abs.Api.Tests.LibrariesEndpointTests.GetById_matches_the_library_object_of_Node" computerName="骁基苯的LEGION" duration="00:00:00.0273946" startTime="2026-10-13T20:09:48.2518035+13:00" endTime="2026-10-13T20:09:48.2518038+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25f232ac-a385-4c92-ae6c-c35264ac6119" />
+    <UnitTestResult executionId="bac870b3-6569-45af-a773-ccf7de65cb1e" testId="0a9ff353-4422-0f59-6fb7-487e361e6e9f" testName="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress/w2-item&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0281004" startTime="2026-10-13T20:09:48.1622020+13:00" endTime="2026-10-13T20:09:48.1622026+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bac870b3-6569-45af-a773-ccf7de65cb1e" />
+    <UnitTestResult executionId="94608836-4ed1-460f-a75b-7fb408816f01" testId="efc96d53-1032-38d0-3689-50b29b0b5194" testName="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-book&quot;, fixture: &quot;missing&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0277583" startTime="2026-10-13T20:09:48.0149219+13:00" endTime="2026-10-13T20:09:48.0149221+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94608836-4ed1-460f-a75b-7fb408816f01" />
+    <UnitTestResult executionId="d8289a34-a0e5-4609-a253-40266f06dabf" testId="044dd3a6-556f-ae73-cb57-3d323821f04c" testName="Abs.Api.Tests.LibrariesEndpointTests.The_controller_asks_IPermissionService_instead_of_reading_permissions_itself" computerName="骁基苯的LEGION" duration="00:00:00.0271712" startTime="2026-10-13T20:09:48.4124217+13:00" endTime="2026-10-13T20:09:48.4124219+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8289a34-a0e5-4609-a253-40266f06dabf" />
+    <UnitTestResult executionId="3e9af97b-7e0d-4339-bee0-1de6b9d4f6e3" testId="1fd7ffdd-3335-38b9-5ce8-133c9e091328" testName="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-item&quot;, fixture: &quot;book&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0288217" startTime="2026-10-13T20:09:48.0439013+13:00" endTime="2026-10-13T20:09:48.0439015+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e9af97b-7e0d-4339-bee0-1de6b9d4f6e3" />
+    <UnitTestResult executionId="cfd58a2a-3f90-47d2-bce7-47b08c2cd901" testId="0fa09d93-091b-362d-d810-6bb6e2f73145" testName="Abs.Api.Tests.LibrariesEndpointTests.Fake_progress_reader_returns_what_it_was_given" computerName="骁基苯的LEGION" duration="00:00:00.0045014" startTime="2026-10-13T20:09:48.4171248+13:00" endTime="2026-10-13T20:09:48.4171255+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfd58a2a-3f90-47d2-bce7-47b08c2cd901" />
+    <UnitTestResult executionId="ba44d6bb-0782-4bd3-b960-6702b52c4a7c" testId="bb4d1887-0759-2c66-9247-f3040dea2506" testName="Abs.Api.Tests.W2ProgressWriteTests.Creation_for_other_user_does_not_change_existing_owner" computerName="骁基苯的LEGION" duration="00:00:00.0446999" startTime="2026-10-13T20:09:49.2139376+13:00" endTime="2026-10-13T20:09:49.2139378+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba44d6bb-0782-4bd3-b960-6702b52c4a7c" />
+    <UnitTestResult executionId="0f195106-582d-4f22-82ee-349e6ddecd06" testId="f0b15fec-e277-e2ba-03d2-e295fda648fd" testName="Abs.Api.Tests.W2ProgressWriteTests.Non_object_payload_rejected" computerName="骁基苯的LEGION" duration="00:00:00.0254520" startTime="2026-10-13T20:09:49.1690652+13:00" endTime="2026-10-13T20:09:49.1690654+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f195106-582d-4f22-82ee-349e6ddecd06" />
+    <UnitTestResult executionId="afbf7ba3-bef5-4f1a-b23b-e260638a1af5" testId="c6d93397-a4f1-1409-07a0-d7e356c73315" testName="Abs.Api.Tests.LibrariesEndpointTests.Unsupported_include_values_return_501_so_Node_can_handle_them" computerName="骁基苯的LEGION" duration="00:00:00.0466935" startTime="2026-10-13T20:09:48.4639602+13:00" endTime="2026-10-13T20:09:48.4639605+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afbf7ba3-bef5-4f1a-b23b-e260638a1af5" />
+    <UnitTestResult executionId="9b092cf9-e4c2-4387-b329-0a701bdc1b67" testId="16c231b9-61cd-dd3d-91a3-7bfeae6fda58" testName="Abs.Api.Tests.W2ProgressWriteTests.Anonymous_write_is_unauthorized" computerName="骁基苯的LEGION" duration="00:00:00.0229554" startTime="2026-10-13T20:09:49.2725381+13:00" endTime="2026-10-13T20:09:49.2725383+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b092cf9-e4c2-4387-b329-0a701bdc1b67" />
+    <UnitTestResult executionId="e6d765e4-ae85-4cf8-a26e-037114c87b6a" testId="2efa7583-fa69-a73c-529f-a4ca50b31928" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;other-user-create&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0341317" startTime="2026-10-13T20:09:48.3665660+13:00" endTime="2026-10-13T20:09:48.3665661+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6d765e4-ae85-4cf8-a26e-037114c87b6a" />
+    <UnitTestResult executionId="c7d07229-0c77-4ef5-a23f-5fd9d624857b" testId="bbc87349-05e9-9dcc-f5ec-26d557c0c8bb" testName="Abs.Api.Tests.DevLoginTests.Requests_without_the_dev_header_are_unauthorized" computerName="骁基苯的LEGION" duration="00:00:00.2111972" startTime="2026-10-13T20:09:47.3026537+13:00" endTime="2026-10-13T20:09:47.3026538+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7d07229-0c77-4ef5-a23f-5fd9d624857b" />
+    <UnitTestResult executionId="8b439cac-8ec7-4ae7-a123-671880a552a3" testId="7d2f3216-66dd-e25f-37e8-12ea27775387" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;create-no-auto-finish&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0339481" startTime="2026-10-13T20:09:48.4858368+13:00" endTime="2026-10-13T20:09:48.4858370+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b439cac-8ec7-4ae7-a123-671880a552a3" />
+    <UnitTestResult executionId="ee67636d-c426-4c96-b73e-6852846ab6e0" testId="493ab283-d102-37ed-4e62-b4190a803e95" testName="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;currentTime\&quot;:[]}&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0330018" startTime="2026-10-13T20:09:49.0341725+13:00" endTime="2026-10-13T20:09:49.0341728+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee67636d-c426-4c96-b73e-6852846ab6e0" />
+    <UnitTestResult executionId="21075a2f-5d1c-433c-8bc2-3c1a6ae5ce00" testId="11bff93b-51e5-3f9f-b4bb-0552aa3bf27c" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;invalid-sync&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0396361" startTime="2026-10-13T20:09:48.5255786+13:00" endTime="2026-10-13T20:09:48.5255788+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21075a2f-5d1c-433c-8bc2-3c1a6ae5ce00" />
+    <UnitTestResult executionId="1db15e42-4cff-4762-a32a-b2956d651c6b" testId="00f91146-fe64-df1f-41cb-c0fa4227e19e" testName="Abs.Api.Tests.LibrariesEndpointTests.GetAll_for_admin_returns_libraries_ordered_by_displayOrder" computerName="骁基苯的LEGION" duration="00:00:00.0487621" startTime="2026-10-13T20:09:48.1405497+13:00" endTime="2026-10-13T20:09:48.1405500+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1db15e42-4cff-4762-a32a-b2956d651c6b" />
+    <UnitTestResult executionId="b0f85976-4ddf-4ac7-9e70-24ab47ddf3c3" testId="19a03e9a-037b-6efe-ce7a-acffd2561257" testName="Abs.Api.Tests.DevLoginTests.The_dev_header_is_ignored_outside_Development(environment: &quot;Production&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0233471" startTime="2026-10-13T20:09:47.3249301+13:00" endTime="2026-10-13T20:09:47.3249306+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0f85976-4ddf-4ac7-9e70-24ab47ddf3c3" />
+    <UnitTestResult executionId="82933eeb-07eb-4d7b-a925-53d832f0f3e1" testId="278daa23-37f7-8152-d7e1-a75eb735735b" testName="Abs.Api.Tests.LibrariesEndpointTests.A_user_without_permissions_cannot_access_a_library" computerName="骁基苯的LEGION" duration="00:00:00.0338750" startTime="2026-10-13T20:09:48.3850215+13:00" endTime="2026-10-13T20:09:48.3850217+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82933eeb-07eb-4d7b-a925-53d832f0f3e1" />
+    <UnitTestResult executionId="e4249dff-71d4-45fa-9326-10731236bc80" testId="c071c781-3868-46b3-cd4c-d688538dcded" testName="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;finishedAt\&quot;:\&quot;invalid\&quot;}&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0329085" startTime="2026-10-13T20:09:49.1069971+13:00" endTime="2026-10-13T20:09:49.1069973+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4249dff-71d4-45fa-9326-10731236bc80" />
+    <UnitTestResult executionId="e6f0a703-c5e1-4f75-82d0-1e3ea7dd079e" testId="3c34c827-c8f8-1a7f-f9c3-9ac3f79c8760" testName="Abs.Api.Tests.LibrariesEndpointTests.GetAll_for_a_user_limited_to_A_matches_Node_response_exactly" computerName="骁基苯的LEGION" duration="00:00:00.0327860" startTime="2026-10-13T20:09:48.2847347+13:00" endTime="2026-10-13T20:09:48.2847348+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6f0a703-c5e1-4f75-82d0-1e3ea7dd079e" />
+    <UnitTestResult executionId="a4cbf606-ebc6-40cb-bfa5-a41b46094fc8" testId="f8b8e037-feab-7bec-bba5-3fbd14b6d6a1" testName="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;isFinished\&quot;:\&quot;false\&quot;}&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0355451" startTime="2026-10-13T20:09:49.0010166+13:00" endTime="2026-10-13T20:09:49.0010168+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4cbf606-ebc6-40cb-bfa5-a41b46094fc8" />
+    <UnitTestResult executionId="48e62a97-7238-445c-9cfe-a9f635791492" testId="1b019611-388b-49ec-2b0f-2f89c7fbeddb" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;explicit-null&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0515405" startTime="2026-10-13T20:09:48.2477287+13:00" endTime="2026-10-13T20:09:48.2477289+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48e62a97-7238-445c-9cfe-a9f635791492" />
+    <UnitTestResult executionId="986d6d6f-d837-45fa-b5c7-09d4b4c40f6f" testId="947db19c-6ac3-6e5c-f4f3-9a6c2cea4a9e" testName="Abs.Api.Tests.W2ProgressReadTests.User_without_progress_gets_empty_list" computerName="骁基苯的LEGION" duration="00:00:00.0437732" startTime="2026-10-13T20:09:48.2257520+13:00" endTime="2026-10-13T20:09:48.2257523+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="986d6d6f-d837-45fa-b5c7-09d4b4c40f6f" />
+    <UnitTestResult executionId="2604dcd7-cdfa-4153-9460-b6458ff0b631" testId="ff6a7c26-8070-b084-7412-20970ab7bc20" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;episode-update&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0428360" startTime="2026-10-13T20:09:48.2906809+13:00" endTime="2026-10-13T20:09:48.2906811+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2604dcd7-cdfa-4153-9460-b6458ff0b631" />
+    <UnitTestResult executionId="65dce86d-4fa9-4187-be24-b2ee3b06539c" testId="92bea7c7-9217-e145-4327-edfaf29a21ca" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;local-sync&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0464204" startTime="2026-10-13T20:09:48.1647316+13:00" endTime="2026-10-13T20:09:48.1647318+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="65dce86d-4fa9-4187-be24-b2ee3b06539c" />
+    <UnitTestResult executionId="4b99c86e-225f-412e-9138-b72c56d0f770" testId="c4f6c735-8cc4-0648-866c-02158612cb78" testName="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress/w2-podcast/w2-episode&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0286499" startTime="2026-10-13T20:09:48.1339927+13:00" endTime="2026-10-13T20:09:48.1339931+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b99c86e-225f-412e-9138-b72c56d0f770" />
+    <UnitTestResult executionId="4433cb44-0025-4d5d-a458-46850caf3019" testId="ee05860b-199e-bb9b-348e-4ee4310b47ec" testName="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0195601" startTime="2026-10-13T20:09:48.1818633+13:00" endTime="2026-10-13T20:09:48.1818638+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4433cb44-0025-4d5d-a458-46850caf3019" />
+    <UnitTestResult executionId="efabf86e-504d-458a-b489-4cbf39bd7b46" testId="33d1a8e3-9b9c-615f-de76-d96a92623e71" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;percent-equal&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0311910" startTime="2026-10-13T20:09:48.5922095+13:00" endTime="2026-10-13T20:09:48.5922097+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efabf86e-504d-458a-b489-4cbf39bd7b46" />
+    <UnitTestResult executionId="7c7912ba-4ada-48b2-b37e-f94e6c7cbb55" testId="df854632-eb7f-ed97-55f2-294572e031ed" testName="Abs.Api.Tests.W2ProgressWriteTests.Batch_remains_unimplemented" computerName="骁基苯的LEGION" duration="00:00:00.2789083" startTime="2026-10-13T20:09:47.3676426+13:00" endTime="2026-10-13T20:09:47.3676428+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c7912ba-4ada-48b2-b37e-f94e6c7cbb55" />
+    <UnitTestResult executionId="3a344639-acc7-4daf-9a82-e7a147f8743b" testId="5242d8ed-9a02-f979-69d0-c78b9e43c4f9" testName="Abs.Api.Tests.W2ProgressReadTests.Wrong_episode_and_unsupported_mutating_action(route: &quot;/api/me/progress/w2-item/remove-from-continue-list&quot;..., status: 501)" computerName="骁基苯的LEGION" duration="00:00:00.0218515" startTime="2026-10-13T20:09:48.1052297+13:00" endTime="2026-10-13T20:09:48.1052299+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a344639-acc7-4daf-9a82-e7a147f8743b" />
+    <UnitTestResult executionId="31efa783-9c2e-4f06-a2e2-60cf2444e6d3" testId="f17d85c1-b195-31a8-65c0-05cd9d6e6f56" testName="Abs.Api.Tests.LibrariesEndpointTests.An_unknown_user_gets_403" computerName="骁基苯的LEGION" duration="00:00:00.8000008" startTime="2026-10-13T20:09:47.8865072+13:00" endTime="2026-10-13T20:09:47.8865074+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31efa783-9c2e-4f06-a2e2-60cf2444e6d3" />
+    <UnitTestResult executionId="f27cd007-dd66-4029-8397-e17e4e907c18" testId="f9e1c6ca-2580-c508-85bf-ba3b654cb6ed" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;ebook&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0310586" startTime="2026-10-13T20:09:48.9190699+13:00" endTime="2026-10-13T20:09:48.9190701+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f27cd007-dd66-4029-8397-e17e4e907c18" />
+    <UnitTestResult executionId="80587592-be20-42bf-a364-8eb27d824317" testId="acac966f-c611-7ec8-bf5f-a510899946f3" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;missing-item&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0309591" startTime="2026-10-13T20:09:48.7469526+13:00" endTime="2026-10-13T20:09:48.7469529+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80587592-be20-42bf-a364-8eb27d824317" />
+    <UnitTestResult executionId="059b8e68-53ff-4b30-b11d-30ccfc43ff0e" testId="5a4ebff1-e735-c7e8-cc90-5ba64aa603b4" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;threshold-beyond&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0502928" startTime="2026-10-13T20:09:48.6831728+13:00" endTime="2026-10-13T20:09:48.6831730+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="059b8e68-53ff-4b30-b11d-30ccfc43ff0e" />
+    <UnitTestResult executionId="df9524c1-ab4d-4a12-b5cb-fe6da41260c6" testId="33983d6d-12a2-56cc-ace7-b0e04c8f83fc" testName="Abs.Api.Tests.LibrariesEndpointTests.Library_without_scan_settings_or_folders_uses_nulls_and_empty_values" computerName="骁基苯的LEGION" duration="00:00:00.2050301" startTime="2026-10-13T20:09:48.0916515+13:00" endTime="2026-10-13T20:09:48.0916518+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df9524c1-ab4d-4a12-b5cb-fe6da41260c6" />
+    <UnitTestResult executionId="d7a96320-8106-4dcf-a2ca-c9f15c447784" testId="25e98de3-0b4b-3c7c-59ea-37f280d7df19" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;numeric-strings&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0415423" startTime="2026-10-13T20:09:48.3323430+13:00" endTime="2026-10-13T20:09:48.3323431+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7a96320-8106-4dcf-a2ca-c9f15c447784" />
+    <UnitTestResult executionId="29160be7-e887-439c-bc7e-7b9c11ed774f" testId="7a77c6bc-27ae-532a-5645-aec530b56599" testName="Abs.Api.Tests.DevLoginTests.The_dev_header_is_ignored_outside_Development(environment: &quot;Staging&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0307223" startTime="2026-10-13T20:09:47.3557919+13:00" endTime="2026-10-13T20:09:47.3557930+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29160be7-e887-439c-bc7e-7b9c11ed774f" />
+    <UnitTestResult executionId="ec93ca12-ac8f-4b65-bc12-7ab7f3d708e7" testId="77c07eae-e8a0-79c0-8429-94bad5693d10" testName="Abs.Api.Tests.W2ProgressWriteTests.Writes_default_off_and_leave_row_unchanged" computerName="骁基苯的LEGION" duration="00:00:00.0353495" startTime="2026-10-13T20:09:49.2494250+13:00" endTime="2026-10-13T20:09:49.2494253+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec93ca12-ac8f-4b65-bc12-7ab7f3d708e7" />
+    <UnitTestResult executionId="ab3423e7-a38f-462a-bdec-bcd327138951" testId="56243fa2-8cb6-5056-44c4-911921fe9dfc" testName="Abs.Api.Tests.LibrariesEndpointTests.GetAll_applies_a_non_empty_list_even_when_accessAllLibraries_is_true" computerName="骁基苯的LEGION" duration="00:00:00.0399100" startTime="2026-10-13T20:09:48.3509979+13:00" endTime="2026-10-13T20:09:48.3509981+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab3423e7-a38f-462a-bdec-bcd327138951" />
+    <UnitTestResult executionId="b0f65891-f1f9-46f9-a566-19ea1cb56d4e" testId="cbcf6477-16fc-f736-b5a3-3c9d46c059ff" testName="Abs.Api.Tests.LibrariesEndpointTests.GetAll_keeps_the_property_order_of_Node" computerName="骁基苯的LEGION" duration="00:00:00.0260797" startTime="2026-10-13T20:09:48.3109550+13:00" endTime="2026-10-13T20:09:48.3109552+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0f65891-f1f9-46f9-a566-19ea1cb56d4e" />
+    <UnitTestResult executionId="ea674314-3385-4699-9e17-966a84dc5c23" testId="73e6a373-9419-8402-dfda-2d080f90d5d5" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;episode-create&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0311855" startTime="2026-10-13T20:09:48.8056540+13:00" endTime="2026-10-13T20:09:48.8056542+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea674314-3385-4699-9e17-966a84dc5c23" />
+    <UnitTestResult executionId="7b8094ce-d8e6-43b7-aad2-0f27361e8ac6" testId="820316d2-5028-e250-7b8a-8c4f4805ffac" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;missing-episode&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0273031" startTime="2026-10-13T20:09:48.7743928+13:00" endTime="2026-10-13T20:09:48.7743931+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b8094ce-d8e6-43b7-aad2-0f27361e8ac6" />
+    <UnitTestResult executionId="14037787-75fc-493f-8542-55bb66e98858" testId="7c6be675-7f72-2a12-a25e-8f61fa9bae52" testName="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress&quot;, fixture: &quot;all&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0380111" startTime="2026-10-13T20:09:47.9463045+13:00" endTime="2026-10-13T20:09:47.9463048+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14037787-75fc-493f-8542-55bb66e98858" />
+    <UnitTestResult executionId="5e5a6fac-4956-4ce0-8587-23ee432c83a0" testId="8aaedcd7-87ce-ce7b-9ce0-79ae0ba49694" testName="Abs.Api.Tests.W2ProgressWriteTests.Partial_update_preserves_unknown_extra_data" computerName="骁基苯的LEGION" duration="00:00:00.0460883" startTime="2026-10-13T20:09:48.9653180+13:00" endTime="2026-10-13T20:09:48.9653185+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e5a6fac-4956-4ce0-8587-23ee432c83a0" />
+    <UnitTestResult executionId="3366a0e9-1b58-48ac-a007-af280105bb5d" testId="7c8e9e6d-6bc8-11df-84e4-15808770e1ff" testName="Abs.Api.Tests.LibrariesEndpointTests.GetById_returns_403_when_the_user_cannot_access_the_library" computerName="骁基苯的LEGION" duration="00:00:00.0312284" startTime="2026-10-13T20:09:48.5213522+13:00" endTime="2026-10-13T20:09:48.5213524+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3366a0e9-1b58-48ac-a007-af280105bb5d" />
+    <UnitTestResult executionId="7c41a19b-d8a4-46a5-a678-2cfaf664fde2" testId="6b9332ce-9020-6287-7841-076a6e79d53c" testName="Abs.Api.Tests.W2ProgressWriteTests.Identity_fields_cannot_transfer_progress_to_another_user" computerName="骁基苯的LEGION" duration="00:00:00.0363327" startTime="2026-10-13T20:09:49.1434689+13:00" endTime="2026-10-13T20:09:49.1434692+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c41a19b-d8a4-46a5-a678-2cfaf664fde2" />
+    <UnitTestResult executionId="ed3f50ee-9889-4ee6-acff-909824067c0f" testId="4959f86d-a431-5090-a4f1-fe39198f651b" testName="Abs.Api.Tests.LibrariesEndpointTests.GetById_returns_404_for_an_unknown_library_when_the_user_can_access_all" computerName="骁基苯的LEGION" duration="00:00:00.0259028" startTime="2026-10-13T20:09:48.4899991+13:00" endTime="2026-10-13T20:09:48.4899992+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed3f50ee-9889-4ee6-acff-909824067c0f" />
+    <UnitTestResult executionId="8740a2e3-cafe-4443-8589-5469204be092" testId="60c81f91-4a5d-205f-fc32-53a32714cc79" testName="Abs.Api.Tests.LibrariesEndpointTests.GetAll_filters_by_the_library_list_of_the_user" computerName="骁基苯的LEGION" duration="00:00:00.0835952" startTime="2026-10-13T20:09:48.2242759+13:00" endTime="2026-10-13T20:09:48.2242761+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8740a2e3-cafe-4443-8589-5469204be092" />
+    <UnitTestResult executionId="46e25c1b-9761-4636-821e-2add19f31baf" testId="30f0c676-bf0e-5a6f-d713-e7494d3dc480" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;partial&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0636970" startTime="2026-10-13T20:09:48.1182134+13:00" endTime="2026-10-13T20:09:48.1182139+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46e25c1b-9761-4636-821e-2add19f31baf" />
+    <UnitTestResult executionId="2e192023-eae8-4b2f-9125-318dcb249966" testId="093722ce-090b-c798-83f5-04374fee170e" testName="Abs.Api.Tests.W2ProgressReadTests.Wrong_episode_and_unsupported_mutating_action(route: &quot;/api/me/progress/w2-podcast/wrong-episode&quot;, status: 404)" computerName="骁基苯的LEGION" duration="00:00:00.0392191" startTime="2026-10-13T20:09:48.0832787+13:00" endTime="2026-10-13T20:09:48.0832790+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e192023-eae8-4b2f-9125-318dcb249966" />
+    <UnitTestResult executionId="507ee236-78dc-4044-bf48-ce43341cbe92" testId="021fe4d5-1891-7164-063f-ddc60a8459a1" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;create-finished&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.6865472" startTime="2026-10-13T20:09:48.0543508+13:00" endTime="2026-10-13T20:09:48.0543511+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="507ee236-78dc-4044-bf48-ce43341cbe92" />
+    <UnitTestResult executionId="0ac8428f-3cdf-4be6-a70d-00ad867f2233" testId="2649e0d2-3257-80ec-2e0c-245c8c9abfad" testName="Abs.Api.Tests.HealthEndpointTests.Health_returns_200" computerName="骁基苯的LEGION" duration="00:00:00.2079180" startTime="2026-10-13T20:09:47.3007421+13:00" endTime="2026-10-13T20:09:47.3007564+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ac8428f-3cdf-4be6-a70d-00ad867f2233" />
+    <UnitTestResult executionId="7ff2ca4a-acfe-4868-ab34-95d1fee8281c" testId="20aad449-29a4-69c2-3411-adbc2396f8fa" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;noop&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0419819" startTime="2026-10-13T20:09:48.4086739+13:00" endTime="2026-10-13T20:09:48.4086743+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ff2ca4a-acfe-4868-ab34-95d1fee8281c" />
+    <UnitTestResult executionId="d9ba9808-2f5d-44f2-9dfc-de22aab32a32" testId="c50a59d9-e479-249a-5a6f-9b6999a454ac" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;percent-beyond&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0352308" startTime="2026-10-13T20:09:48.5609147+13:00" endTime="2026-10-13T20:09:48.5609167+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9ba9808-2f5d-44f2-9dfc-de22aab32a32" />
+    <UnitTestResult executionId="f7cd9f12-6208-44f2-bba2-f35b526b6cf2" testId="45abc587-6b06-a938-c2cb-8a357f3adee0" testName="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;createdAt-ignored&quot;)" computerName="骁基苯的LEGION" duration="00:00:00.0312563" startTime="2026-10-13T20:09:48.1960936+13:00" endTime="2026-10-13T20:09:48.1960938+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7cd9f12-6208-44f2-bba2-f35b526b6cf2" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.User_without_progress_gets_empty_list" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="947db19c-6ac3-6e5c-f4f3-9a6c2cea4a9e">
+      <Execution id="986d6d6f-d837-45fa-b5c7-09d4b4c40f6f" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="User_without_progress_gets_empty_list" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;currentTime\&quot;:\&quot;invalid\&quot;}&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="3257fe58-2023-cff6-df37-143e6a11f709">
+      <Execution id="006a07b9-3b09-42e7-a4c6-b1c8da835ab1" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Unsupported_values_do_not_mutate_data" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;currentTime\&quot;:[]}&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="493ab283-d102-37ed-4e62-b4190a803e95">
+      <Execution id="ee67636d-c426-4c96-b73e-6852846ab6e0" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Unsupported_values_do_not_mutate_data" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Wrong_episode_and_unsupported_mutating_action(route: &quot;/api/me/progress/w2-podcast/wrong-episode&quot;, status: 404)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="093722ce-090b-c798-83f5-04374fee170e">
+      <Execution id="2e192023-eae8-4b2f-9125-318dcb249966" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Wrong_episode_and_unsupported_mutating_action" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetAll_keeps_the_property_order_of_Node" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="cbcf6477-16fc-f736-b5a3-3c9d46c059ff">
+      <Execution id="b0f65891-f1f9-46f9-a566-19ea1cb56d4e" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetAll_keeps_the_property_order_of_Node" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;numeric-strings&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="25e98de3-0b4b-3c7c-59ea-37f280d7df19">
+      <Execution id="d7a96320-8106-4dcf-a2ca-c9f15c447784" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;missing-episode&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="820316d2-5028-e250-7b8a-8c4f4805ffac">
+      <Execution id="7b8094ce-d8e6-43b7-aad2-0f27361e8ac6" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;threshold-equal&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="6221401a-868f-2031-04b4-31303417e544">
+      <Execution id="9517ed27-8f77-447d-80c6-8442e7b6fee4" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.DevLoginTests.The_dev_header_is_ignored_outside_Development(environment: &quot;Production&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="19a03e9a-037b-6efe-ce7a-acffd2561257">
+      <Execution id="b0f85976-4ddf-4ac7-9e70-24ab47ddf3c3" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.DevLoginTests" name="The_dev_header_is_ignored_outside_Development" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetAll_filters_by_the_library_list_of_the_user" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="60c81f91-4a5d-205f-fc32-53a32714cc79">
+      <Execution id="8740a2e3-cafe-4443-8589-5469204be092" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetAll_filters_by_the_library_list_of_the_user" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;finishedAt\&quot;:\&quot;invalid\&quot;}&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="c071c781-3868-46b3-cd4c-d688538dcded">
+      <Execution id="e4249dff-71d4-45fa-9326-10731236bc80" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Unsupported_values_do_not_mutate_data" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;threshold-beyond&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="5a4ebff1-e735-c7e8-cc90-5ba64aa603b4">
+      <Execution id="059b8e68-53ff-4b30-b11d-30ccfc43ff0e" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Partial_update_preserves_unknown_extra_data" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="8aaedcd7-87ce-ce7b-9ce0-79ae0ba49694">
+      <Execution id="5e5a6fac-4956-4ce0-8587-23ee432c83a0" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Partial_update_preserves_unknown_extra_data" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.HealthEndpointTests.Health_returns_200" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="2649e0d2-3257-80ec-2e0c-245c8c9abfad">
+      <Execution id="0ac8428f-3cdf-4be6-a70d-00ad867f2233" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.HealthEndpointTests" name="Health_returns_200" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;local-sync&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="92bea7c7-9217-e145-4327-edfaf29a21ca">
+      <Execution id="65dce86d-4fa9-4187-be24-b2ee3b06539c" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;invalid-sync&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="11bff93b-51e5-3f9f-b4bb-0552aa3bf27c">
+      <Execution id="21075a2f-5d1c-433c-8bc2-3c1a6ae5ce00" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;createdAt-ignored&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="45abc587-6b06-a938-c2cb-8a357f3adee0">
+      <Execution id="f7cd9f12-6208-44f2-bba2-f35b526b6cf2" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.Fake_progress_reader_returns_what_it_was_given" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="0fa09d93-091b-362d-d810-6bb6e2f73145">
+      <Execution id="cfd58a2a-3f90-47d2-bce7-47b08c2cd901" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="Fake_progress_reader_returns_what_it_was_given" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;noop&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="20aad449-29a4-69c2-3411-adbc2396f8fa">
+      <Execution id="7ff2ca4a-acfe-4868-ab34-95d1fee8281c" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;partial&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="30f0c676-bf0e-5a6f-d713-e7494d3dc480">
+      <Execution id="46e25c1b-9761-4636-821e-2add19f31baf" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;missing-item&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="acac966f-c611-7ec8-bf5f-a510899946f3">
+      <Execution id="80587592-be20-42bf-a364-8eb27d824317" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Identity_fields_cannot_transfer_progress_to_another_user" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="6b9332ce-9020-6287-7841-076a6e79d53c">
+      <Execution id="7c41a19b-d8a4-46a5-a678-2cfaf664fde2" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Identity_fields_cannot_transfer_progress_to_another_user" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.The_controller_asks_IPermissionService_instead_of_reading_permissions_itself" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="044dd3a6-556f-ae73-cb57-3d323821f04c">
+      <Execution id="d8289a34-a0e5-4609-a253-40266f06dabf" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="The_controller_asks_IPermissionService_instead_of_reading_permissions_itself" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress/w2-podcast/w2-episode&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="c4f6c735-8cc4-0648-866c-02158612cb78">
+      <Execution id="4b99c86e-225f-412e-9138-b72c56d0f770" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Anonymous_requests_are_rejected" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetById_returns_404_for_an_unknown_library_when_the_user_can_access_all" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="4959f86d-a431-5090-a4f1-fe39198f651b">
+      <Execution id="ed3f50ee-9889-4ee6-acff-909824067c0f" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetById_returns_404_for_an_unknown_library_when_the_user_can_access_all" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;explicit-null&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="1b019611-388b-49ec-2b0f-2f89c7fbeddb">
+      <Execution id="48e62a97-7238-445c-9cfe-a9f635791492" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;ebook&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="f9e1c6ca-2580-c508-85bf-ba3b654cb6ed">
+      <Execution id="f27cd007-dd66-4029-8397-e17e4e907c18" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;same-stored-progress-touches-timestamp&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="f7fc0eed-2995-08d8-8d7f-c7d0070aeda8">
+      <Execution id="0cc61640-db2d-4ec7-8c4f-f61322e315d2" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-private-item&quot;, fixture: &quot;otherUser&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="2673938a-f2c2-0a43-f24e-71f20abdf02b">
+      <Execution id="ec9fcaae-8f46-4b4d-a021-51d2d4acfbff" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Matches_real_Node_methods" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;other-user-create&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="2efa7583-fa69-a73c-529f-a4ca50b31928">
+      <Execution id="e6d765e4-ae85-4cf8-a26e-037114c87b6a" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress&quot;, fixture: &quot;all&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="7c6be675-7f72-2a12-a25e-8f61fa9bae52">
+      <Execution id="14037787-75fc-493f-8542-55bb66e98858" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Matches_real_Node_methods" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Batch_remains_unimplemented" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="df854632-eb7f-ed97-55f2-294572e031ed">
+      <Execution id="7c7912ba-4ada-48b2-b37e-f94e6c7cbb55" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Batch_remains_unimplemented" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress/w2-item&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="0a9ff353-4422-0f59-6fb7-487e361e6e9f">
+      <Execution id="bac870b3-6569-45af-a773-ccf7de65cb1e" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Anonymous_requests_are_rejected" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;create-no-auto-finish&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="7d2f3216-66dd-e25f-37e8-12ea27775387">
+      <Execution id="8b439cac-8ec7-4ae7-a123-671880a552a3" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-podcast/w2-episode&quot;, fixture: &quot;episode&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="5d4c88f9-abc6-aabb-29ba-dce242101ad0">
+      <Execution id="ac36c482-e41f-429c-8d12-7f8ba615dd65" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Matches_real_Node_methods" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.DevLoginTests.The_dev_header_is_ignored_outside_Development(environment: &quot;Staging&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="7a77c6bc-27ae-532a-5645-aec530b56599">
+      <Execution id="29160be7-e887-439c-bc7e-7b9c11ed774f" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.DevLoginTests" name="The_dev_header_is_ignored_outside_Development" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetAll_applies_a_non_empty_list_even_when_accessAllLibraries_is_true" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="56243fa2-8cb6-5056-44c4-911921fe9dfc">
+      <Execution id="ab3423e7-a38f-462a-bdec-bcd327138951" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetAll_applies_a_non_empty_list_even_when_accessAllLibraries_is_true" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Writes_default_off_and_leave_row_unchanged" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="77c07eae-e8a0-79c0-8429-94bad5693d10">
+      <Execution id="ec93ca12-ac8f-4b65-bc12-7ab7f3d708e7" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Writes_default_off_and_leave_row_unchanged" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;episode-update&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="ff6a7c26-8070-b084-7412-20970ab7bc20">
+      <Execution id="2604dcd7-cdfa-4153-9460-b6458ff0b631" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;create-finished&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="021fe4d5-1891-7164-063f-ddc60a8459a1">
+      <Execution id="507ee236-78dc-4044-bf48-ce43341cbe92" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetAll_for_a_user_limited_to_A_matches_Node_response_exactly" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="3c34c827-c8f8-1a7f-f9c3-9ac3f79c8760">
+      <Execution id="e6f0a703-c5e1-4f75-82d0-1e3ea7dd079e" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetAll_for_a_user_limited_to_A_matches_Node_response_exactly" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetAll_for_admin_returns_libraries_ordered_by_displayOrder" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="00f91146-fe64-df1f-41cb-c0fa4227e19e">
+      <Execution id="1db15e42-4cff-4762-a32a-b2956d651c6b" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetAll_for_admin_returns_libraries_ordered_by_displayOrder" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Wrong_episode_and_unsupported_mutating_action(route: &quot;/api/me/progress/w2-item/remove-from-continue-list&quot;..., status: 501)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="5242d8ed-9a02-f979-69d0-c78b9e43c4f9">
+      <Execution id="3a344639-acc7-4daf-9a82-e7a147f8743b" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Wrong_episode_and_unsupported_mutating_action" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;unfinish&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="bf047d9e-e316-46e2-6ff5-661c15811283">
+      <Execution id="8ef3e592-44af-448d-bb0c-3960eaa362b7" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Non_object_payload_rejected" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="f0b15fec-e277-e2ba-03d2-e295fda648fd">
+      <Execution id="0f195106-582d-4f22-82ee-349e6ddecd06" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Non_object_payload_rejected" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.An_unknown_user_gets_403" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="f17d85c1-b195-31a8-65c0-05cd9d6e6f56">
+      <Execution id="31efa783-9c2e-4f06-a2e2-60cf2444e6d3" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="An_unknown_user_gets_403" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;percent-equal&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="33d1a8e3-9b9c-615f-de76-d96a92623e71">
+      <Execution id="efabf86e-504d-458a-b489-4cbf39bd7b46" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.Unsupported_include_values_return_501_so_Node_can_handle_them" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="c6d93397-a4f1-1409-07a0-d7e356c73315">
+      <Execution id="afbf7ba3-bef5-4f1a-b23b-e260638a1af5" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="Unsupported_include_values_return_501_so_Node_can_handle_them" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-book&quot;, fixture: &quot;missing&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="efc96d53-1032-38d0-3689-50b29b0b5194">
+      <Execution id="94608836-4ed1-460f-a75b-7fb408816f01" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Matches_real_Node_methods" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetById_returns_403_when_the_user_cannot_access_the_library" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="7c8e9e6d-6bc8-11df-84e4-15808770e1ff">
+      <Execution id="3366a0e9-1b58-48ac-a007-af280105bb5d" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetById_returns_403_when_the_user_cannot_access_the_library" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;not-book&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="070f71f0-01bc-9ac5-7820-bd246e7642b5">
+      <Execution id="0610ae6c-9a36-482d-93ba-7869121ceffe" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;percent-beyond&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="c50a59d9-e479-249a-5a6f-9b6999a454ac">
+      <Execution id="d9ba9808-2f5d-44f2-9dfc-de22aab32a32" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;finish&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="4cb1543b-4e45-2309-9c87-5f670ad38869">
+      <Execution id="0f0d260b-4cf9-41f2-a7e5-7ddf1304129c" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.GetById_matches_the_library_object_of_Node" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="7ef359de-8167-a8ca-70e7-633a6e3020b1">
+      <Execution id="25f232ac-a385-4c92-ae6c-c35264ac6119" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="GetById_matches_the_library_object_of_Node" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.DevLoginTests.Requests_without_the_dev_header_are_unauthorized" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="bbc87349-05e9-9dcc-f5ec-26d557c0c8bb">
+      <Execution id="c7d07229-0c77-4ef5-a23f-5fd9d624857b" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.DevLoginTests" name="Requests_without_the_dev_header_are_unauthorized" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Anonymous_write_is_unauthorized" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="16c231b9-61cd-dd3d-91a3-7bfeae6fda58">
+      <Execution id="9b092cf9-e4c2-4387-b329-0a701bdc1b67" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Anonymous_write_is_unauthorized" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.Library_without_scan_settings_or_folders_uses_nulls_and_empty_values" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="33983d6d-12a2-56cc-ace7-b0e04c8f83fc">
+      <Execution id="df9524c1-ab4d-4a12-b5cb-fe6da41260c6" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="Library_without_scan_settings_or_folders_uses_nulls_and_empty_values" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Anonymous_requests_are_rejected(route: &quot;/api/me/progress&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="ee05860b-199e-bb9b-348e-4ee4310b47ec">
+      <Execution id="4433cb44-0025-4d5d-a458-46850caf3019" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Anonymous_requests_are_rejected" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Unsupported_values_do_not_mutate_data(payload: &quot;{\&quot;isFinished\&quot;:\&quot;false\&quot;}&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="f8b8e037-feab-7bec-bba5-3fbd14b6d6a1">
+      <Execution id="a4cbf606-ebc6-40cb-bfa5-a41b46094fc8" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Unsupported_values_do_not_mutate_data" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Single_patch_matches_Node_persisted_result(name: &quot;episode-create&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="73e6a373-9419-8402-dfda-2d080f90d5d5">
+      <Execution id="ea674314-3385-4699-9e17-966a84dc5c23" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Single_patch_matches_Node_persisted_result" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressReadTests.Matches_real_Node_methods(route: &quot;/api/me/progress/w2-item&quot;, fixture: &quot;book&quot;)" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="1fd7ffdd-3335-38b9-5ce8-133c9e091328">
+      <Execution id="3e9af97b-7e0d-4339-bee0-1de6b9d4f6e3" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressReadTests" name="Matches_real_Node_methods" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.LibrariesEndpointTests.A_user_without_permissions_cannot_access_a_library" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="278daa23-37f7-8152-d7e1-a75eb735735b">
+      <Execution id="82933eeb-07eb-4d7b-a925-53d832f0f3e1" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.LibrariesEndpointTests" name="A_user_without_permissions_cannot_access_a_library" />
+    </UnitTest>
+    <UnitTest name="Abs.Api.Tests.W2ProgressWriteTests.Creation_for_other_user_does_not_change_existing_owner" storage="d:\waikato\26b\compx574\abs-dotnet-rewrite\tests\abs.api.tests\bin\debug\net8.0\abs.api.tests.dll" id="bb4d1887-0759-2c66-9247-f3040dea2506">
+      <Execution id="ba44d6bb-0782-4bd3-b960-6702b52c4a7c" />
+      <TestMethod codeBase="D:\Waikato\26b\COMPX574\abs-dotnet-rewrite\tests\Abs.Api.Tests\bin\Debug\net8.0\Abs.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Abs.Api.Tests.W2ProgressWriteTests" name="Creation_for_other_user_does_not_change_existing_owner" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="bf047d9e-e316-46e2-6ff5-661c15811283" executionId="8ef3e592-44af-448d-bb0c-3960eaa362b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d4c88f9-abc6-aabb-29ba-dce242101ad0" executionId="ac36c482-e41f-429c-8d12-7f8ba615dd65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2673938a-f2c2-0a43-f24e-71f20abdf02b" executionId="ec9fcaae-8f46-4b4d-a021-51d2d4acfbff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4cb1543b-4e45-2309-9c87-5f670ad38869" executionId="0f0d260b-4cf9-41f2-a7e5-7ddf1304129c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="070f71f0-01bc-9ac5-7820-bd246e7642b5" executionId="0610ae6c-9a36-482d-93ba-7869121ceffe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6221401a-868f-2031-04b4-31303417e544" executionId="9517ed27-8f77-447d-80c6-8442e7b6fee4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7fc0eed-2995-08d8-8d7f-c7d0070aeda8" executionId="0cc61640-db2d-4ec7-8c4f-f61322e315d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3257fe58-2023-cff6-df37-143e6a11f709" executionId="006a07b9-3b09-42e7-a4c6-b1c8da835ab1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ef359de-8167-a8ca-70e7-633a6e3020b1" executionId="25f232ac-a385-4c92-ae6c-c35264ac6119" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a9ff353-4422-0f59-6fb7-487e361e6e9f" executionId="bac870b3-6569-45af-a773-ccf7de65cb1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efc96d53-1032-38d0-3689-50b29b0b5194" executionId="94608836-4ed1-460f-a75b-7fb408816f01" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="044dd3a6-556f-ae73-cb57-3d323821f04c" executionId="d8289a34-a0e5-4609-a253-40266f06dabf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fd7ffdd-3335-38b9-5ce8-133c9e091328" executionId="3e9af97b-7e0d-4339-bee0-1de6b9d4f6e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0fa09d93-091b-362d-d810-6bb6e2f73145" executionId="cfd58a2a-3f90-47d2-bce7-47b08c2cd901" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb4d1887-0759-2c66-9247-f3040dea2506" executionId="ba44d6bb-0782-4bd3-b960-6702b52c4a7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0b15fec-e277-e2ba-03d2-e295fda648fd" executionId="0f195106-582d-4f22-82ee-349e6ddecd06" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6d93397-a4f1-1409-07a0-d7e356c73315" executionId="afbf7ba3-bef5-4f1a-b23b-e260638a1af5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16c231b9-61cd-dd3d-91a3-7bfeae6fda58" executionId="9b092cf9-e4c2-4387-b329-0a701bdc1b67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2efa7583-fa69-a73c-529f-a4ca50b31928" executionId="e6d765e4-ae85-4cf8-a26e-037114c87b6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbc87349-05e9-9dcc-f5ec-26d557c0c8bb" executionId="c7d07229-0c77-4ef5-a23f-5fd9d624857b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d2f3216-66dd-e25f-37e8-12ea27775387" executionId="8b439cac-8ec7-4ae7-a123-671880a552a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="493ab283-d102-37ed-4e62-b4190a803e95" executionId="ee67636d-c426-4c96-b73e-6852846ab6e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11bff93b-51e5-3f9f-b4bb-0552aa3bf27c" executionId="21075a2f-5d1c-433c-8bc2-3c1a6ae5ce00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00f91146-fe64-df1f-41cb-c0fa4227e19e" executionId="1db15e42-4cff-4762-a32a-b2956d651c6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19a03e9a-037b-6efe-ce7a-acffd2561257" executionId="b0f85976-4ddf-4ac7-9e70-24ab47ddf3c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="278daa23-37f7-8152-d7e1-a75eb735735b" executionId="82933eeb-07eb-4d7b-a925-53d832f0f3e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c071c781-3868-46b3-cd4c-d688538dcded" executionId="e4249dff-71d4-45fa-9326-10731236bc80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c34c827-c8f8-1a7f-f9c3-9ac3f79c8760" executionId="e6f0a703-c5e1-4f75-82d0-1e3ea7dd079e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8b8e037-feab-7bec-bba5-3fbd14b6d6a1" executionId="a4cbf606-ebc6-40cb-bfa5-a41b46094fc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b019611-388b-49ec-2b0f-2f89c7fbeddb" executionId="48e62a97-7238-445c-9cfe-a9f635791492" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="947db19c-6ac3-6e5c-f4f3-9a6c2cea4a9e" executionId="986d6d6f-d837-45fa-b5c7-09d4b4c40f6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff6a7c26-8070-b084-7412-20970ab7bc20" executionId="2604dcd7-cdfa-4153-9460-b6458ff0b631" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="92bea7c7-9217-e145-4327-edfaf29a21ca" executionId="65dce86d-4fa9-4187-be24-b2ee3b06539c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4f6c735-8cc4-0648-866c-02158612cb78" executionId="4b99c86e-225f-412e-9138-b72c56d0f770" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee05860b-199e-bb9b-348e-4ee4310b47ec" executionId="4433cb44-0025-4d5d-a458-46850caf3019" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33d1a8e3-9b9c-615f-de76-d96a92623e71" executionId="efabf86e-504d-458a-b489-4cbf39bd7b46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df854632-eb7f-ed97-55f2-294572e031ed" executionId="7c7912ba-4ada-48b2-b37e-f94e6c7cbb55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5242d8ed-9a02-f979-69d0-c78b9e43c4f9" executionId="3a344639-acc7-4daf-9a82-e7a147f8743b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f17d85c1-b195-31a8-65c0-05cd9d6e6f56" executionId="31efa783-9c2e-4f06-a2e2-60cf2444e6d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f9e1c6ca-2580-c508-85bf-ba3b654cb6ed" executionId="f27cd007-dd66-4029-8397-e17e4e907c18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acac966f-c611-7ec8-bf5f-a510899946f3" executionId="80587592-be20-42bf-a364-8eb27d824317" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a4ebff1-e735-c7e8-cc90-5ba64aa603b4" executionId="059b8e68-53ff-4b30-b11d-30ccfc43ff0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33983d6d-12a2-56cc-ace7-b0e04c8f83fc" executionId="df9524c1-ab4d-4a12-b5cb-fe6da41260c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25e98de3-0b4b-3c7c-59ea-37f280d7df19" executionId="d7a96320-8106-4dcf-a2ca-c9f15c447784" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a77c6bc-27ae-532a-5645-aec530b56599" executionId="29160be7-e887-439c-bc7e-7b9c11ed774f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77c07eae-e8a0-79c0-8429-94bad5693d10" executionId="ec93ca12-ac8f-4b65-bc12-7ab7f3d708e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56243fa2-8cb6-5056-44c4-911921fe9dfc" executionId="ab3423e7-a38f-462a-bdec-bcd327138951" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbcf6477-16fc-f736-b5a3-3c9d46c059ff" executionId="b0f65891-f1f9-46f9-a566-19ea1cb56d4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73e6a373-9419-8402-dfda-2d080f90d5d5" executionId="ea674314-3385-4699-9e17-966a84dc5c23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="820316d2-5028-e250-7b8a-8c4f4805ffac" executionId="7b8094ce-d8e6-43b7-aad2-0f27361e8ac6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c6be675-7f72-2a12-a25e-8f61fa9bae52" executionId="14037787-75fc-493f-8542-55bb66e98858" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aaedcd7-87ce-ce7b-9ce0-79ae0ba49694" executionId="5e5a6fac-4956-4ce0-8587-23ee432c83a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c8e9e6d-6bc8-11df-84e4-15808770e1ff" executionId="3366a0e9-1b58-48ac-a007-af280105bb5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b9332ce-9020-6287-7841-076a6e79d53c" executionId="7c41a19b-d8a4-46a5-a678-2cfaf664fde2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4959f86d-a431-5090-a4f1-fe39198f651b" executionId="ed3f50ee-9889-4ee6-acff-909824067c0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60c81f91-4a5d-205f-fc32-53a32714cc79" executionId="8740a2e3-cafe-4443-8589-5469204be092" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="30f0c676-bf0e-5a6f-d713-e7494d3dc480" executionId="46e25c1b-9761-4636-821e-2add19f31baf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="093722ce-090b-c798-83f5-04374fee170e" executionId="2e192023-eae8-4b2f-9125-318dcb249966" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="021fe4d5-1891-7164-063f-ddc60a8459a1" executionId="507ee236-78dc-4044-bf48-ce43341cbe92" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2649e0d2-3257-80ec-2e0c-245c8c9abfad" executionId="0ac8428f-3cdf-4be6-a70d-00ad867f2233" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20aad449-29a4-69c2-3411-adbc2396f8fa" executionId="7ff2ca4a-acfe-4868-ab34-95d1fee8281c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c50a59d9-e479-249a-5a6f-9b6999a454ac" executionId="d9ba9808-2f5d-44f2-9dfc-de22aab32a32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45abc587-6b06-a938-c2cb-8a357f3adee0" executionId="f7cd9f12-6208-44f2-bba2-f35b526b6cf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="63" executed="63" passed="63" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.25)&#xD;
+[xUnit.net 00:00:00.68]   Discovering: Abs.Api.Tests&#xD;
+[xUnit.net 00:00:00.73]   Discovered:  Abs.Api.Tests&#xD;
+[xUnit.net 00:00:00.73]   Starting:    Abs.Api.Tests&#xD;
+info: Abs.Api.Auth.DevHeaderAuthenticationHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Abs.Api.Auth.UnauthenticatedHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Abs.Api.Auth.UnauthenticatedHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[@__itemId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (Size = 36)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "t"."id", "t"."createdAt", "t"."displayOrder", "t"."extraData", "t"."icon", "t"."lastScan", "t"."lastScanVersion", "t"."mediaType", "t"."name", "t"."provider", "t"."settings", "t"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM (&#xD;
+          SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt"&#xD;
+          FROM "libraries" AS "l"&#xD;
+          WHERE "l"."id" = @__id_0&#xD;
+          LIMIT 1&#xD;
+      ) AS "t"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "t"."id" = "l0"."libraryId"&#xD;
+      ORDER BY "t"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 30), @p2='?' (DbType = Double), @p3='?' (DbType = Double), @p4='?', @p5='?' (DbType = Double), @p6='?' (Size = 44), @p7='?' (Size = 30), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 11), @p11='?' (Size = 4), @p12='?', @p13='?' (Size = 30), @p14='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "mediaProgresses" ("id", "createdAt", "currentTime", "duration", "ebookLocation", "ebookProgress", "extraData", "finishedAt", "hideFromContinueListening", "isFinished", "mediaItemId", "mediaItemType", "podcastId", "updatedAt", "userId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Abs.Api.Auth.DevHeaderAuthenticationHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM "libraries" AS "l"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "l"."id" = "l0"."libraryId"&#xD;
+      ORDER BY "l"."displayOrder", "l"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Abs.Api.Auth.DevHeaderAuthenticationHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Abs.Api.Auth.DevHeaderAuthenticationHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__onlyLibraryIds_0='?' (Size = 40)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM "libraries" AS "l"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "l"."id" = "l0"."libraryId"&#xD;
+      WHERE "l"."id" IN (&#xD;
+          SELECT "o"."value"&#xD;
+          FROM json_each(@__onlyLibraryIds_0) AS "o"&#xD;
+      )&#xD;
+      ORDER BY "l"."displayOrder", "l"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p3='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 40), @p2='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "extraData" = @p1, "updatedAt" = @p2&#xD;
+      WHERE "id" = @p3&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (Size = 36)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "t"."id", "t"."createdAt", "t"."displayOrder", "t"."extraData", "t"."icon", "t"."lastScan", "t"."lastScanVersion", "t"."mediaType", "t"."name", "t"."provider", "t"."settings", "t"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM (&#xD;
+          SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt"&#xD;
+          FROM "libraries" AS "l"&#xD;
+          WHERE "l"."id" = @__id_0&#xD;
+          LIMIT 1&#xD;
+      ) AS "t"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "t"."id" = "l0"."libraryId"&#xD;
+      ORDER BY "t"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__onlyLibraryIds_0='?' (Size = 40)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM "libraries" AS "l"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "l"."id" = "l0"."libraryId"&#xD;
+      WHERE "l"."id" IN (&#xD;
+          SELECT "o"."value"&#xD;
+          FROM json_each(@__onlyLibraryIds_0) AS "o"&#xD;
+      )&#xD;
+      ORDER BY "l"."displayOrder", "l"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__episodeId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "p"."id", "p"."podcastId"&#xD;
+      FROM "podcastEpisodes" AS "p"&#xD;
+      WHERE "p"."id" = @__episodeId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p4='?' (Size = 19), @p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (DbType = Boolean), @p3='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "duration" = @p1, "hideFromContinueListening" = @p2, "updatedAt" = @p3&#xD;
+      WHERE "id" = @p4&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__onlyLibraryIds_0='?' (Size = 40)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM "libraries" AS "l"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "l"."id" = "l0"."libraryId"&#xD;
+      WHERE "l"."id" IN (&#xD;
+          SELECT "o"."value"&#xD;
+          FROM json_each(@__onlyLibraryIds_0) AS "o"&#xD;
+      )&#xD;
+      ORDER BY "l"."displayOrder", "l"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p4='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (DbType = Double), @p2='?' (Size = 43), @p3='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "duration" = @p1, "extraData" = @p2, "updatedAt" = @p3&#xD;
+      WHERE "id" = @p4&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__onlyLibraryIds_0='?' (Size = 40)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM "libraries" AS "l"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "l"."id" = "l0"."libraryId"&#xD;
+      WHERE "l"."id" IN (&#xD;
+          SELECT "o"."value"&#xD;
+          FROM json_each(@__onlyLibraryIds_0) AS "o"&#xD;
+      )&#xD;
+      ORDER BY "l"."displayOrder", "l"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (Size = 36)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "t"."id", "t"."createdAt", "t"."displayOrder", "t"."extraData", "t"."icon", "t"."lastScan", "t"."lastScanVersion", "t"."mediaType", "t"."name", "t"."provider", "t"."settings", "t"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM (&#xD;
+          SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt"&#xD;
+          FROM "libraries" AS "l"&#xD;
+          WHERE "l"."id" = @__id_0&#xD;
+          LIMIT 1&#xD;
+      ) AS "t"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "t"."id" = "l0"."libraryId"&#xD;
+      ORDER BY "t"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 30), @p2='?' (DbType = Double), @p3='?' (DbType = Double), @p4='?', @p5='?' (DbType = Double), @p6='?' (Size = 48), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 11), @p11='?' (Size = 4), @p12='?', @p13='?' (Size = 30), @p14='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "mediaProgresses" ("id", "createdAt", "currentTime", "duration", "ebookLocation", "ebookProgress", "extraData", "finishedAt", "hideFromContinueListening", "isFinished", "mediaItemId", "mediaItemType", "podcastId", "updatedAt", "userId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 13)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 30), @p2='?' (DbType = Double), @p3='?' (DbType = Double), @p4='?', @p5='?' (DbType = Double), @p6='?' (Size = 44), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 11), @p11='?' (Size = 4), @p12='?', @p13='?' (Size = 30), @p14='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "mediaProgresses" ("id", "createdAt", "currentTime", "duration", "ebookLocation", "ebookProgress", "extraData", "finishedAt", "hideFromContinueListening", "isFinished", "mediaItemId", "mediaItemType", "podcastId", "updatedAt", "userId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 10)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (Size = 14)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "t"."id", "t"."createdAt", "t"."displayOrder", "t"."extraData", "t"."icon", "t"."lastScan", "t"."lastScanVersion", "t"."mediaType", "t"."name", "t"."provider", "t"."settings", "t"."updatedAt", "l0"."id", "l0"."createdAt", "l0"."libraryId", "l0"."path", "l0"."updatedAt"&#xD;
+      FROM (&#xD;
+          SELECT "l"."id", "l"."createdAt", "l"."displayOrder", "l"."extraData", "l"."icon", "l"."lastScan", "l"."lastScanVersion", "l"."mediaType", "l"."name", "l"."provider", "l"."settings", "l"."updatedAt"&#xD;
+          FROM "libraries" AS "l"&#xD;
+          WHERE "l"."id" = @__id_0&#xD;
+          LIMIT 1&#xD;
+      ) AS "t"&#xD;
+      LEFT JOIN "libraryFolders" AS "l0" ON "t"."id" = "l0"."libraryId"&#xD;
+      ORDER BY "t"."id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."permissions"&#xD;
+      FROM "users" AS "u"&#xD;
+      WHERE "u"."id" = @__userId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p5='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 40), @p2='?' (Size = 30), @p3='?' (DbType = Boolean), @p4='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "extraData" = @p1, "finishedAt" = @p2, "isFinished" = @p3, "updatedAt" = @p4&#xD;
+      WHERE "id" = @p5&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p5='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 40), @p2='?' (Size = 30), @p3='?' (DbType = Boolean), @p4='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "extraData" = @p1, "finishedAt" = @p2, "isFinished" = @p3, "updatedAt" = @p4&#xD;
+      WHERE "id" = @p5&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (Size = 42), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "extraData" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__episodeId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "p"."id", "p"."podcastId"&#xD;
+      FROM "podcastEpisodes" AS "p"&#xD;
+      WHERE "p"."id" = @__episodeId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__episodeId_0='?' (Size = 14)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "p"."id", "p"."podcastId"&#xD;
+      FROM "podcastEpisodes" AS "p"&#xD;
+      WHERE "p"."id" = @__episodeId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 14)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 30), @p2='?' (DbType = Double), @p3='?' (DbType = Double), @p4='?', @p5='?' (DbType = Double), @p6='?' (Size = 43), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 14), @p11='?' (Size = 14), @p12='?' (Size = 16), @p13='?' (Size = 30), @p14='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "mediaProgresses" ("id", "createdAt", "currentTime", "duration", "ebookLocation", "ebookProgress", "extraData", "finishedAt", "hideFromContinueListening", "isFinished", "mediaItemId", "mediaItemType", "podcastId", "updatedAt", "userId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 6), @__mediaId_1='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p6='?' (Size = 10), @p0='?' (DbType = Double), @p1='?' (Size = 48), @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "extraData" = @p1, "finishedAt" = @p2, "hideFromContinueListening" = @p3, "isFinished" = @p4, "updatedAt" = @p5&#xD;
+      WHERE "id" = @p6&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p4='?' (Size = 16), @p0='?' (Size = 40), @p1='?' (Size = 30), @p2='?' (DbType = Boolean), @p3='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "extraData" = @p0, "finishedAt" = @p1, "isFinished" = @p2, "updatedAt" = @p3&#xD;
+      WHERE "id" = @p4&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p3='?' (Size = 16), @p0='?' (Size = 9), @p1='?' (DbType = Double), @p2='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "ebookLocation" = @p0, "ebookProgress" = @p1, "updatedAt" = @p2&#xD;
+      WHERE "id" = @p3&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."id" = 'w2-book-progress'&#xD;
+      LIMIT 2&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p1='?' (Size = 16), @p0='?' (Size = 66)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "extraData" = @p0&#xD;
+      WHERE "id" = @p1&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."id" = 'w2-book-progress'&#xD;
+      LIMIT 2&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 16), @p0='?' (DbType = Double), @p1='?' (Size = 30)], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "mediaProgresses" SET "currentTime" = @p0, "updatedAt" = @p1&#xD;
+      WHERE "id" = @p2&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__itemId_0='?' (Size = 15)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "l"."id", "l"."mediaId", "l"."mediaType"&#xD;
+      FROM "libraryItems" AS "l"&#xD;
+      WHERE "l"."id" = @__itemId_0&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__item_MediaId_0='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "books" AS "b"&#xD;
+          WHERE "b"."id" = @__item_MediaId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "users" AS "u"&#xD;
+          WHERE "u"."id" = @__userId_0)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8), @__mediaId_1='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0 AND "m"."mediaItemId" = @__mediaId_1&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 30), @p2='?' (DbType = Double), @p3='?' (DbType = Double), @p4='?', @p5='?' (DbType = Double), @p6='?' (Size = 48), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 11), @p11='?' (Size = 4), @p12='?', @p13='?' (Size = 30), @p14='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "mediaProgresses" ("id", "createdAt", "currentTime", "duration", "ebookLocation", "ebookProgress", "extraData", "finishedAt", "hideFromContinueListening", "isFinished", "mediaItemId", "mediaItemType", "podcastId", "updatedAt", "userId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "m"."id", "m"."createdAt", "m"."currentTime", "m"."duration", "m"."ebookLocation", "m"."ebookProgress", "m"."extraData", "m"."finishedAt", "m"."hideFromContinueListening", "m"."isFinished", "m"."mediaItemId", "m"."mediaItemType", "m"."podcastId", "m"."updatedAt", "m"."userId"&#xD;
+      FROM "mediaProgresses" AS "m"&#xD;
+      WHERE "m"."userId" = @__userId_0&#xD;
+info: Abs.Api.Auth.DevHeaderAuthenticationHandler[12]&#xD;
+      AuthenticationScheme: AbsAuth was challenged.&#xD;
+[xUnit.net 00:00:02.95]   Finished:    Abs.Api.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

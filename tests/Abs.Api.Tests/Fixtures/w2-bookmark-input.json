@@ -1,0 +1,450 @@
+{
+  "users": [
+    {
+      "id": "w2-bm-alice",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": false
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-bob",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": false
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "bob-only",
+          "createdAt": 1790812800000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-null",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": false
+      },
+      "bookmarks": null
+    },
+    {
+      "id": "w2-bm-empty",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": false
+      },
+      "bookmarks": []
+    },
+    {
+      "id": "w2-bm-deny-library",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": false,
+        "accessAllTags": true,
+        "accessExplicitContent": false,
+        "librariesAccessible": []
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-allow-tag",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": false,
+        "accessExplicitContent": false,
+        "itemTagsSelected": [
+          "history"
+        ]
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-deny-tag",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": false,
+        "accessExplicitContent": false,
+        "itemTagsSelected": [
+          "other"
+        ]
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-denylist",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": false,
+        "accessExplicitContent": false,
+        "selectedTagsNotAccessible": true,
+        "itemTagsSelected": [
+          "history"
+        ]
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-explicit",
+      "isActive": true,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": true
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    },
+    {
+      "id": "w2-bm-inactive",
+      "isActive": false,
+      "permissions": {
+        "accessAllLibraries": true,
+        "accessAllTags": true,
+        "accessExplicitContent": true
+      },
+      "bookmarks": [
+        {
+          "libraryItemId": "w2-item",
+          "time": 12,
+          "title": "note",
+          "createdAt": 1790812800000,
+          "extension": {
+            "label": "keep"
+          }
+        },
+        {
+          "libraryItemId": "w2-item",
+          "time": "24",
+          "title": null,
+          "createdAt": 1790812801000
+        },
+        {
+          "libraryItemId": "w2-podcast",
+          "time": 4,
+          "title": "podcast",
+          "createdAt": 1790812802000
+        },
+        {
+          "libraryItemId": "absent-item",
+          "time": 9,
+          "title": "orphan",
+          "createdAt": 1790812803000
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "w2-item",
+      "mediaId": "w2-book",
+      "mediaType": "book",
+      "libraryId": "aeb8a59a-eb09-4444-bd9d-2ca5cf8fa161",
+      "media": {
+        "explicit": false,
+        "tags": [
+          "history"
+        ]
+      }
+    },
+    {
+      "id": "w2-new-item",
+      "mediaId": "w2-new-book",
+      "mediaType": "book",
+      "libraryId": "aeb8a59a-eb09-4444-bd9d-2ca5cf8fa161",
+      "media": {
+        "explicit": true,
+        "tags": [
+          "history"
+        ]
+      }
+    },
+    {
+      "id": "w2-podcast",
+      "mediaId": "w2-podcast-media",
+      "mediaType": "podcast",
+      "libraryId": "aeb8a59a-eb09-4444-bd9d-2ca5cf8fa161",
+      "media": {
+        "explicit": false,
+        "tags": [
+          "history"
+        ]
+      }
+    },
+    {
+      "id": "w2-private-item",
+      "mediaId": "w2-bob-book",
+      "mediaType": "book",
+      "libraryId": "aeb8a59a-eb09-4444-bd9d-2ca5cf8fa161",
+      "media": {
+        "explicit": false,
+        "tags": []
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "all",
+      "user": "w2-bm-alice"
+    },
+    {
+      "name": "item",
+      "user": "w2-bm-alice",
+      "item": "w2-item"
+    },
+    {
+      "name": "bob",
+      "user": "w2-bm-bob",
+      "item": "w2-item"
+    },
+    {
+      "name": "null-bookmarks",
+      "user": "w2-bm-null"
+    },
+    {
+      "name": "empty-bookmarks",
+      "user": "w2-bm-empty",
+      "item": "w2-item"
+    },
+    {
+      "name": "missing-item",
+      "user": "w2-bm-alice",
+      "item": "absent-item"
+    },
+    {
+      "name": "deny-library",
+      "user": "w2-bm-deny-library",
+      "item": "w2-item"
+    },
+    {
+      "name": "all-does-not-filter",
+      "user": "w2-bm-deny-library"
+    },
+    {
+      "name": "allow-tag",
+      "user": "w2-bm-allow-tag",
+      "item": "w2-item"
+    },
+    {
+      "name": "deny-tag",
+      "user": "w2-bm-deny-tag",
+      "item": "w2-item"
+    },
+    {
+      "name": "denylist",
+      "user": "w2-bm-denylist",
+      "item": "w2-item"
+    },
+    {
+      "name": "denylist-untagged",
+      "user": "w2-bm-denylist",
+      "item": "w2-private-item"
+    },
+    {
+      "name": "allowlist-untagged",
+      "user": "w2-bm-allow-tag",
+      "item": "w2-private-item"
+    },
+    {
+      "name": "explicit-denied",
+      "user": "w2-bm-alice",
+      "item": "w2-new-item"
+    },
+    {
+      "name": "explicit-allowed",
+      "user": "w2-bm-explicit",
+      "item": "w2-new-item"
+    },
+    {
+      "name": "explicit-inactive",
+      "user": "w2-bm-inactive",
+      "item": "w2-new-item"
+    },
+    {
+      "name": "podcast",
+      "user": "w2-bm-alice",
+      "item": "w2-podcast"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "all": {
+    "status": 200,
+    "body": {
+      "mediaProgress": [
+        {
+          "id": "w2-book-progress",
+          "userId": "w2-alice",
+          "libraryItemId": "w2-item",
+          "episodeId": null,
+          "mediaItemId": "w2-book",
+          "mediaItemType": "book",
+          "duration": 200,
+          "progress": 0.4,
+          "currentTime": 50,
+          "isFinished": false,
+          "hideFromContinueListening": false,
+          "ebookLocation": null,
+          "ebookProgress": null,
+          "lastUpdate": 1790899200000,
+          "startedAt": 1790812800000,
+          "finishedAt": null
+        },
+        {
+          "id": "w2-episode-progress",
+          "userId": "w2-alice",
+          "libraryItemId": "w2-podcast",
+          "episodeId": "w2-episode",
+          "mediaItemId": "w2-episode",
+          "mediaItemType": "podcastEpisode",
+          "duration": null,
+          "progress": "0.25",
+          "currentTime": null,
+          "isFinished": false,
+          "hideFromContinueListening": false,
+          "ebookLocation": "chapter-2",
+          "ebookProgress": 0.2,
+          "lastUpdate": 1790899200000,
+          "startedAt": 1790812800000,
+          "finishedAt": null
+        }
+      ]
+    }
+  },
+  "book": {
+    "status": 200,
+    "body": {
+      "id": "w2-book-progress",
+      "userId": "w2-alice",
+      "libraryItemId": "w2-item",
+      "episodeId": null,
+      "mediaItemId": "w2-book",
+      "mediaItemType": "book",
+      "duration": 200,
+      "progress": 0.4,
+      "currentTime": 50,
+      "isFinished": false,
+      "hideFromContinueListening": false,
+      "ebookLocation": null,
+      "ebookProgress": null,
+      "lastUpdate": 1790899200000,
+      "startedAt": 1790812800000,
+      "finishedAt": null
+    }
+  },
+  "episode": {
+    "status": 200,
+    "body": {
+      "id": "w2-episode-progress",
+      "userId": "w2-alice",
+      "libraryItemId": "w2-podcast",
+      "episodeId": "w2-episode",
+      "mediaItemId": "w2-episode",
+      "mediaItemType": "podcastEpisode",
+      "duration": null,
+      "progress": "0.25",
+      "currentTime": null,
+      "isFinished": false,
+      "hideFromContinueListening": false,
+      "ebookLocation": "chapter-2",
+      "ebookProgress": 0.2,
+      "lastUpdate": 1790899200000,
+      "startedAt": 1790812800000,
+      "finishedAt": null
+    }
+  },
+  "missing": {
+    "status": 404,
+    "body": "Not Found"
+  },
+  "otherUser": {
+    "status": 404,
+    "body": "Not Found"
+  }
+}

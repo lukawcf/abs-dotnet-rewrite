@@ -1,0 +1,238 @@
+[
+  {
+    "name": "create-new",
+    "method": "POST",
+    "payload": {
+      "time": 36,
+      "title": "new"
+    }
+  },
+  {
+    "name": "create-string",
+    "method": "POST",
+    "payload": {
+      "time": "36",
+      "title": "string-time"
+    }
+  },
+  {
+    "name": "create-zero",
+    "method": "POST",
+    "payload": {
+      "time": 0,
+      "title": "zero"
+    }
+  },
+  {
+    "name": "create-negative",
+    "method": "POST",
+    "payload": {
+      "time": -2,
+      "title": "negative"
+    }
+  },
+  {
+    "name": "create-boolean",
+    "method": "POST",
+    "payload": {
+      "time": false,
+      "title": "boolean-time"
+    }
+  },
+  {
+    "name": "duplicate-unchanged",
+    "method": "POST",
+    "payload": {
+      "time": 12,
+      "title": "note"
+    }
+  },
+  {
+    "name": "duplicate-title",
+    "method": "POST",
+    "payload": {
+      "time": 12,
+      "title": "replaced"
+    }
+  },
+  {
+    "name": "duplicate-string-input",
+    "method": "POST",
+    "payload": {
+      "time": "12",
+      "title": "replaced"
+    }
+  },
+  {
+    "name": "different-strings",
+    "method": "POST",
+    "payload": {
+      "time": "024",
+      "title": "distinct"
+    }
+  },
+  {
+    "name": "patch-existing",
+    "method": "PATCH",
+    "payload": {
+      "time": 12,
+      "title": "updated"
+    }
+  },
+  {
+    "name": "patch-same-title",
+    "method": "PATCH",
+    "payload": {
+      "time": 12,
+      "title": "note"
+    }
+  },
+  {
+    "name": "patch-string-stored",
+    "method": "PATCH",
+    "payload": {
+      "time": 24,
+      "title": "updated-string"
+    }
+  },
+  {
+    "name": "patch-missing",
+    "method": "PATCH",
+    "payload": {
+      "time": 99,
+      "title": "missing"
+    }
+  },
+  {
+    "name": "delete-number",
+    "method": "DELETE",
+    "time": "12"
+  },
+  {
+    "name": "delete-string-quirk",
+    "method": "DELETE",
+    "time": "24"
+  },
+  {
+    "name": "delete-converted-string",
+    "method": "DELETE",
+    "time": "024"
+  },
+  {
+    "name": "delete-missing",
+    "method": "DELETE",
+    "time": "99"
+  },
+  {
+    "name": "invalid-delete-time",
+    "method": "DELETE",
+    "time": "bad"
+  },
+  {
+    "name": "invalid-time",
+    "method": "POST",
+    "payload": {
+      "time": "bad",
+      "title": "x"
+    }
+  },
+  {
+    "name": "null-time",
+    "method": "POST",
+    "payload": {
+      "time": null,
+      "title": "x"
+    }
+  },
+  {
+    "name": "missing-time",
+    "method": "PATCH",
+    "payload": {
+      "title": "x"
+    }
+  },
+  {
+    "name": "empty-title",
+    "method": "POST",
+    "payload": {
+      "time": 3,
+      "title": ""
+    }
+  },
+  {
+    "name": "non-string-title",
+    "method": "PATCH",
+    "payload": {
+      "time": 12,
+      "title": 3
+    }
+  },
+  {
+    "name": "missing-title",
+    "method": "POST",
+    "payload": {
+      "time": 3
+    }
+  },
+  {
+    "name": "missing-item-first",
+    "method": "POST",
+    "item": "absent",
+    "payload": {
+      "time": "bad",
+      "title": ""
+    }
+  },
+  {
+    "name": "denied-library-first",
+    "method": "POST",
+    "user": "w2-bm-deny-library",
+    "payload": {
+      "time": "bad",
+      "title": ""
+    }
+  },
+  {
+    "name": "denied-tag",
+    "method": "PATCH",
+    "user": "w2-bm-deny-tag",
+    "payload": {
+      "time": 12,
+      "title": "forbidden"
+    }
+  },
+  {
+    "name": "denied-explicit",
+    "method": "DELETE",
+    "item": "w2-new-item",
+    "time": "12"
+  },
+  {
+    "name": "allowed-explicit",
+    "method": "POST",
+    "user": "w2-bm-explicit",
+    "item": "w2-new-item",
+    "payload": {
+      "time": 12,
+      "title": "allowed"
+    }
+  },
+  {
+    "name": "podcast-create",
+    "method": "POST",
+    "item": "w2-podcast",
+    "payload": {
+      "time": 8,
+      "title": "episode-note"
+    }
+  },
+  {
+    "name": "bob-isolated",
+    "method": "PATCH",
+    "user": "w2-bm-bob",
+    "payload": {
+      "time": 12,
+      "title": "bob-updated"
+    }
+  }
+]
