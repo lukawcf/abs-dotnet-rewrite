@@ -65,6 +65,13 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 - **Second fix, same day:** the web client calls `/audiobookshelf/api/...` (Node's base path), which the first version of the new rules did not match, so the browser still reached only Node. The rules now accept the prefix and strip it before proxying; the e2e suite tests both path forms (211 of 211 identical through nginx, 37 of 37 routing probes).
 - **Not covered:** the web client in a real browser after the second fix; the e2e run uses a small sample database.
 
+## 12. JWT secrets shorter than 32 characters (fixed on 2026-10-15)
+
+- **What happened:** The deployed `JWT_SECRET_KEY` has 30 characters (240 bits). Node signs and verifies with any length. The .NET JWT library refuses HS256 keys under 256 bits, so every real browser token got `401` from .NET (log message `IDX10517 ... Signature validation failed`). It only showed once nginx really sent browser traffic to .NET; the unit tests and the e2e suite used 64 character keys.
+- **Fix:** `JwtAuthenticationHandler.SigningKeyBytes` pads the key with zero bytes to 32 bytes. HMAC pads short keys with zeros anyway, so the signature is identical to Node's. Unit tests cover key lengths 1, 20, 30, 32 and 64; the e2e suite now uses a 30 character key.
+- **Checked on the running stack:** tokens signed inside the Node container with the real key (old style and new style) are accepted by both Node and .NET, with the same fields in `/api/me`.
+- **Side effect while it was broken:** browser requests that nginx sent to .NET (for example `GET /api/libraries`) failed with 401 once, the client refreshed its token and the page kept working because the other calls went to Node.
+
 ## 10. Verification gaps
 
 - Comparisons ran on **synthetic or very small data** (1 library, 4 items; 5 generated books in C's run).

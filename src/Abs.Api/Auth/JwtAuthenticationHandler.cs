@@ -41,7 +41,7 @@ public class JwtAuthenticationHandler(
         try
         {
             var handler = new JwtSecurityTokenHandler();
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
+            var key = new SymmetricSecurityKey(SigningKeyBytes(secret));
 
             var validationParams = new TokenValidationParameters
             {
@@ -86,6 +86,19 @@ public class JwtAuthenticationHandler(
 
         var ticket = new AuthenticationTicket(new ClaimsPrincipal(identity), Scheme.Name);
         return AuthenticateResult.Success(ticket);
+    }
+
+    /// <summary>
+    /// Node signs with the secret string as it is, whatever its length. The IdentityModel library refuses HS256 keys
+    /// shorter than 256 bits, but HMAC pads a key shorter than its block size with zero bytes, so padding with zeros
+    /// to 32 bytes gives the identical signature (a 30 character JWT_SECRET_KEY otherwise fails with IDX10517).
+    /// </summary>
+    internal static byte[] SigningKeyBytes(string secret)
+    {
+        var bytes = Encoding.UTF8.GetBytes(secret);
+        if (bytes.Length < 32)
+            Array.Resize(ref bytes, 32);
+        return bytes;
     }
 
     private string? ExtractToken()

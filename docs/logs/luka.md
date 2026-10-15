@@ -143,3 +143,14 @@
 - Cost: not recorded
 - Result: success, with a correction to earlier statements. While pulling sample log lines the agent saw that every browser request was `/audiobookshelf/api/...` and answered by Node. The nginx rules matched only `/api/...`, so the owner's browser check (V2) tested Node, not .NET; the e2e suite had the same blind spot because it never used the prefix. Fix: all API locations accept the optional prefix and strip it with a rewrite before proxying. e2e: .NET vs Node 103 cases (0 unexpected); nginx vs Node 211 of 211 identical (both path forms); routing 37 of 37. The running nginx was restarted and the log shows prefixed requests going to .NET. Statement in V2 and in open-items about the browser check was corrected
 - Outcome: nginx/nginx.conf, tests/e2e/run_e2e.py, docs/open-items.md, docs/known-limitations.md
+
+## V4. Log analysis: real browser tokens rejected by .NET
+- Task: analyse the nginx log after the owner reloaded the web client
+- Workflow: W2 small steps
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat request "analyse the log"
+- Time spent: about 40 minutes
+- Cost: not recorded
+- Result: success. In the 54 requests after the nginx restart, 14 went to .NET but the browser's own `GET /api/libraries` calls got 401 from .NET (the rest of the page worked because its calls carry include or filter and went to Node). .NET log: IDX10517 signature validation failed. Both containers had the same JWT_SECRET_KEY (compared by hash, never printed): 30 letters and digits. Reproduced in the e2e stack: a 30 character key gives node=200 dotnet=401, a 64 character key gives 200/200. Cause: the IdentityModel library rejects HS256 keys under 256 bits. Fix: zero-pad the key to 32 bytes (identical HMAC). Unit tests for key lengths 1 to 64, e2e key changed to 30 characters (211 of 211 identical through nginx, 37 of 37 routing), and tokens signed in the Node container with the real key now work on the running stack. 250 unit tests pass. The earlier claims that the 245 tests and the e2e suite proved the token handling were too strong: both used long keys
+- Outcome: src/Abs.Api/Auth/JwtAuthenticationHandler.cs, tests/Abs.Api.Tests/UserEndpointTests.cs, tests/e2e/run_e2e.py, docs/known-limitations.md

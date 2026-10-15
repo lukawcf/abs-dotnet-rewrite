@@ -9,7 +9,7 @@ compares status and body. Never touches the live config folder or .env.
 Exit code 0: every case is identical or an expected, documented difference. 1: at least one unexpected difference.
 Needs: docker-compose, Python 3.
 """
-import argparse, base64, hashlib, hmac, json, os, secrets, shutil, subprocess, sys, time
+import argparse, base64, hashlib, hmac, json, os, secrets, shutil, string, subprocess, sys, time
 import urllib.error, urllib.parse, urllib.request
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -119,7 +119,9 @@ def main():
     parser.add_argument("--keep", action="store_true", help="leave the stack running afterwards")
     args = parser.parse_args()
 
-    secret = secrets.token_hex(32)  # test key for this run only, never written anywhere but the temp compose file
+    # Test key for this run only, never written anywhere but the temp compose file. 30 letters and digits, the same
+    # shape as a real deployment: a 64 character key hid a bug (HS256 keys under 256 bits were rejected by .NET).
+    secret = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(30))
     start_stack(args.db, secret)
     try:
         run(secret)

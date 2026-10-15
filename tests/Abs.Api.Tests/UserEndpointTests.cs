@@ -44,6 +44,23 @@ public class UserEndpointTests
         return client;
     }
 
+    // Regression: a 30 character JWT_SECRET_KEY (240 bits) is valid for Node but was rejected by .NET (IDX10517).
+    [Theory]
+    [InlineData(1)]
+    [InlineData(20)]
+    [InlineData(30)]
+    [InlineData(32)]
+    [InlineData(64)]
+    public async Task Tokens_signed_with_a_secret_of_any_length_are_accepted(int length)
+    {
+        var secret = new string('k', length - 1) + "Z";
+        using var factory = FactoryWithUsers(secret);
+
+        var response = await Client(factory, Token(secret, "u-full", withExpiry: true)).GetAsync("/api/me");
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
     [Fact]
     public async Task Me_returns_the_stored_user_fields()
     {
