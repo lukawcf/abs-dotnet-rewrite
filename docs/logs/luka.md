@@ -165,3 +165,14 @@
 - Cost: not recorded
 - Result: partial by decision. Opened: include=rssfeed (Feed table, five fields), include=share (501 when a share exists for an admin), numEpisodesIncomplete and unknown values (ignored like Node). Not opened, with reasons: filterdata (response carries loadedAt of Node's in-memory cache and Node's natural sort order, so it cannot be byte-identical) and personalized/series/collections (not implemented). New safety net in nginx: a 501 from .NET makes nginx repeat the GET on Node, so the browser never sees a 501. Verification: 255 unit tests; e2e 112 cases .NET vs Node (102 identical, 10 expected 501, 0 unexpected), 229 of 229 identical through nginx, 40 of 40 routing probes (including the share fallback). The running stack was rebuilt and the web client's items request (include=rssfeed,numEpisodesIncomplete,share) is now answered by .NET. Mistake caught: a first write of AbsDbContext.cs overwrote seven DbSet lines of a teammate; restored from git before building
 - Outcome: Feed and MediaItemShare entities, RssFeedDto, LibraryItemService/Controller, nginx/nginx.conf, tests (LibraryItemsIncludeTests, fixtures), tests/e2e/run_e2e.py, docs
+
+## A1. Assessment: answering include=filterdata in .NET
+- Task: assess (not implement) answering GET /api/libraries/:id?include=filterdata in .NET
+- Workflow: W3 planning-first
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat request "assess the filterdata approach"
+- Time spent: about 25 minutes
+- Cost: not recorded
+- Result: success. Read Node's getFilterData, its in-memory cache (30 minutes, patched with push without re-sorting) and the client (loadedAt is never read; the client reads filterdata, issues, numUserPlaylists, library). Experiment: 119 hard names sorted in the Node container and in .NET 8 inside the aspnet image: plain .NET collation differs at 34 positions, a digit-chunk comparer at 0. Conclusion: technically feasible; four differences remain (loadedAt, order after Node edits, stale Node cache, tie order); recommendation is to keep it in Node unless the goal is to show .NET answering the library page
+- Outcome: docs/research/filterdata-assessment.md, tests/tools/sortcheck/

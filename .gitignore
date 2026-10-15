@@ -12,3 +12,7 @@ obj/
 .vs/
 # e2e scratch stack
 tests/e2e/.work/
+tests/tools/sortcheck/out/
+tests/tools/sortcheck/net/bin/
+tests/tools/sortcheck/net/obj/
+tests/tools/sortcheck/node_sorted.json
