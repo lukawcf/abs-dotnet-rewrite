@@ -26,7 +26,8 @@ public record LibraryItemMinifiedDto(
     string? MediaType,
     BookMinifiedDto Media,
     int NumFiles,
-    long? Size)
+    long? Size,
+    [property: JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] RssFeedDto? RssFeed = null)
 {
     public static LibraryItemMinifiedDto From(LibraryItem item, Book book, ServerSortSettings settings)
     {
@@ -53,6 +54,19 @@ public record LibraryItemMinifiedDto(
             item.Size);
     }
 }
+
+/// <summary>Node's Feed.toOldJSONMinified (server/models/Feed.js), added to an item by ?include=rssfeed.</summary>
+public record RssFeedDto(string Id, string? EntityType, string? EntityId, string? FeedUrl, RssFeedMetaDto Meta)
+{
+    public static RssFeedDto From(Feed feed) => new(
+        feed.Id,
+        feed.EntityType,
+        feed.EntityId,
+        feed.FeedUrl,
+        new RssFeedMetaDto(feed.Title, feed.Description, feed.PreventIndexing, feed.OwnerName, feed.OwnerEmail));
+}
+
+public record RssFeedMetaDto(string? Title, string? Description, bool? PreventIndexing, string? OwnerName, string? OwnerEmail);
 
 /// <summary>Node's Book.toOldJSONMinified (server/models/Book.js:640-659).</summary>
 public record BookMinifiedDto(

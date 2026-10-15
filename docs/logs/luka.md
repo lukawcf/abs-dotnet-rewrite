@@ -154,3 +154,14 @@
 - Cost: not recorded
 - Result: success. In the 54 requests after the nginx restart, 14 went to .NET but the browser's own `GET /api/libraries` calls got 401 from .NET (the rest of the page worked because its calls carry include or filter and went to Node). .NET log: IDX10517 signature validation failed. Both containers had the same JWT_SECRET_KEY (compared by hash, never printed): 30 letters and digits. Reproduced in the e2e stack: a 30 character key gives node=200 dotnet=401, a 64 character key gives 200/200. Cause: the IdentityModel library rejects HS256 keys under 256 bits. Fix: zero-pad the key to 32 bytes (identical HMAC). Unit tests for key lengths 1 to 64, e2e key changed to 30 characters (211 of 211 identical through nginx, 37 of 37 routing), and tokens signed in the Node container with the real key now work on the running stack. 250 unit tests pass. The earlier claims that the 245 tests and the e2e suite proved the token handling were too strong: both used long keys
 - Outcome: src/Abs.Api/Auth/JwtAuthenticationHandler.cs, tests/Abs.Api.Tests/UserEndpointTests.cs, tests/e2e/run_e2e.py, docs/known-limitations.md
+
+## I1. Open include parameters for the items list
+- Task: let .NET answer GET /api/libraries/:id/items with include parameters
+- Workflow: W3 planning-first (read Node's include handling for items, filterdata and personalized; decided what can match exactly; then code, unit tests, e2e)
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat request "open the requests with the include parameter"
+- Time spent: about 1 hour
+- Cost: not recorded
+- Result: partial by decision. Opened: include=rssfeed (Feed table, five fields), include=share (501 when a share exists for an admin), numEpisodesIncomplete and unknown values (ignored like Node). Not opened, with reasons: filterdata (response carries loadedAt of Node's in-memory cache and Node's natural sort order, so it cannot be byte-identical) and personalized/series/collections (not implemented). New safety net in nginx: a 501 from .NET makes nginx repeat the GET on Node, so the browser never sees a 501. Verification: 255 unit tests; e2e 112 cases .NET vs Node (102 identical, 10 expected 501, 0 unexpected), 229 of 229 identical through nginx, 40 of 40 routing probes (including the share fallback). The running stack was rebuilt and the web client's items request (include=rssfeed,numEpisodesIncomplete,share) is now answered by .NET. Mistake caught: a first write of AbsDbContext.cs overwrote seven DbSet lines of a teammate; restored from git before building
+- Outcome: Feed and MediaItemShare entities, RssFeedDto, LibraryItemService/Controller, nginx/nginx.conf, tests (LibraryItemsIncludeTests, fixtures), tests/e2e/run_e2e.py, docs

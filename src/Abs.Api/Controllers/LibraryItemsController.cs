@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Abs.Api.Abstractions;
 using Abs.Api.Dtos;
 using Abs.Api.Services;
@@ -55,11 +56,10 @@ public class LibraryItemsController(LibraryService libraries, LibraryItemService
         var itemSort = LibraryItemService.ParseSort(sort);
         var rules = await permissions.GetItemAccessRulesAsync(cancellationToken);
 
-        // Everything below needs Node: filters, series collapsing, per-user progress sorts, includes,
+        // Everything below needs Node: filters, series collapsing, per-user progress sorts,
         // podcast libraries and tag restricted users. Returning 501 lets the request go to Node.
         if (!string.IsNullOrEmpty(filter)
             || collapseseries == "1"
-            || includes.Count > 0
             || itemSort is null
             || library.MediaType != "book"
             || rules is null
@@ -69,8 +69,21 @@ public class LibraryItemsController(LibraryService libraries, LibraryItemService
         }
 
         var offset = pageValue.Value * limitValue.Value;
-        var (results, total) = await items.GetPageAsync(
-            id, itemSort.Value, desc == "1", limitValue.Value, offset, rules.CanAccessExplicit, cancellationToken);
+        var isAdmin = User.FindFirstValue(ClaimTypes.Role) is "root" or "admin";
+        IReadOnlyList<LibraryItemMinifiedDto> results;
+        int total;
+        try
+        {
+            // Node: rssfeed adds rssFeed to each item; share adds mediaItemShare for admins only; other values are ignored
+            // (numepisodesincomplete only applies to podcasts).
+            (results, total) = await items.GetPageAsync(
+                id, itemSort.Value, desc == "1", limitValue.Value, offset, rules.CanAccessExplicit, cancellationToken,
+                includeRssFeed: includes.Contains("rssfeed"), includeShare: isAdmin && includes.Contains("share"));
+        }
+        catch (UnsupportedIncludeException)
+        {
+            return StatusCode(StatusCodes.Status501NotImplemented);
+        }
 
         return Ok(new LibraryItemsResponse(
             results,

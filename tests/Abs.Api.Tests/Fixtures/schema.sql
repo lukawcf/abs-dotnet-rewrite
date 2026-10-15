@@ -35,3 +35,7 @@ CREATE INDEX `book_series_series_book` ON `bookSeries` (`seriesId`, `bookId`);
 CREATE INDEX `authors_name` ON `authors` (`name` COLLATE `NOCASE`);
 CREATE INDEX `authors_library_id` ON `authors` (`libraryId`);
 CREATE INDEX `bookAuthor_authorId` ON `bookAuthors` (`authorId`);
+
+-- RSS feeds and shares (DDL from the real 2.37.1 database). Used by the include=rssfeed and include=share tests.
+CREATE TABLE `feeds` (`id` UUID PRIMARY KEY, `slug` VARCHAR(255), `entityType` VARCHAR(255), `entityId` UUID, `entityUpdatedAt` DATETIME, `serverAddress` VARCHAR(255), `feedURL` VARCHAR(255), `imageURL` VARCHAR(255), `siteURL` VARCHAR(255), `title` VARCHAR(255), `description` TEXT, `author` VARCHAR(255), `podcastType` VARCHAR(255), `language` VARCHAR(255), `ownerName` VARCHAR(255), `ownerEmail` VARCHAR(255), `explicit` TINYINT(1), `preventIndexing` TINYINT(1), `coverPath` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` UUID REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);
+CREATE TABLE `mediaItemShares` (`id` UUID PRIMARY KEY, `mediaItemId` UUID, `mediaItemType` VARCHAR(255), `slug` VARCHAR(255), `pash` VARCHAR(255), `expiresAt` DATETIME, `extraData` JSON, `isDownloadable` TINYINT(1), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` UUID REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);

@@ -271,7 +271,6 @@ public class LibraryItemsEndpointTests : IDisposable
     [Theory]
     [InlineData("filter=genres.RmFudGFzeQ%3D%3D")]
     [InlineData("collapseseries=1")]
-    [InlineData("include=rssfeed")]
     [InlineData("sort=progress")]
     [InlineData("sort=random")]
     [InlineData("sort=nonsense")]

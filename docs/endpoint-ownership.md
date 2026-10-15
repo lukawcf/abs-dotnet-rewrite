@@ -21,7 +21,8 @@ A request goes to .NET only when .NET answers it exactly like Node. Everything e
 | Path | To .NET when | Otherwise |
 |---|---|---|
 | `/api/libraries`, `/api/libraries/<id>`, `/api/users`, `/api/me`, `/api/items/<id>`, `/api/me/progress`, `/api/me/progress/<id>[/<episodeId>]`, `/api/me/bookmarks`, `/api/me/bookmarks/<libraryItemId>` | the query string is empty | Node (for example `?include=filterdata`, `?expanded=1`, `?token=...`) |
-| `/api/libraries/<id>/items` | the query string uses only `limit`, `page`, `desc`, `minified` and `sort` with a supported value (`addedAt`, `size`, `birthtimeMs`, `mtimeMs`, `media.duration`, `media.metadata.publishedYear/authorName/authorNameLF/title`) | Node (`filter`, `collapseseries`, `include`, other sorts) |
+| `/api/libraries/<id>/items` | the query string uses only `limit`, `page`, `desc`, `minified`, `include` (any value) and `sort` with a supported value (`addedAt`, `size`, `birthtimeMs`, `mtimeMs`, `media.duration`, `media.metadata.publishedYear/authorName/authorNameLF/title`) | Node (`filter`, `collapseseries`, `include`, other sorts) |
+| a request .NET cannot answer exactly: .NET returns **501** and nginx sends the same GET to Node (`error_page 501 = @abs_node`) | never reaches the browser | Node |
 | every other method (POST, PATCH, DELETE), `/api/users/<id>`, `/api/me/progress/<id>/remove-from-continue-listening`, `/api/me/progress/batch/update`, bookmark writes, sockets, the web client | never | Node |
 
 ## Endpoints
@@ -31,7 +32,7 @@ A request goes to .NET only when .NET answers it exactly like Node. Everything e
 | GET | `/health` | A | `HealthController` | Done | none | none | .NET only, used by compose and tests |
 | GET | `/api/libraries` | A | `LibrariesController` | Done, routed | `LibraryController.js:188-212`, route `ApiRouter.js:70` | libraries, libraryFolders, users | Identical to Node in the e2e run. `include=stats` returns 501 (nginx never sends it) |
 | GET | `/api/libraries/:id` | A | `LibrariesController` | Done, routed | `LibraryController.js:220-233`, route `ApiRouter.js:71` | libraries, libraryFolders, users | `include=filterdata` returns 501 (nginx never sends it; the web client does use it, `client/store/libraries.js:115`) |
-| GET | `/api/libraries/:id/items` | C | `LibraryItemsController` | Partial, routed for supported options | `LibraryController.js:604-639`, route `ApiRouter.js:75` | libraryItems, books, authors, bookAuthors, series, bookSeries, settings | Book libraries only (`research/library-items-slice.md`) |
+| GET | `/api/libraries/:id/items` | C | `LibraryItemsController` | Partial, routed for supported options (now including `include=rssfeed` and `include=share`) | `LibraryController.js:604-639`, route `ApiRouter.js:75` | libraryItems, books, authors, bookAuthors, series, bookSeries, settings | Book libraries only (`research/library-items-slice.md`) |
 | GET | `/api/items/:id` | C | `ItemsController` | Partial, routed without a query | `LibraryItemController.js:70`, route `ApiRouter.js:108` | libraryItems, books, authors, series | Default shape. `expanded=1` and podcast items return 501 |
 | GET | `/api/me` | B + D | `MeController` | Done, routed | `MeController.js:27`, route `ApiRouter.js:173` | users, mediaProgresses | Now includes real `mediaProgress`, `bookmarks`, `token`, `isOldToken`, `lastSeen`, `seriesHideFromContinueListening` (A fixed this on 2026-10-15) |
 | GET | `/api/users` | B | `UsersController` | Done, routed without a query | `UserController.js:29`, route `ApiRouter.js:134` | users | Minimal form, root token hidden from non-root, creation order. `include=latestSession` returns 501 |
@@ -53,9 +54,9 @@ Run on 2026-10-15 against Node 2.37.1 and the .NET service from `main`, on a cop
 
 | Check | Result |
 |---|---|
-| .NET against Node, 103 request and user combinations | 95 identical, 8 expected 501 answers, 0 unexpected |
-| nginx against Node, 108 combinations including every unsupported option, plus writes sent through nginx and read back | 108 identical |
-| Routing probes (26 requests, upstream read from nginx's access log) | 26 correct |
+| .NET against Node, 103 request and user combinations | 102 identical, 10 expected 501 answers, 0 unexpected (112 cases) |
+| nginx against Node, 229 combinations (with and without Node's `/audiobookshelf` prefix) including every unsupported option, plus writes sent through nginx and read back | 229 identical |
+| Routing probes (40 requests, upstream read from nginx's access log) | 40 correct |
 
 It does **not** cover: write endpoints of .NET (disabled), podcast libraries, real data volumes, the web client in a browser, and `/socket.io`.
 

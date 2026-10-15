@@ -71,7 +71,7 @@ public class LibraryItemService(AbsDbContext db)
     /// </summary>
     public async Task<(IReadOnlyList<LibraryItemMinifiedDto> Items, int Total)> GetPageAsync(
         string libraryId, ItemSort sort, bool desc, int limit, int offset, bool canAccessExplicit,
-        CancellationToken cancellationToken = default)
+        CancellationToken cancellationToken = default, bool includeRssFeed = false, bool includeShare = false)
     {
         var settings = await LoadSortSettingsAsync(cancellationToken);
 
@@ -94,10 +94,39 @@ public class LibraryItemService(AbsDbContext db)
             .Where(x => ids.Contains(x.Id))
             .ToListAsync(cancellationToken);
 
+        // ?include=share (admins only): Node reads the live shares from memory (ShareManager). The table is only a
+        // starting point there, so when a share exists for a page item the answer cannot be guaranteed: leave it to Node.
+        if (includeShare)
+        {
+            var mediaIds = items.Select(x => x.MediaId).Where(x => x != null).ToList();
+            if (await db.MediaItemShares.AnyAsync(x => x.MediaItemId != null && mediaIds.Contains(x.MediaItemId), cancellationToken))
+            {
+                throw new UnsupportedIncludeException("share");
+            }
+        }
+
+        // ?include=rssfeed: Node takes the first feed of the item (feeds[0], no ORDER BY) and shows Feed.toOldJSONMinified.
+        var feedByItem = new Dictionary<string, Feed>();
+        if (includeRssFeed)
+        {
+            var feeds = await db.Feeds
+                .Where(x => x.EntityType == "libraryItem" && x.EntityId != null && ids.Contains(x.EntityId))
+                .OrderBy(x => x.CreatedAt).ThenBy(x => x.Id)
+                .ToListAsync(cancellationToken);
+            foreach (var feed in feeds)
+            {
+                feedByItem.TryAdd(feed.EntityId!, feed);
+            }
+        }
+
         var position = ids.Select((id, index) => (id, index)).ToDictionary(x => x.id, x => x.index);
         var dtos = items
             .OrderBy(x => position[x.Id])
-            .Select(x => LibraryItemMinifiedDto.From(x, x.Book!, settings))
+            .Select(x =>
+            {
+                var dto = LibraryItemMinifiedDto.From(x, x.Book!, settings);
+                return feedByItem.TryGetValue(x.Id, out var feed) ? dto with { RssFeed = RssFeedDto.From(feed) } : dto;
+            })
             .ToList();
         return (dtos, total);
     }
@@ -205,3 +234,6 @@ public class LibraryItemService(AbsDbContext db)
         return new ServerSortSettings(settings["sortingIgnorePrefix"]?.GetValue<bool>() == true, prefixes);
     }
 }
+
+/// <summary>The request asks for something that only Node can answer exactly (for example live share state).</summary>
+public class UnsupportedIncludeException(string include) : Exception($"include={include} is answered by Node");

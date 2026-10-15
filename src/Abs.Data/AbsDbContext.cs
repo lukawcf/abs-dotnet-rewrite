@@ -19,6 +19,8 @@ public class AbsDbContext(DbContextOptions<AbsDbContext> options) : DbContext(op
     public DbSet<BookAuthor> BookAuthors => Set<BookAuthor>();
     public DbSet<BookSeries> BookSeries => Set<BookSeries>();
     public DbSet<Setting> Settings => Set<Setting>();
+    public DbSet<Feed> Feeds => Set<Feed>();
+    public DbSet<MediaItemShare> MediaItemShares => Set<MediaItemShare>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AbsDbContext).Assembly);

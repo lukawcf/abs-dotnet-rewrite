@@ -166,6 +166,17 @@ def run(secret):
         call(NODE, f"/api/me/item/{items[0]}/bookmark", users[who], "POST", {"time": 40, "title": "second"})
     root_user_id = root_id
 
+    # An RSS feed and a share, created by Node itself, so that ?include=rssfeed and ?include=share have data to show.
+    code, body = call(NODE, f"/api/feeds/item/{items[0]}/open", root, "POST",
+                      {"serverAddress": "http://localhost:13378", "slug": "e2e-feed",
+                       "metadataDetails": {"preventIndexing": True, "ownerName": "e2e owner", "ownerEmail": "owner@example.test"}})
+    assert code == 200, f"cannot open an RSS feed: {code} {body}"
+    code, body = call(NODE, f"/api/items/{items[1]}", root)
+    code, body = call(NODE, "/api/share/mediaitem", root, "POST",
+                      {"slug": "e2e-share", "expiresAt": 0, "mediaItemType": "book", "mediaItemId": body["media"]["id"],
+                       "isDownloadable": False})
+    assert code in (200, 201), f"cannot create a share: {code} {body}"
+
     all_users = ["root", "reader", "nolib"]
     cases = []  # (path, users, expected_difference_or_None)
 
@@ -189,6 +200,15 @@ def run(secret):
                   "limit=abc&sort=size", "sort=size&minified=1", "limit=-1"):
         add(f"/api/libraries/{library}/items?{query}", ["root"])
     add(f"/api/libraries/{library}/items?sort=size", ["nolib"])
+    items_url = f"/api/libraries/{library}/items"
+    client_include = "limit=35&page=0&sort=media.metadata.title&desc=0&minified=1&include=rssfeed,numEpisodesIncomplete,share"
+    add(f"{items_url}?include=rssfeed", ["root", "reader"])
+    add(f"{items_url}?{client_include}", ["reader"])
+    add(f"{items_url}?{client_include}", ["root"], "a share exists: .NET answers 501, nginx falls back to Node")
+    add(f"{items_url}?include=%20RSSFeed%20,foo", ["root", "reader"])
+    add(f"{items_url}?include=numEpisodesIncomplete", ["root"])
+    add(f"{items_url}?include=share", ["reader"])
+    add(f"{items_url}?include=share", ["root"], "a share exists: .NET answers 501, nginx falls back to Node")
     add(f"/api/libraries/{library}/items?filter=authors.abc", ["root"], "filter stays in Node (501)")
     add(f"/api/libraries/{library}/items?collapseseries=1", ["root"], "collapseseries stays in Node (501)")
     add("/api/me")
@@ -272,7 +292,10 @@ def run(secret):
         ("GET", f"/api/libraries/{library}/items", "dotnet"),
         ("GET", f"/api/libraries/{library}/items?limit=2&page=1&sort=media.metadata.title&desc=1&minified=1", "dotnet"),
         ("GET", f"/api/libraries/{library}/items?filter=authors.abc", "node"),
-        ("GET", f"/api/libraries/{library}/items?include=rssfeed", "node"),
+        ("GET", f"/api/libraries/{library}/items?include=rssfeed", "dotnet"),
+        ("GET", f"/api/libraries/{library}/items?{client_include}", "dotnet"),
+        ("GET", f"/api/libraries/{library}/items?{client_include.replace('limit=35', 'limit=36')}", "node", "root"),
+        ("GET", f"/api/libraries/{library}/items?include=share&limit=7", "dotnet"),
         ("GET", f"/api/libraries/{library}/items?sort=progress", "node"),
         ("GET", f"/api/items/{items[0]}", "dotnet"), ("GET", f"/api/items/{items[0]}?expanded=1", "node"),
         ("GET", "/api/me", "dotnet"), ("GET", "/api/me?token=x", "node"),
@@ -294,11 +317,12 @@ def run(secret):
         ("GET", f"/audiobookshelf/api/items/{items[0]}", "dotnet"),
         ("GET", "/audiobookshelf/api/authors/x", "node"),
     ]
-    for method, path, _ in probes:
-        call(NGINX, path, users["reader"], method, {} if method in ("PATCH", "POST") else None)
+    for probe in probes:
+        method, path = probe[0], probe[1]
+        call(NGINX, path, users[probe[3] if len(probe) > 3 else "reader"], method, {} if method in ("PATCH", "POST") else None)
     log = compose("logs", "--no-color", "nginx").stdout
     routing_bad = []
-    for method, path, want in probes:
+    for method, path, want, *_ in probes:
         needle = f'"{method} {path} HTTP/1.1"'
         lines = [line for line in log.splitlines() if needle in line and "upstream=" in line]
         got = None
