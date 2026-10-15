@@ -52,11 +52,20 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 ## 8. `/api/me` is incomplete
 
 - The user payload from .NET has placeholder `mediaProgress` and `bookmarks` (`research/d-integration-handover.md`). The browser reads those fields to draw progress.
-- **Severity:** High if `/api/me` were routed to .NET. **Workaround:** do not route `/api/me` until B and D fill the fields.
+- **Severity:** High, because `/api/me` **is** routed to .NET already (entry 11). **Workaround:** revert that nginx block until B and D fill the fields.
 
 ## 9. Permission rules differ between list and single library
 
 - `GET /api/libraries` filters by `librariesAccessible` only when it is not empty and ignores `accessAllLibraries` (`LibraryController.js:191-194`). `GET /api/libraries/:id` honours the flag (`User.js:646-650`). .NET copies both and tests both. It is a Node quirk, listed so nobody "fixes" it.
+
+## 11. nginx already sends five routes to .NET, query strings included
+
+- **Difference:** `nginx/nginx.conf` (commit `a3d8393`) sends `/api/libraries`, `/api/libraries/<id>`, `/api/me`, `/api/users` and `/api/users/<id>` to .NET. The `location` blocks match the path only, so `?include=stats` and `?include=filterdata` also reach .NET, where they return **501** (entries 6). `/api/me` returns placeholder `mediaProgress` and `bookmarks` (entry 8).
+- **Who sees it:** Anyone using the web UI through `http://localhost:8080`. The web client reads the user object from `/api/me` to draw progress and bookmarks. The client does request `/api/libraries/<id>?include=filterdata` (`client/store/libraries.js:115` in the upstream repo), so the library filter data call hits the 501. It was **not** checked whether the UI still renders without it. `include=stats` was not found in the client code searched.
+- **Checked on 2026-10-15** with the real `nginx.conf` in a throwaway nginx container on the compose network (without a token): `/api/libraries`, `/api/libraries/<id>`, `/api/libraries/<id>?include=filterdata`, `/api/me` and `/api/users` were answered by .NET (empty 401 body); `/api/libraries/<id>/items`, `/api/me/progress` and `/api/items/<id>` by Node (text body `Unauthorized`). With a valid token the `include=filterdata` request gets 501 from .NET (unit-tested, not tried through nginx).
+- **Severity:** High until checked. This cutover happened without E's comparison test.
+- **Workaround:** Revert the `/api/me` block, or make nginx send any request that has an `include` query argument to Node. Not applied; it is B's change and needs a group decision.
+- **Status:** Open. Found on 2026-10-15 by diffing `nginx/nginx.conf` against `60c88f2`; no one had listed it.
 
 ## 10. Verification gaps
 

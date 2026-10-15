@@ -99,3 +99,14 @@
 - Cost: not recorded
 - Result: partial. docs/endpoint-ownership.md, docs/known-limitations.md, docs/entity-notes.md written from the research files, the code on main and upstream route lines. DEV.md does not exist in the repository, so (1) scope and roles were taken from PR titles and logs and marked inferred, and (2) the "Open items" update was written to docs/open-items.md instead. Two statements were wrong on the first draft (which table the continue-listening route writes; what B added to the User entity) and were corrected after checking the source. AGENTS.md had been deleted from main by commit a904758 and was restored from ebdc009, with the authentication section updated
 - Outcome: docs/endpoint-ownership.md, docs/known-limitations.md, docs/entity-notes.md, docs/open-items.md, AGENTS.md. See the commit that follows
+
+## V1. Check of main after the merges
+- Task: verify main end to end and correct the planning documents
+- Workflow: W2 small steps
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat request to check the state and finish everything
+- Time spent: about 30 minutes
+- Cost: not recorded
+- Result: success with findings. Docker image builds from the merged main; dotnet build 0 warnings, 235/235 tests pass. Found that B's commit a3d8393 had already cut five routes over in nginx.conf; my first draft of the documents said no route was cut over, which was wrong because I had only compared my own changes. Corrected in endpoint-ownership.md, known-limitations.md (entry 11) and open-items.md, then verified with the real nginx.conf in a temporary container. The web client calls /api/libraries/<id>?include=filterdata (client/store/libraries.js:115), which .NET answers with 501. Not fixed: that is B's cutover and needs a group decision. Port 8080 could not be published (Windows excluded port range), so the stack was checked on port 18080
+- Outcome: docs/known-limitations.md, docs/open-items.md, docs/endpoint-ownership.md, docs/logs/luka.md

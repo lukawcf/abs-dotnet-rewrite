@@ -2,6 +2,8 @@
 
 State of `main` at commit `0fc4c71` (PR #1, #2, #3 merged). 235 tests pass.
 
+**nginx cutover has already happened for five routes.** Commit `a3d8393` (B, PR #1) changed `nginx/nginx.conf` so that `=/api/libraries`, `/api/libraries/<id>`, `=/api/me`, `=/api/users` and `/api/users/<id>` go to the .NET service. Everything else, including `/api/libraries/<id>/items`, `/api/items/...` and all `/api/me/progress` and bookmark routes, still goes to Node. This was done without E's comparison test (the handbook's rule) and the blocks match on the path only, so every query string, such as `?include=stats`, reaches .NET as well. See known limitations 11.
+
 ## Who owns what
 
 DEV.md is not in the repository, so the scope and the role letters are taken from the handbook and from who opened which pull request. Treat the people column as **inferred** and correct it if it is wrong.
@@ -16,18 +18,18 @@ DEV.md is not in the repository, so the scope and the role letters are taken fro
 
 ## Endpoints
 
-"Status" is what exists in `src/Abs.Api/Controllers` on `main`. **No route is cut over in nginx yet**: `nginx/nginx.conf` still sends 100% of traffic to Node (unchanged since `60c88f2`), so every .NET endpoint below is reachable only inside the compose network.
+"Status" is what exists in `src/Abs.Api/Controllers` on `main`. **Only five routes are cut over in nginx** (marked "routed to .NET" in the Status column, from `nginx/nginx.conf` lines added in `a3d8393`). Every other route below is reachable only inside the compose network.
 
 | Method | Path | Owner | .NET controller | Status | Node source | Tables | Notes |
 |---|---|---|---|---|---|---|---|
 | GET | `/health` | A | `HealthController` | Done | none | none | .NET only, used by tests and compose |
-| GET | `/api/libraries` | A | `LibrariesController` | Done | `LibraryController.js:188-212`, route `ApiRouter.js:70` | libraries, libraryFolders, users | Body matched Node byte for byte on a database copy (`research/k2-shape-comparison.md`). `include=stats` returns 501 |
-| GET | `/api/libraries/:id` | A | `LibrariesController` | Done | `LibraryController.js:220-233`, route `ApiRouter.js:71` | libraries, libraryFolders, users | `include=filterdata` returns 501 |
+| GET | `/api/libraries` | A | `LibrariesController` | Done, **routed to .NET** | `LibraryController.js:188-212`, route `ApiRouter.js:70` | libraries, libraryFolders, users | Body matched Node byte for byte on a database copy (`research/k2-shape-comparison.md`). `include=stats` returns 501 |
+| GET | `/api/libraries/:id` | A | `LibrariesController` | Done, **routed to .NET** | `LibraryController.js:220-233`, route `ApiRouter.js:71` | libraries, libraryFolders, users | `include=filterdata` returns 501 |
 | GET | `/api/libraries/:id/items` | C | `LibraryItemsController` | Partial | `LibraryController.js:604-639`, route `ApiRouter.js:75` | libraryItems, books, authors, bookAuthors, series, bookSeries, settings | Book libraries only. `filter`, `collapseseries`, `include`, unsupported `sort` return 501 (`research/library-items-slice.md`) |
 | GET | `/api/items/:id` | C | `ItemsController` | Partial | `LibraryItemController.js:70`, route `ApiRouter.js:108` | libraryItems, books, authors, series | Default shape, book items. `expanded=1` and podcast items return 501 |
-| GET | `/api/me` | B | `MeController` | Partial | `MeController.js:27`, route `ApiRouter.js:173` | users | `mediaProgress` and `bookmarks` in the user payload are placeholders (`research/d-integration-handover.md`) |
-| GET | `/api/users` | B | `UsersController` | Done (see note) | `UserController.js:29`, route `ApiRouter.js:134` | users | No test evidence read by A; B's PR text only |
-| GET | `/api/users/:id` | B | `UsersController` | Done (see note) | `UserController.js:59`, route `ApiRouter.js:136` | users | same |
+| GET | `/api/me` | B | `MeController` | Partial, **routed to .NET** | `MeController.js:27`, route `ApiRouter.js:173` | users | `mediaProgress` and `bookmarks` in the user payload are placeholders (`research/d-integration-handover.md`) |
+| GET | `/api/users` | B | `UsersController` | Done (see note), **routed to .NET** | `UserController.js:29`, route `ApiRouter.js:134` | users | No test evidence read by A; B's PR text only |
+| GET | `/api/users/:id` | B | `UsersController` | Done (see note), **routed to .NET** | `UserController.js:59`, route `ApiRouter.js:136` | users | same |
 | GET | `/api/me/progress` | D | `PlaybackProgressController` | Done, default read-only | `MeController.js`, route `ApiRouter.js:176` | mediaProgresses, users | |
 | GET | `/api/me/progress/:id/:episodeId?` | D | `PlaybackProgressController` | Done | `MeController.js:239`, route `ApiRouter.js:183` | mediaProgresses, libraryItems, books, podcastEpisodes | |
 | PATCH | `/api/me/progress/:id/:episodeId?` | D | `PlaybackProgressController` | Written, **disabled by default** | `MeController.js:275`, route `ApiRouter.js:185` | mediaProgresses | Write flag `ProgressWrites:Enabled`. See known limitations |

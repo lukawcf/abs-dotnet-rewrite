@@ -5,8 +5,8 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 ## Blocking a cutover
 
 1. **E's integration test suite does not exist.** A route may move in `nginx/nginx.conf` only after the same test passes against Node and against .NET (AGENTS.md). Owner: E (ShamiaAkterShanta, unconfirmed; no commits yet).
-2. **No route is cut over.** `nginx/nginx.conf` is unchanged since `60c88f2`.
-3. **`/api/me` returns placeholder `mediaProgress` and `bookmarks`** (`research/d-integration-handover.md`). Needs B and D.
+2. **Five routes are already cut over** by B's commit `a3d8393` (`/api/libraries`, `/api/libraries/<id>`, `/api/me`, `/api/users`, `/api/users/<id>`), without E's test. Decide: keep, revert, or send requests with `include=` to Node (`known-limitations.md` entry 11). The client calls `/api/libraries/<id>?include=filterdata` (`client/store/libraries.js:115`), which .NET answers with 501.
+3. **`/api/me` returns placeholder `mediaProgress` and `bookmarks`** (`research/d-integration-handover.md`) and is already routed to .NET. Needs B and D, or a revert.
 4. **Socket event `user_updated` is never emitted by .NET** (`known-limitations.md` entry 1). The group must pick option (a), (b) or (c).
 5. **Node cache invalidation and write lock handling** are open before any write is enabled (`known-limitations.md` entries 2 and 3).
 
@@ -32,3 +32,7 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 - Behaviour on a database with real, large data.
 - SQLite version inside Microsoft.Data.Sqlite versus the `GROUP_CONCAT ... ORDER BY` triggers.
 - Podcast libraries.
+
+## Environment
+
+17. **Port 8080 is reserved by Windows on the author's machine** (excluded port range 7981-8080 after a Docker restart), so `docker-compose up` cannot publish nginx there. The `abs-dotnet` and `abs-node` containers run; nginx does not. Releasing the range needs an administrator (restart of the winnat service), which was not done. Checks in this session used a temporary nginx on port 18080 with the same config.
