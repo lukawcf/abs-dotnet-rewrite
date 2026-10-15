@@ -68,6 +68,10 @@ About 1.5 to 2 hours:
 
 **Keep option A unless the goal is to show .NET answering the library page.** The benefit is small (Node already answers from memory, one request per page) and the cost is a permanent exception to the rule that .NET answers exactly like Node. If the group wants B anyway, the experiment shows the hard part (the sort) is solved; do it with the guardrails in section 5 and record differences 2 to 4 as known limitations.
 
+## Decision
+
+Option A, keep it in Node. Decided by the repository owner on 2026-10-15 after this assessment.
+
 ## Unconfirmed
 
 - Behaviour with a locale other than en-US on the Node host.

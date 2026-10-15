@@ -39,6 +39,7 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 
 - **What works in .NET:** `include=rssfeed` (adds `rssFeed` from the `feeds` table, five fields, same as Node's `Feed.toOldJSONMinified`), `include=share` for non-admins (Node ignores it), `include=numEpisodesIncomplete` and unknown values (Node ignores them). The `include` list is echoed trimmed and lower-cased, like Node. Checked against Node with a feed and a share that Node itself created.
 - **What stays with Node:** `include=share` for an admin when a share exists for a listed book. Node answers from the live share list in memory (`ShareManager`), which the table alone cannot reproduce, so .NET returns 501 and **nginx sends the request to Node** (`error_page 501`).
+- **Decision (2026-10-15, repository owner): `filterdata` stays in Node.** Assessment and the sort experiment: `research/filterdata-assessment.md`. The sort can be matched (0 of 119 differences), but Node's in-memory cache (30 minutes, appended values, `loadedAt`) cannot be reproduced from the database, so .NET could not answer exactly like Node.
 - **Not opened:** `GET /api/libraries/<id>?include=filterdata` (the response contains `loadedAt`, the time of Node's own in-memory cache, and uses Node's natural sort), `GET /api/libraries/<id>/personalized` and `/series`, `/collections`. They stay in Node. The web client calls all of these on every library page, so most of its traffic is still answered by Node.
 
 ## 5. `GET /api/items/:id` default shape only
