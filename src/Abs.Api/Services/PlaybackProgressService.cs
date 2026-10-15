@@ -12,8 +12,11 @@ public partial class PlaybackProgressService(AbsDbContext db) : IUserProgressRea
     // No library permission filtering: these endpoints only expose the authenticated user's rows.
     public async Task<IReadOnlyList<PlaybackProgressDto>> GetAllAsync(string userId, CancellationToken ct)
     {
+        // Node has no ORDER BY, so rows come back in insertion order; createdAt is the closest key.
         var rows = await db.Set<PlaybackProgress>().AsNoTracking()
-            .Where(x => x.UserId == userId).ToListAsync(ct);
+            .Where(x => x.UserId == userId)
+            .OrderBy(x => x.CreatedAt).ThenBy(x => x.Id)
+            .ToListAsync(ct);
         return rows.Select(PlaybackProgressDto.From).ToList();
     }
 

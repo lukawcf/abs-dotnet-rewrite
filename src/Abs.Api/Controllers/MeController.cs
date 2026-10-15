@@ -1,12 +1,13 @@
 using System.Security.Claims;
-using Abs.Api.Dtos;
+using Abs.Api.Auth;
 using Abs.Api.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Abs.Api.Controllers;
 
-/// <summary>Node source: server/controllers/MeController.js (getCurrentUser).</summary>
+/// <summary>Node source: server/controllers/MeController.js (getCurrentUser, line 27).</summary>
 [ApiController]
 [Authorize]
 [Route("api/me")]
@@ -18,12 +19,10 @@ public class MeController(UserService users) : ControllerBase
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         if (string.IsNullOrEmpty(userId))
-            return Unauthorized();
+            return StatusCode(StatusCodes.Status401Unauthorized);
 
-        var user = await users.GetByIdAsync(userId, cancellationToken);
-        if (user is null)
-            return NotFound();
-
-        return Ok(UserDto.From(user));
+        var isOldToken = User.HasClaim(JwtAuthenticationHandler.OldTokenClaim, "true");
+        var user = await users.GetBrowserUserAsync(userId, isOldToken, cancellationToken);
+        return user is null ? StatusCode(StatusCodes.Status404NotFound) : Ok(user);
     }
 }

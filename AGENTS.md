@@ -15,8 +15,11 @@ behind nginx and both read the same SQLite file.
 - The database is opened read-only (`Mode=ReadOnly`, see `src/Abs.Api/appsettings.json`). Do not add writes
   unless your task says so: a write behind Node's back leaves Node's `/libraries*` response cache stale
   (`docs/research/wal-and-cache.md`).
-- Do not change `nginx/nginx.conf` or add routes to it unless the task says so. A route moves to .NET only after the
-  same test passes against Node and against .NET.
+- Do not change `nginx/nginx.conf` unless the task says so. A request may go to .NET only when .NET answers it exactly like
+  Node. Prove it with `python tests/e2e/run_e2e.py --db <copy of a database>`: it starts Node, .NET and nginx on a copy,
+  compares every request, checks that nginx routes each probe to the right backend, and must end with 0 unexpected
+  differences. Add your endpoint's cases to `run()` in that file and its routing rule to `nginx/nginx.conf` together.
+  Unsupported options must stay on Node in nginx (never rely on a 501 reaching the browser).
 
 ## Structure of a slice
 
@@ -82,6 +85,8 @@ dotnet build AbsRewrite.sln
 dotnet test AbsRewrite.sln
 dotnet format AbsRewrite.sln --verify-no-changes
 ```
+
+For anything that changes what nginx sends to .NET, also run the end-to-end suite (needs Docker; uses ports 13378, 18080 and 18081).
 
 ## When something fails
 

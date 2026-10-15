@@ -110,3 +110,14 @@
 - Cost: not recorded
 - Result: success with findings. Docker image builds from the merged main; dotnet build 0 warnings, 235/235 tests pass. Found that B's commit a3d8393 had already cut five routes over in nginx.conf; my first draft of the documents said no route was cut over, which was wrong because I had only compared my own changes. Corrected in endpoint-ownership.md, known-limitations.md (entry 11) and open-items.md, then verified with the real nginx.conf in a temporary container. The web client calls /api/libraries/<id>?include=filterdata (client/store/libraries.js:115), which .NET answers with 501. Not fixed: that is B's cutover and needs a group decision. Port 8080 could not be published (Windows excluded port range), so the stack was checked on port 18080
 - Outcome: docs/known-limitations.md, docs/open-items.md, docs/endpoint-ownership.md, docs/logs/luka.md
+
+## E1. End-to-end suite and nginx routing rules
+- Task: build the E module's work ourselves: compare Node, .NET and nginx, fix what it finds, make nginx send only identical requests to .NET
+- Workflow: W2 small steps (run the suite, read the diffs, fix, rerun; five rounds)
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat request "do not mind the others, let us finish the project ourselves"; no saved prompt file
+- Time spent: about 2 hours
+- Cost: not recorded
+- Result: success. tests/e2e/run_e2e.py starts Node 2.37.1, the .NET service and nginx on a copy of the sample database with a random test JWT key (never .env), mints tokens like Node's TokenManager, and compares requests. Round 1 found 14 real differences. Fixed in .NET: plain-text error bodies (Unauthorized, Forbidden, Not Found) instead of ProblemDetails; /api/me and /api/users now carry token, email, lastSeen, isLocked, seriesHideFromContinueListening, mediaProgress, bookmarks and Node's isOldToken rule; users in creation order; progress rows in insertion order; /api/users/:id answers 501 and stays in Node. nginx.conf was rewritten to send a request to .NET only when its query string and method are supported (everything else to Node). Final: .NET vs Node 103 cases (95 identical, 8 expected 501, 0 unexpected); nginx vs Node 108 of 108 identical; 26 of 26 routing probes correct; 245 unit tests pass. Cache behaviour with a signed token tested live: Node serves a stale value after a write made outside Node. Limits: sample database has 1 library and 4 items; no browser run; port 8080 could not be published on this machine (Windows excluded range), so the suite uses 18080; write endpoints stay disabled
+- Outcome: tests/e2e/run_e2e.py, nginx/nginx.conf, docker-compose.yml, UserDto/UserService/UserController/MeController, tests/Abs.Api.Tests/UserEndpointTests.cs, docs, .gitattributes

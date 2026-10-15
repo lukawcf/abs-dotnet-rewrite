@@ -56,4 +56,4 @@ Yes, in process.
 - Node's sqlite driver default busy timeout (no `node_modules` in the clone; 1000 ms is from memory only and not confirmed).
 - How Microsoft.Data.Sqlite maps `Default Timeout` to `busy_timeout`.
 - Single non-repeated, parallel experiment; numbers are indicative.
-- Authenticated cache behaviour through nginx.
+- Authenticated cache behaviour through nginx. (Update 2026-10-15: the cache behaviour itself was tested with a signed test token and confirmed, see `docs/known-limitations.md` entry 2. Not tested through nginx.)

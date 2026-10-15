@@ -10,3 +10,5 @@ metadata/
 bin/
 obj/
 .vs/
+# e2e scratch stack
+tests/e2e/.work/

@@ -1,12 +1,12 @@
 using System.Security.Claims;
-using Abs.Api.Dtos;
 using Abs.Api.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Abs.Api.Controllers;
 
-/// <summary>Node source: server/controllers/UserController.js (findAll, findOne).</summary>
+/// <summary>Node source: server/controllers/UserController.js (findAll, line 29).</summary>
 [ApiController]
 [Authorize]
 [Route("api/users")]
@@ -17,26 +17,23 @@ public class UsersController(UserService users) : ControllerBase
 
     // GET /api/users
     [HttpGet]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetAll([FromQuery] string? include, CancellationToken cancellationToken)
     {
         if (!IsAdmin)
             return StatusCode(StatusCodes.Status403Forbidden);
 
-        var all = await users.GetAllAsync(cancellationToken);
-        return Ok(new { users = all.Select(UserDto.From).ToList() });
+        // include=latestSession needs playback sessions; Node keeps serving those requests.
+        if ((include ?? string.Empty).Split(',').Select(x => x.Trim()).Contains("latestSession"))
+            return StatusCode(StatusCodes.Status501NotImplemented);
+
+        var hideRootToken = User.FindFirstValue(ClaimTypes.Role) != "root";
+        var all = await users.GetMinimalUsersAsync(hideRootToken, cancellationToken);
+        return Ok(new { users = all });
     }
 
-    // GET /api/users/:id
+    // GET /api/users/:id (UserController.js:59). Node adds display titles and covers to every media progress
+    // row; that is not implemented, so Node keeps serving this route.
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(string id, CancellationToken cancellationToken)
-    {
-        if (!IsAdmin)
-            return StatusCode(StatusCodes.Status403Forbidden);
-
-        var user = await users.GetByIdAsync(id, cancellationToken);
-        if (user is null)
-            return NotFound();
-
-        return Ok(UserDto.From(user));
-    }
+    public IActionResult GetById(string id) =>
+        IsAdmin ? StatusCode(StatusCodes.Status501NotImplemented) : StatusCode(StatusCodes.Status403Forbidden);
 }

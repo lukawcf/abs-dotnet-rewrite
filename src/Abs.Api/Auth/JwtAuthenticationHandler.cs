@@ -23,6 +23,9 @@ public class JwtAuthenticationHandler(
     IConfiguration configuration)
     : AuthenticationHandler<AuthenticationSchemeOptions>(options, logger, encoder)
 {
+    /// <summary>Set to "true" when the token has no exp claim (Node's "old token", User.isOldToken).</summary>
+    public const string OldTokenClaim = "isOldToken";
+
     protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
     {
         var token = ExtractToken();
@@ -77,7 +80,8 @@ public class JwtAuthenticationHandler(
         [
             new Claim(ClaimTypes.NameIdentifier, user.Id),
             new Claim(ClaimTypes.Name, user.Username ?? string.Empty),
-            new Claim(ClaimTypes.Role, user.Type ?? string.Empty)
+            new Claim(ClaimTypes.Role, user.Type ?? string.Empty),
+            new Claim(OldTokenClaim, principal.HasClaim(c => c.Type == "exp") ? "false" : "true")
         ], Scheme.Name);
 
         var ticket = new AuthenticationTicket(new ClaimsPrincipal(identity), Scheme.Name);

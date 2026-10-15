@@ -16,7 +16,8 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 - **Who sees it:** Nobody while .NET is read-only. Once any .NET write is enabled, Node can keep serving old library data.
 - **Severity:** High for writes, none for reads.
 - **Workaround:** Keep writes in Node, or add an invalidation call before enabling writes.
-- **Status:** Open. The authenticated cache behaviour was reasoned from code and **not tested live** (no credentials were available in `research/wal-and-cache.md`).
+- **Tested live on 2026-10-15** (Node 2.37.1 with a token signed by a test key, on a database copy): after the `libraries.name` column was changed by a process other than Node, `GET /api/libraries` through Node still returned the old name while .NET returned the new one. After a `PATCH /api/libraries/<id>` made through Node, both returned the new name. So the cache is real, only Node's own writes clear it, and a .NET write would behave like the outside write.
+- **Status:** Open for writes; harmless while .NET only reads.
 
 ## 3. "database is locked" under concurrent use
 
@@ -30,49 +31,45 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 ## 4. `GET /api/libraries/:id/items` supports a small part of Node's options
 
 - **Difference:** Supported: book libraries, `limit`, `page`, `sort`, `desc`, `minified`, permission and explicit-content rules. Answered with 501: `filter`, `collapseseries`, `include`, progress sorts, `sort=random`, podcast libraries (`research/library-items-slice.md`, `research/library-endpoints.md` section 4).
-- **Who sees it:** Anyone using filters, series grouping or progress sorting. Today nobody, because nothing is routed.
-- **Severity:** Medium. The web client uses these options heavily.
-- **Workaround:** When the route is cut over, nginx must send requests with an unsupported option to Node. A bare 501 would break the page.
-- **Status:** Open by design (scope decision).
+- **Who sees it:** Nobody. nginx sends a request to .NET only when its query string uses supported options, so everything else is answered by Node (`endpoint-ownership.md`, routing table). This was checked by `tests/e2e/run_e2e.py` (nginx against Node, 108 of 108 identical).
+- **Severity:** Low now (was medium before the nginx rules). The web client's usual calls carry `include` or `filter` and therefore still hit Node, so the .NET path is used less than the numbers suggest.
+- **Status:** By design.
 
 ## 5. `GET /api/items/:id` default shape only
 
-- `expanded=1` and podcast items return 501 (`research/library-items-slice.md`). Node source: `LibraryItemController.js:70`. Same routing workaround as 4.
+- `expanded=1` and podcast items return 501 (`research/library-items-slice.md`). Node source: `LibraryItemController.js:70`. nginx sends `/api/items/<id>` to .NET only without a query string (a podcast item without a query would still reach .NET and get 501; not tested, podcast libraries are out of scope).
 
 ## 6. Includes that need Node-only state
 
 - `GET /api/libraries?include=stats` and `GET /api/libraries/:id?include=filterdata` return 501. The second uses Node's in-memory filter data with a 30 minute TTL (`research/library-endpoints.md` section 3). `include=share` and `filter=share-open` depend on Node's `ShareManager` state.
-- **Severity:** Low to medium. **Workaround:** leave these requests in Node.
+- **Severity:** Low. nginx never sends these requests to .NET (a query string always goes to Node).
 
 ## 7. Tie order and no-sort order differ
 
 - When two items have equal sort values, Node's order is undefined; .NET breaks ties by id. Without `sort`, Node has no ORDER BY and .NET uses `createdAt` then id (`research/library-items-slice.md`, "Known differences").
 - **Severity:** Low. **Who sees it:** Lists with duplicate sort values may list in a different order.
 
-## 8. `/api/me` is incomplete
+## 8. `/api/me` (fixed on 2026-10-15)
 
-- The user payload from .NET has placeholder `mediaProgress` and `bookmarks` (`research/d-integration-handover.md`). The browser reads those fields to draw progress.
-- **Severity:** High, because `/api/me` **is** routed to .NET already (entry 11). **Workaround:** revert that nginx block until B and D fill the fields.
+- Was: placeholder `mediaProgress`, `bookmarks`, empty `token`, wrong `isOldToken`, no `lastSeen`. Now: filled from the same data as Node. Compared with Node in the e2e run for root, an ordinary user and a user without library access: identical (token without expiry and token with expiry are both covered by unit tests, `UserEndpointTests`).
+- **Still open:** `hasOpenIDLink` is always false (the column `authOpenIDSub` is not in the 2.37.1 schema that was read); `GET /api/users/:id` stays in Node because Node adds display titles and covers to each progress row.
 
 ## 9. Permission rules differ between list and single library
 
 - `GET /api/libraries` filters by `librariesAccessible` only when it is not empty and ignores `accessAllLibraries` (`LibraryController.js:191-194`). `GET /api/libraries/:id` honours the flag (`User.js:646-650`). .NET copies both and tests both. It is a Node quirk, listed so nobody "fixes" it.
 
-## 11. nginx already sends five routes to .NET, query strings included
+## 11. nginx cutover of 2026-10-08 (replaced on 2026-10-15)
 
-- **Difference:** `nginx/nginx.conf` (commit `a3d8393`) sends `/api/libraries`, `/api/libraries/<id>`, `/api/me`, `/api/users` and `/api/users/<id>` to .NET. The `location` blocks match the path only, so `?include=stats` and `?include=filterdata` also reach .NET, where they return **501** (entries 6). `/api/me` returns placeholder `mediaProgress` and `bookmarks` (entry 8).
-- **Who sees it:** Anyone using the web UI through `http://localhost:8080`. The web client reads the user object from `/api/me` to draw progress and bookmarks. The client does request `/api/libraries/<id>?include=filterdata` (`client/store/libraries.js:115` in the upstream repo), so the library filter data call hits the 501. It was **not** checked whether the UI still renders without it. `include=stats` was not found in the client code searched.
-- **Checked on 2026-10-15** with the real `nginx.conf` in a throwaway nginx container on the compose network (without a token): `/api/libraries`, `/api/libraries/<id>`, `/api/libraries/<id>?include=filterdata`, `/api/me` and `/api/users` were answered by .NET (empty 401 body); `/api/libraries/<id>/items`, `/api/me/progress` and `/api/items/<id>` by Node (text body `Unauthorized`). With a valid token the `include=filterdata` request gets 501 from .NET (unit-tested, not tried through nginx).
-- **Severity:** High until checked. This cutover happened without E's comparison test.
-- **Workaround:** Revert the `/api/me` block, or make nginx send any request that has an `include` query argument to Node. Not applied; it is B's change and needs a group decision.
-- **Status:** Open. Found on 2026-10-15 by diffing `nginx/nginx.conf` against `60c88f2`; no one had listed it.
+- **What happened:** Commit `a3d8393` (B) sent five routes to .NET with every query string, while `/api/me` was incomplete and `?include=filterdata` (used by the web client, `client/store/libraries.js:115`) returned 501. It was found by diffing `nginx/nginx.conf` against `60c88f2`.
+- **Fix:** `nginx/nginx.conf` now decides per request (empty query string, or only the supported options) and sends the rest to Node. `tests/e2e/run_e2e.py` checks the result: nginx answers all 108 compared requests exactly like Node, and 26 routing probes go to the expected backend.
+- **Not covered:** the web client in a real browser; the e2e run uses a small sample database.
 
 ## 10. Verification gaps
 
 - Comparisons ran on **synthetic or very small data** (1 library, 4 items; 5 generated books in C's run).
-- No deployed end-to-end test of nginx, Node and .NET together (D states this itself).
-- No integration test suite by E exists yet.
-- `dotnet format --verify-no-changes` reports line-ending errors on a Windows checkout with `core.autocrlf=true`. The repository itself stores LF. Not a code problem, but anyone on Windows sees it.
+- The end-to-end suite (`tests/e2e/run_e2e.py`) runs Node, .NET and nginx together, but on a copy of a very small database and through scripted requests, not a browser.
+- Port 8080 could not be published on the author's machine (Windows reserved it), so the suite uses 18080.
+- `dotnet format --verify-no-changes` reported line-ending errors on Windows checkouts with `core.autocrlf=true`; `.gitattributes` (added 2026-10-15) fixes this for fresh clones.
 
 ## Unconfirmed
 
