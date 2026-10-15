@@ -21,7 +21,7 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 
 ## Housekeeping
 
-11. **`JWT_SECRET_KEY` must reach the team** through a private channel (it is not in the repository and must not be). Done by the repository owner, outside git.
+11. ~~`JWT_SECRET_KEY` must reach the team~~ Done: the repository owner sent it to the team through a private channel. It is not in the repository.
 12. **Collaborator ShamiaAkterShanta** had not accepted the invitation when last checked.
 13. **DEV.md** is missing. Two documents depend on it (ownership scope, this list).
 15. **Branch `feat/progress-bookmarks-integration`** can be deleted (merged). GitHub offers a button on PR #2.
