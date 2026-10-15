@@ -68,7 +68,7 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 
 - Comparisons ran on **synthetic or very small data** (1 library, 4 items; 5 generated books in C's run).
 - The end-to-end suite (`tests/e2e/run_e2e.py`) runs Node, .NET and nginx together, but on a copy of a very small database and through scripted requests, not a browser.
-- Port 8080 could not be published on the author's machine (Windows reserved it), so the suite uses 18080.
+- The suite uses port 18080 so it can run next to the normal stack; the normal stack runs on 8080 (see `open-items.md` item 17 if Windows blocks that port).
 - `dotnet format --verify-no-changes` reported line-ending errors on Windows checkouts with `core.autocrlf=true`; `.gitattributes` (added 2026-10-15) fixes this for fresh clones.
 
 ## Unconfirmed

@@ -121,3 +121,14 @@
 - Cost: not recorded
 - Result: success. tests/e2e/run_e2e.py starts Node 2.37.1, the .NET service and nginx on a copy of the sample database with a random test JWT key (never .env), mints tokens like Node's TokenManager, and compares requests. Round 1 found 14 real differences. Fixed in .NET: plain-text error bodies (Unauthorized, Forbidden, Not Found) instead of ProblemDetails; /api/me and /api/users now carry token, email, lastSeen, isLocked, seriesHideFromContinueListening, mediaProgress, bookmarks and Node's isOldToken rule; users in creation order; progress rows in insertion order; /api/users/:id answers 501 and stays in Node. nginx.conf was rewritten to send a request to .NET only when its query string and method are supported (everything else to Node). Final: .NET vs Node 103 cases (95 identical, 8 expected 501, 0 unexpected); nginx vs Node 108 of 108 identical; 26 of 26 routing probes correct; 245 unit tests pass. Cache behaviour with a signed token tested live: Node serves a stale value after a write made outside Node. Limits: sample database has 1 library and 4 items; no browser run; port 8080 could not be published on this machine (Windows excluded range), so the suite uses 18080; write endpoints stay disabled
 - Outcome: tests/e2e/run_e2e.py, nginx/nginx.conf, docker-compose.yml, UserDto/UserService/UserController/MeController, tests/Abs.Api.Tests/UserEndpointTests.cs, docs, .gitattributes
+
+## V2. Full stack on port 8080 and browser check
+- Task: start nginx, Node and .NET together on port 8080 and check the web client
+- Workflow: W2 small steps
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat requests for the steps and for checking the routing
+- Time spent: about 10 minutes
+- Cost: not recorded
+- Result: success. Windows had reserved ports 7981-8080 (no administrator mark in netsh output); the owner ran net stop winnat, docker-compose up -d, net start winnat in an administrator PowerShell. All three containers Up, /status 200 on 8080. Eleven unauthenticated probes through nginx were answered by the expected backend (read from nginx's access log). The owner then logged in with a browser and reported the web client works; that was one manual session, not recorded, and the agent cannot log in
+- Outcome: docs/open-items.md, docs/known-limitations.md, docs/logs/luka.md

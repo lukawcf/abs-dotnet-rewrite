@@ -8,6 +8,7 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 2. **`GET /api/users/:id`, podcast libraries and `include=` options** stay in Node by design.
 3. **E's role is unfilled.** ShamiaAkterShanta has no commits. `tests/e2e/run_e2e.py` was written by A and can be extended: add podcast data, more users, a browser run.
 4. **The suite has only seen the 2026-10-06 sample database** (1 library, 4 items). Run it on a larger copy before trusting the numbers.
+5. **Browser check:** on 2026-10-15 the repository owner logged in at http://localhost:8080 (full stack: nginx, Node, .NET) and reported that the web client works. This was one manual session by one person on the sample data; nothing was recorded about which pages were opened.
 
 ## Decisions for the group meeting
 
@@ -34,4 +35,4 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 
 ## Environment
 
-17. **Port 8080 is reserved by Windows on the author's machine** (excluded port range 7981-8080 after a Docker restart), so `docker-compose up` cannot publish nginx there. The `abs-dotnet` and `abs-node` containers run; nginx does not. Releasing the range needs an administrator (restart of the winnat service), which was not done. Checks in this session used a temporary nginx on port 18080 with the same config.
+17. **Port 8080 can be reserved by Windows** (excluded port range 7981-8080 after a Docker restart), which makes `docker-compose up` fail for nginx. Fix, in an administrator PowerShell: `net stop winnat`, then `docker-compose up -d`, then `net start winnat` (in that order). Done on 2026-10-15 by the repository owner; the full stack then ran on 8080.
