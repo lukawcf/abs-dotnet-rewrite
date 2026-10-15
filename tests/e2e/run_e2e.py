@@ -227,14 +227,16 @@ def run(secret):
     # Phase 2: the front door. Every case, including the ones .NET does not support, must look exactly like Node
     # when it goes through nginx, because nginx sends unsupported requests back to Node.
     front_same, front_bad = 0, []
-    for path, who, _ in cases:
-        for name in who:
-            cn, bn = call(NODE, path, users[name])
-            cf, bf = call(NGINX, path, users[name])
-            if (cn, bn) == (cf, bf):
-                front_same += 1
-            else:
-                front_bad.append((name, path, cn, cf, bn, bf))
+    # The web client uses Node's base path (/audiobookshelf/api/...), other clients use /api/...: test both.
+    for prefix in ("", "/audiobookshelf"):
+        for path, who, _ in cases:
+            for name in who:
+                cn, bn = call(NODE, path, users[name])
+                cf, bf = call(NGINX, prefix + path, users[name])
+                if (cn, bn) == (cf, bf):
+                    front_same += 1
+                else:
+                    front_bad.append((name, prefix + path, cn, cf, bn, bf))
 
     # Writes always go to Node: do them through nginx, then read through both paths.
     call(NGINX, f"/api/me/progress/{items[2]}", users["reader"], "PATCH",
@@ -280,6 +282,15 @@ def run(secret):
         ("GET", "/api/me/bookmarks", "dotnet"), ("GET", f"/api/me/bookmarks/{items[0]}", "dotnet"),
         ("POST", f"/api/me/item/{items[0]}/bookmark", "node"),
         ("GET", "/status", "node"),
+        # the web client's paths carry Node's base path
+        ("GET", "/audiobookshelf/api/libraries", "dotnet"), ("GET", f"/audiobookshelf/api/libraries/{library}?include=filterdata", "node"),
+        ("GET", f"/audiobookshelf/api/libraries/{library}/items?limit=2&sort=size", "dotnet"),
+        ("GET", f"/audiobookshelf/api/libraries/{library}/items?filter=authors.abc", "node"),
+        ("GET", "/audiobookshelf/api/me", "dotnet"), ("GET", "/audiobookshelf/api/users", "dotnet"),
+        ("GET", f"/audiobookshelf/api/users/{root_user_id}", "node"),
+        ("GET", "/audiobookshelf/api/me/progress", "dotnet"), ("GET", "/audiobookshelf/api/me/bookmarks", "dotnet"),
+        ("GET", f"/audiobookshelf/api/items/{items[0]}", "dotnet"),
+        ("GET", "/audiobookshelf/api/authors/x", "node"),
     ]
     for method, path, _ in probes:
         call(NGINX, path, users["reader"], method, {} if method in ("PATCH", "POST") else None)
