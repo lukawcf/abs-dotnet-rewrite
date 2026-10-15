@@ -132,3 +132,14 @@
 - Cost: not recorded
 - Result: success. Windows had reserved ports 7981-8080 (no administrator mark in netsh output); the owner ran net stop winnat, docker-compose up -d, net start winnat in an administrator PowerShell. All three containers Up, /status 200 on 8080. Eleven unauthenticated probes through nginx were answered by the expected backend (read from nginx's access log). The owner then logged in with a browser and reported the web client works; that was one manual session, not recorded, and the agent cannot log in
 - Outcome: docs/open-items.md, docs/known-limitations.md, docs/logs/luka.md
+
+## V3. Correction: the browser never reached .NET
+- Task: explain nginx log lines and check what the browser traffic did
+- Workflow: W2 small steps
+- Agent and model: Claude Code, Sonnet 5.5
+- Operator: Luka
+- Prompt: chat question about reading the nginx log
+- Time spent: about 20 minutes
+- Cost: not recorded
+- Result: success, with a correction to earlier statements. While pulling sample log lines the agent saw that every browser request was `/audiobookshelf/api/...` and answered by Node. The nginx rules matched only `/api/...`, so the owner's browser check (V2) tested Node, not .NET; the e2e suite had the same blind spot because it never used the prefix. Fix: all API locations accept the optional prefix and strip it with a rewrite before proxying. e2e: .NET vs Node 103 cases (0 unexpected); nginx vs Node 211 of 211 identical (both path forms); routing 37 of 37. The running nginx was restarted and the log shows prefixed requests going to .NET. Statement in V2 and in open-items about the browser check was corrected
+- Outcome: nginx/nginx.conf, tests/e2e/run_e2e.py, docs/open-items.md, docs/known-limitations.md

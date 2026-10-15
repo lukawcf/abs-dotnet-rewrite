@@ -62,7 +62,8 @@ Each entry says what differs from Node, who notices, how serious it is, and what
 
 - **What happened:** Commit `a3d8393` (B) sent five routes to .NET with every query string, while `/api/me` was incomplete and `?include=filterdata` (used by the web client, `client/store/libraries.js:115`) returned 501. It was found by diffing `nginx/nginx.conf` against `60c88f2`.
 - **Fix:** `nginx/nginx.conf` now decides per request (empty query string, or only the supported options) and sends the rest to Node. `tests/e2e/run_e2e.py` checks the result: nginx answers all 108 compared requests exactly like Node, and 26 routing probes go to the expected backend.
-- **Not covered:** the web client in a real browser; the e2e run uses a small sample database.
+- **Second fix, same day:** the web client calls `/audiobookshelf/api/...` (Node's base path), which the first version of the new rules did not match, so the browser still reached only Node. The rules now accept the prefix and strip it before proxying; the e2e suite tests both path forms (211 of 211 identical through nginx, 37 of 37 routing probes).
+- **Not covered:** the web client in a real browser after the second fix; the e2e run uses a small sample database.
 
 ## 10. Verification gaps
 

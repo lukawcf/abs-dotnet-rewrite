@@ -8,7 +8,7 @@ DEV.md is not in the repository, so this list lives here. Move it into DEV.md "O
 2. **`GET /api/users/:id`, podcast libraries and `include=` options** stay in Node by design.
 3. **E's role is unfilled.** ShamiaAkterShanta has no commits. `tests/e2e/run_e2e.py` was written by A and can be extended: add podcast data, more users, a browser run.
 4. **The suite has only seen the 2026-10-06 sample database** (1 library, 4 items). Run it on a larger copy before trusting the numbers.
-5. **Browser check:** on 2026-10-15 the repository owner logged in at http://localhost:8080 (full stack: nginx, Node, .NET) and reported that the web client works. This was one manual session by one person on the sample data; nothing was recorded about which pages were opened.
+5. **Browser check (corrected 2026-10-15):** the first manual login at http://localhost:8080 did **not** exercise .NET: the web client sends `/audiobookshelf/api/...` and the nginx rules only matched `/api/...`, so everything went to Node. The rules now match both (`nginx/nginx.conf`, tested by the e2e suite with and without the prefix). A browser session after this fix has to be repeated and checked against `docker-compose logs nginx` (`upstream=...:8080` lines are .NET). Not done yet.
 
 ## Decisions for the group meeting
 
